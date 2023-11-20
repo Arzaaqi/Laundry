@@ -1,13 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Source;
 
-/**
- *
- * @author 62811
- */
 public class Coba {
     
+    public Coba(int iterasi) {
+        emotBatu(iterasi);
+    }
+
+    public void emotBatu(int iterasi) {
+        for (int i = 0; i < iterasi; i++) {
+            System.out.print("🗿");
+        }
+        System.out.println("");
+    }
 }
