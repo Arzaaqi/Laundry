@@ -8,6 +8,10 @@ package Logic;
  *
  * @author ZAQI
  */
-public class tes {
+public class Keranjang {
+
+    public Keranjang() {
+    }
+    
     
 }
