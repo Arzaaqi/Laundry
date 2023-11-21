@@ -26,21 +26,34 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        InputNama = new javax.swing.JTextField();
+        InputPassword = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        InputNama.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InputNamaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(InputNama);
+        InputNama.setBounds(560, 260, 110, 22);
+        getContentPane().add(InputPassword);
+        InputPassword.setBounds(560, 320, 110, 22);
 
-        pack();
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\kimi reza\\Downloads\\Password.png")); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 790, 490);
+
+        setSize(new java.awt.Dimension(801, 496));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void InputNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InputNamaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_InputNamaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +91,8 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField InputNama;
+    private javax.swing.JTextField InputPassword;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
