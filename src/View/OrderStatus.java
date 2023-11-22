@@ -4,6 +4,7 @@
  */
 package View;
 
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author 62811
@@ -15,6 +16,7 @@ public class OrderStatus extends javax.swing.JFrame {
      */
     public OrderStatus() {
         initComponents();
+        
     }
 
     /**
@@ -27,14 +29,16 @@ public class OrderStatus extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        table = new javax.swing.JTable();
+        goToDetail_btn = new javax.swing.JButton();
+        goBack_btn = new javax.swing.JButton();
+        deleteData_btn = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -50,22 +54,43 @@ public class OrderStatus extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(table);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(30, 80, 480, 250);
+        jScrollPane1.setBounds(160, 90, 530, 300);
 
-        jButton1.setText("Edit");
-        getContentPane().add(jButton1);
-        jButton1.setBounds(440, 370, 73, 28);
+        goToDetail_btn.setText("Detail");
+        goToDetail_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                goToDetail_btnActionPerformed(evt);
+            }
+        });
+        getContentPane().add(goToDetail_btn);
+        goToDetail_btn.setBounds(650, 440, 120, 30);
 
-        jButton2.setText("Kembali");
-        getContentPane().add(jButton2);
-        jButton2.setBounds(30, 370, 73, 28);
+        goBack_btn.setText("Kembali");
+        getContentPane().add(goBack_btn);
+        goBack_btn.setBounds(390, 440, 120, 30);
 
-        setSize(new java.awt.Dimension(552, 463));
+        deleteData_btn.setText("Hapus");
+        getContentPane().add(deleteData_btn);
+        deleteData_btn.setBounds(523, 440, 120, 30);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("E:\\Kuliah\\Semester 3\\OOP\\Tugas\\UAS-Project\\Laundry\\img\\Alin Status Order.png")); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 790, 490);
+
+        setSize(new java.awt.Dimension(800, 525));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void goToDetail_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goToDetail_btnActionPerformed
+        DefaultTableModel model = (DefaultTableModel) table.getModel();
+        int selectedRow = table.getSelectedRow();
+        
+        
+    }//GEN-LAST:event_goToDetail_btnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -103,9 +128,11 @@ public class OrderStatus extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton deleteData_btn;
+    private javax.swing.JButton goBack_btn;
+    private javax.swing.JButton goToDetail_btn;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable table;
     // End of variables declaration//GEN-END:variables
 }
