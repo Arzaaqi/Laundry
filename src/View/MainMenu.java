@@ -26,21 +26,53 @@ public class MainMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        btnInputOrder = new javax.swing.JButton();
+        btnOrderList = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
+
+        btnInputOrder.setBackground(new java.awt.Color(94, 23, 235));
+        btnInputOrder.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnInputOrder.setForeground(new java.awt.Color(255, 255, 255));
+        btnInputOrder.setText("Input Order");
+        btnInputOrder.setBorder(null);
+        btnInputOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInputOrderActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnInputOrder);
+        btnInputOrder.setBounds(120, 350, 180, 40);
+
+        btnOrderList.setBackground(new java.awt.Color(94, 23, 235));
+        btnOrderList.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnOrderList.setForeground(new java.awt.Color(255, 255, 255));
+        btnOrderList.setText("Order List");
+        btnOrderList.setBorder(null);
+        btnOrderList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOrderListActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnOrderList);
+        btnOrderList.setBounds(480, 360, 170, 30);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/PilihanMenu.png"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 0, 790, 490);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnInputOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInputOrderActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnInputOrderActionPerformed
+
+    private void btnOrderListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrderListActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnOrderListActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +110,8 @@ public class MainMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnInputOrder;
+    private javax.swing.JButton btnOrderList;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

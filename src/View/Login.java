@@ -28,6 +28,7 @@ public class Login extends javax.swing.JFrame {
 
         InputNama = new javax.swing.JTextField();
         InputPassword = new javax.swing.JTextField();
+        btnLogin = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -43,9 +44,18 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(InputPassword);
         InputPassword.setBounds(560, 320, 110, 22);
 
+        btnLogin.setText("Login");
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnLogin);
+        btnLogin.setBounds(660, 400, 72, 23);
+
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\kimi reza\\Downloads\\Password.png")); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 790, 490);
+        jLabel1.setBounds(0, 0, 788, 490);
 
         setSize(new java.awt.Dimension(801, 496));
         setLocationRelativeTo(null);
@@ -54,6 +64,14 @@ public class Login extends javax.swing.JFrame {
     private void InputNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InputNamaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_InputNamaActionPerformed
+
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        // TODO add your handling code here:
+        MainMenu mainMenu = new MainMenu();
+        mainMenu.setVisible(true);
+        this.dispose();
+        
+    }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -93,6 +111,7 @@ public class Login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField InputNama;
     private javax.swing.JTextField InputPassword;
+    private javax.swing.JButton btnLogin;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
