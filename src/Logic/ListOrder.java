@@ -4,10 +4,14 @@
  */
 package Logic;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author 62811
  */
 public class ListOrder {
+    private List<Order> listOrder = new ArrayList<>();
     
 }

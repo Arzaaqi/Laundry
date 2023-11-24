@@ -92,7 +92,7 @@ public class OrderDetail extends javax.swing.JFrame {
                     .addComponent(txtName, javax.swing.GroupLayout.DEFAULT_SIZE, 386, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 273, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -114,7 +114,7 @@ public class OrderDetail extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(30, 110, 500, 160);
+        jPanel2.setBounds(50, 110, 500, 160);
 
         pnlPakaian.setBorder(javax.swing.BorderFactory.createTitledBorder("Pakaian"));
         pnlPakaian.setToolTipText("");
@@ -138,7 +138,7 @@ public class OrderDetail extends javax.swing.JFrame {
                 .addGroup(pnlPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblClothesWeight, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblClothesWashType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblClothesDuration, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)))
+                    .addComponent(lblClothesDuration, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)))
         );
         pnlPakaianLayout.setVerticalGroup(
             pnlPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,11 +154,11 @@ public class OrderDetail extends javax.swing.JFrame {
                 .addGroup(pnlPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblClothesDuration, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         getContentPane().add(pnlPakaian);
-        pnlPakaian.setBounds(20, 290, 250, 140);
+        pnlPakaian.setBounds(40, 280, 250, 140);
 
         pnlPakaian1.setBorder(javax.swing.BorderFactory.createTitledBorder("Sepatu"));
         pnlPakaian1.setToolTipText("");
@@ -177,7 +177,7 @@ public class OrderDetail extends javax.swing.JFrame {
                     .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlPakaian1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblShoesTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                    .addComponent(lblShoesTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
                     .addComponent(lblShoesDuration, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         pnlPakaian1Layout.setVerticalGroup(
@@ -190,11 +190,11 @@ public class OrderDetail extends javax.swing.JFrame {
                 .addGroup(pnlPakaian1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblShoesDuration, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(pnlPakaian1);
-        pnlPakaian1.setBounds(20, 440, 250, 110);
+        pnlPakaian1.setBounds(40, 430, 250, 90);
 
         pnlPakaian3.setBorder(javax.swing.BorderFactory.createTitledBorder("Karpet"));
         pnlPakaian3.setToolTipText("");
@@ -213,7 +213,7 @@ public class OrderDetail extends javax.swing.JFrame {
                     .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlPakaian3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblCarpetTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                    .addComponent(lblCarpetTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
                     .addComponent(lblCarpetDuration, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         pnlPakaian3Layout.setVerticalGroup(
@@ -226,19 +226,19 @@ public class OrderDetail extends javax.swing.JFrame {
                 .addGroup(pnlPakaian3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblCarpetDuration, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(pnlPakaian3);
-        pnlPakaian3.setBounds(290, 440, 250, 110);
+        pnlPakaian3.setBounds(310, 430, 250, 90);
 
         jButton1.setText("Kembali");
         getContentPane().add(jButton1);
-        jButton1.setBounds(30, 580, 110, 28);
+        jButton1.setBounds(320, 530, 110, 25);
 
         jButton3.setText("Ubah Pesanan");
         getContentPane().add(jButton3);
-        jButton3.setBounds(420, 580, 110, 28);
+        jButton3.setBounds(450, 530, 110, 25);
 
         pnlPakaian4.setBorder(javax.swing.BorderFactory.createTitledBorder("Selimut"));
         pnlPakaian4.setToolTipText("");
@@ -262,7 +262,7 @@ public class OrderDetail extends javax.swing.JFrame {
                 .addGroup(pnlPakaian4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblBlanketWeight, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblBlanketWashType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblBlanketDuration, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)))
+                    .addComponent(lblBlanketDuration, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)))
         );
         pnlPakaian4Layout.setVerticalGroup(
             pnlPakaian4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -278,13 +278,13 @@ public class OrderDetail extends javax.swing.JFrame {
                 .addGroup(pnlPakaian4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblBlanketDuration, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         getContentPane().add(pnlPakaian4);
-        pnlPakaian4.setBounds(290, 290, 250, 140);
+        pnlPakaian4.setBounds(310, 280, 250, 140);
 
-        setSize(new java.awt.Dimension(575, 714));
+        setSize(new java.awt.Dimension(617, 687));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

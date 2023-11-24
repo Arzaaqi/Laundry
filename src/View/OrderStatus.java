@@ -81,7 +81,7 @@ public class OrderStatus extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 490);
 
-        setSize(new java.awt.Dimension(800, 525));
+        setSize(new java.awt.Dimension(801, 529));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

@@ -4,6 +4,8 @@
  */
 package Logic;
 
+import java.util.ArrayList;
+import java.util.List;
 /**
  *
  * @author 62811
@@ -11,12 +13,11 @@ package Logic;
 public class Customer {
     private String name;
     private String phoneNumber;
-    private ListOrder listOrder;
+    private List<Order> orderList = new ArrayList<>();
     
-    public Customer(String name, String phoneNumber, ListOrder listOrder){
+    public Customer(String name, String phoneNumber){
         this.name = name;
         this.phoneNumber = phoneNumber;
-        this.listOrder = listOrder;
     }
 
     public String getName() {
@@ -27,11 +28,28 @@ public class Customer {
         return phoneNumber;
     }
 
-    public ListOrder getListOrder() {
-        return listOrder;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setListOrder(ListOrder listOrder) {
-        this.listOrder = listOrder;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+    
+    public void addOrder(String itemType, String washingType, double weight, int totalItem, int duration) {
+        Order order = new Order(String itemType, String washingType, double weight, int totalItem, int duration);
+        orderList.add(order);
+    }
+
+    public Keranjang getKeranjanglist(int indeks) {
+        return keranjanglist.get(indeks);
+    }
+
+    public int getJumlahKeranjang() {
+        return keranjanglist.size();
+    }
+
+    public void hapusKeranjang(int indeks) {
+        keranjanglist.remove(indeks);
     }
 }

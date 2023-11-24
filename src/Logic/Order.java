@@ -9,5 +9,19 @@ package Logic;
  * @author 62811
  */
 public class Order {
-    private String serviceType;
+    private String itemType;
+    private String washingType;
+    private double weight;
+    private int totalItem;
+    private int duration;
+    
+    public Order(String itemType, String washingType, double weight, int totalItem, int duration){
+        this.itemType = itemType;
+        this.washingType = washingType;
+        this.weight = weight;
+        this.totalItem = totalItem;
+        this.duration = duration;
+    }
+    
+    
 }
