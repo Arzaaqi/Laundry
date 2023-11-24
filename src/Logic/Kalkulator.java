@@ -8,6 +8,7 @@ package Logic;
  *
  * @author ZAQI
  */
-public class tes {
-    
+public interface Kalkulator {
+    public int hitung();   
+    public int ubahJenisCucian();
 }
