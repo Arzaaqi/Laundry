@@ -37,19 +37,12 @@ public class Customer {
     }
     
     public void addOrder(String itemType, String washingType, double weight, int totalItem, int duration) {
-        Order order = new Order(String itemType, String washingType, double weight, int totalItem, int duration);
+        Order order = new Order(itemType, washingType, weight, totalItem, duration);
         orderList.add(order);
     }
-
-    public Keranjang getKeranjanglist(int indeks) {
-        return keranjanglist.get(indeks);
-    }
-
-    public int getJumlahKeranjang() {
-        return keranjanglist.size();
-    }
-
-    public void hapusKeranjang(int indeks) {
-        keranjanglist.remove(indeks);
+    
+    public void addOrder(String itemType, int totalItem, int duration) {
+        Order order = new Order(itemType, totalItem, duration);
+        orderList.add(order);
     }
 }

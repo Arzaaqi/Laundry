@@ -23,5 +23,11 @@ public class Order {
         this.duration = duration;
     }
     
+    public Order(String itemType, int totalItem, int duration){
+        this.itemType = itemType;
+        this.totalItem = totalItem;
+        this.duration = duration;
+    }
+    
     
 }
