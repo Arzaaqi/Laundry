@@ -1,18 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package View;
 
-/**
- *
- * @author bagas
- */
 public class MenuItem extends javax.swing.JFrame {
 
-    /**
-     * Creates new form MenuItem
-     */
     public MenuItem() {
         initComponents();
     }
@@ -26,26 +15,56 @@ public class MenuItem extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        btnBaju = new javax.swing.JButton();
+        btnSepatu = new javax.swing.JButton();
+        btnKarpet = new javax.swing.JButton();
+        btnSelimut = new javax.swing.JButton();
+        btnKeranjang = new javax.swing.JButton();
+        btnKembali = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Baju");
+        btnBaju.setText("Baju");
+        btnBaju.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBajuActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Sepatu");
+        btnSepatu.setText("Sepatu");
+        btnSepatu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSepatuActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("Karpet");
+        btnKarpet.setText("Karpet");
+        btnKarpet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKarpetActionPerformed(evt);
+            }
+        });
 
-        jButton4.setText("Selimut");
+        btnSelimut.setText("Selimut");
+        btnSelimut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSelimutActionPerformed(evt);
+            }
+        });
 
-        jButton5.setText("Keranjang");
+        btnKeranjang.setText("Keranjang");
+        btnKeranjang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKeranjangActionPerformed(evt);
+            }
+        });
 
-        jButton6.setText("Kembali");
+        btnKembali.setText("Kembali");
+        btnKembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKembaliActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -53,42 +72,71 @@ public class MenuItem extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton5)
+                .addComponent(btnKeranjang)
                 .addGap(34, 34, 34))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(133, 133, 133)
-                        .addComponent(jButton1)
+                        .addComponent(btnBaju)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2)
+                        .addComponent(btnSepatu)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton3)
+                        .addComponent(btnKarpet)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton4))
+                        .addComponent(btnSelimut))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(31, 31, 31)
-                        .addComponent(jButton6)))
+                        .addComponent(btnKembali)))
                 .addContainerGap(145, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(34, 34, 34)
-                .addComponent(jButton5)
+                .addComponent(btnKeranjang)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 200, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
+                    .addComponent(btnBaju)
+                    .addComponent(btnSepatu)
+                    .addComponent(btnKarpet)
+                    .addComponent(btnSelimut))
                 .addGap(130, 130, 130)
-                .addComponent(jButton6)
+                .addComponent(btnKembali)
                 .addGap(27, 27, 27))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnBajuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBajuActionPerformed
+        ItemBaju itemBaju = new ItemBaju(this, true);
+        itemBaju.setVisible(true);
+    }//GEN-LAST:event_btnBajuActionPerformed
+
+    private void btnSepatuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSepatuActionPerformed
+        ItemSepatu ItemSepatu = new ItemSepatu(this, true);
+        ItemSepatu.setVisible(true);
+    }//GEN-LAST:event_btnSepatuActionPerformed
+
+    private void btnKarpetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKarpetActionPerformed
+        ItemKarpet ItemKarpet = new ItemKarpet(this, true);
+        ItemKarpet.setVisible(true);
+    }//GEN-LAST:event_btnKarpetActionPerformed
+
+    private void btnSelimutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelimutActionPerformed
+        ItemSelimut ItemSelimut = new ItemSelimut(this, true);
+        ItemSelimut.setVisible(true);
+    }//GEN-LAST:event_btnSelimutActionPerformed
+
+    private void btnKeranjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeranjangActionPerformed
+//        Keranjang keranjang = new Keranjang(this, true);
+//        Keranjang.setVisible(true);
+    }//GEN-LAST:event_btnKeranjangActionPerformed
+
+    private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
+        
+    }//GEN-LAST:event_btnKembaliActionPerformed
 
     /**
      * @param args the command line arguments
@@ -126,11 +174,11 @@ public class MenuItem extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton btnBaju;
+    private javax.swing.JButton btnKarpet;
+    private javax.swing.JButton btnKembali;
+    private javax.swing.JButton btnKeranjang;
+    private javax.swing.JButton btnSelimut;
+    private javax.swing.JButton btnSepatu;
     // End of variables declaration//GEN-END:variables
 }
