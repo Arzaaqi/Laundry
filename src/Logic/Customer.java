@@ -45,4 +45,12 @@ public class Customer {
         Order order = new Order(itemType, totalItem, duration);
         orderList.add(order);
     }
+    
+    public Order getOrderList(int index){
+        return orderList.get(index);
+    }
+    
+    public int getTotalOrder(){
+        return orderList.size();
+    }
 }
