@@ -27,264 +27,89 @@ public class OrderDetail extends javax.swing.JFrame {
     private void initComponents() {
 
         jCheckBox1 = new javax.swing.JCheckBox();
-        jPanel2 = new javax.swing.JPanel();
-        lblName = new javax.swing.JLabel();
-        lblStatus = new javax.swing.JLabel();
-        lblTelepon = new javax.swing.JLabel();
-        txtNoTelp = new javax.swing.JTextField();
-        txtName = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        pnlPakaian = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        lblClothesWashType = new javax.swing.JLabel();
-        lblClothesWeight = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        lblClothesDuration = new javax.swing.JLabel();
-        pnlPakaian1 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        lblShoesDuration = new javax.swing.JLabel();
-        lblShoesTotal = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        pnlPakaian3 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        lblCarpetDuration = new javax.swing.JLabel();
-        lblCarpetTotal = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        pnlPakaian4 = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        lblBlanketWashType = new javax.swing.JLabel();
+        lblCarpetTotal = new javax.swing.JLabel();
+        lblCarpetDuration = new javax.swing.JLabel();
+        lblShoesTotal = new javax.swing.JLabel();
+        lblShoesDuration = new javax.swing.JLabel();
         lblBlanketWeight = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        lblBlanketWashType = new javax.swing.JLabel();
         lblBlanketDuration = new javax.swing.JLabel();
+        lblClothesWeight = new javax.swing.JLabel();
+        lblClothesWashType = new javax.swing.JLabel();
+        lblClothesDuration = new javax.swing.JLabel();
+        txtName = new javax.swing.JTextField();
+        txtNoTelp = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
 
         jCheckBox1.setText("jCheckBox1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        lblName.setText("Nama                :");
-
-        lblStatus.setText("Status Pesanan :");
-
-        lblTelepon.setText("No. Telepon       :");
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Belum Selesai", "Selesaikan", " " }));
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblTelepon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtNoTelp)
-                    .addComponent(txtName, javax.swing.GroupLayout.DEFAULT_SIZE, 386, Short.MAX_VALUE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 273, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(17, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblTelepon, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNoTelp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(14, 14, 14))
-        );
-
-        getContentPane().add(jPanel2);
-        jPanel2.setBounds(50, 110, 500, 160);
-
-        pnlPakaian.setBorder(javax.swing.BorderFactory.createTitledBorder("Pakaian"));
-        pnlPakaian.setToolTipText("");
-
-        jLabel1.setText("Berat (kg)              :");
-
-        jLabel2.setText("Jenis Cuci             :");
-
-        jLabel5.setText("Lama Pengerjaan :");
-
-        javax.swing.GroupLayout pnlPakaianLayout = new javax.swing.GroupLayout(pnlPakaian);
-        pnlPakaian.setLayout(pnlPakaianLayout);
-        pnlPakaianLayout.setHorizontalGroup(
-            pnlPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlPakaianLayout.createSequentialGroup()
-                .addGroup(pnlPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblClothesWeight, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblClothesWashType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblClothesDuration, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)))
-        );
-        pnlPakaianLayout.setVerticalGroup(
-            pnlPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlPakaianLayout.createSequentialGroup()
-                .addGroup(pnlPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(lblClothesWeight, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblClothesWashType, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblClothesDuration, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(24, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(pnlPakaian);
-        pnlPakaian.setBounds(40, 280, 250, 140);
-
-        pnlPakaian1.setBorder(javax.swing.BorderFactory.createTitledBorder("Sepatu"));
-        pnlPakaian1.setToolTipText("");
-
-        jLabel6.setText("Jumlah                  :");
-
-        jLabel8.setText("Lama Pengerjaan :");
-
-        javax.swing.GroupLayout pnlPakaian1Layout = new javax.swing.GroupLayout(pnlPakaian1);
-        pnlPakaian1.setLayout(pnlPakaian1Layout);
-        pnlPakaian1Layout.setHorizontalGroup(
-            pnlPakaian1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlPakaian1Layout.createSequentialGroup()
-                .addGroup(pnlPakaian1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlPakaian1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblShoesTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
-                    .addComponent(lblShoesDuration, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-        pnlPakaian1Layout.setVerticalGroup(
-            pnlPakaian1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlPakaian1Layout.createSequentialGroup()
-                .addGroup(pnlPakaian1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(lblShoesTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlPakaian1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblShoesDuration, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(pnlPakaian1);
-        pnlPakaian1.setBounds(40, 430, 250, 90);
-
-        pnlPakaian3.setBorder(javax.swing.BorderFactory.createTitledBorder("Karpet"));
-        pnlPakaian3.setToolTipText("");
-
-        jLabel10.setText("Jumlah                  :");
-
-        jLabel11.setText("Lama Pengerjaan :");
-
-        javax.swing.GroupLayout pnlPakaian3Layout = new javax.swing.GroupLayout(pnlPakaian3);
-        pnlPakaian3.setLayout(pnlPakaian3Layout);
-        pnlPakaian3Layout.setHorizontalGroup(
-            pnlPakaian3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlPakaian3Layout.createSequentialGroup()
-                .addGroup(pnlPakaian3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlPakaian3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblCarpetTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
-                    .addComponent(lblCarpetDuration, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-        pnlPakaian3Layout.setVerticalGroup(
-            pnlPakaian3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlPakaian3Layout.createSequentialGroup()
-                .addGroup(pnlPakaian3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(lblCarpetTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlPakaian3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblCarpetDuration, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(pnlPakaian3);
-        pnlPakaian3.setBounds(310, 430, 250, 90);
-
         jButton1.setText("Kembali");
         getContentPane().add(jButton1);
-        jButton1.setBounds(320, 530, 110, 25);
+        jButton1.setBounds(340, 610, 110, 25);
 
         jButton3.setText("Ubah Pesanan");
         getContentPane().add(jButton3);
-        jButton3.setBounds(450, 530, 110, 25);
+        jButton3.setBounds(470, 620, 110, 25);
 
-        pnlPakaian4.setBorder(javax.swing.BorderFactory.createTitledBorder("Selimut"));
-        pnlPakaian4.setToolTipText("");
+        lblCarpetTotal.setText("tes");
+        getContentPane().add(lblCarpetTotal);
+        lblCarpetTotal.setBounds(460, 510, 100, 26);
 
-        jLabel12.setText("Berat (kg)              :");
+        lblCarpetDuration.setText("12");
+        getContentPane().add(lblCarpetDuration);
+        lblCarpetDuration.setBounds(490, 540, 60, 26);
 
-        jLabel13.setText("Jenis Cuci             :");
+        lblShoesTotal.setText("1");
+        getContentPane().add(lblShoesTotal);
+        lblShoesTotal.setBounds(150, 520, 127, 26);
 
-        jLabel14.setText("Lama Pengerjaan :");
+        lblShoesDuration.setText("2");
+        getContentPane().add(lblShoesDuration);
+        lblShoesDuration.setBounds(230, 550, 50, 26);
 
-        javax.swing.GroupLayout pnlPakaian4Layout = new javax.swing.GroupLayout(pnlPakaian4);
-        pnlPakaian4.setLayout(pnlPakaian4Layout);
-        pnlPakaian4Layout.setHorizontalGroup(
-            pnlPakaian4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlPakaian4Layout.createSequentialGroup()
-                .addGroup(pnlPakaian4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlPakaian4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblBlanketWeight, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblBlanketWashType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblBlanketDuration, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)))
-        );
-        pnlPakaian4Layout.setVerticalGroup(
-            pnlPakaian4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlPakaian4Layout.createSequentialGroup()
-                .addGroup(pnlPakaian4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(lblBlanketWeight, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlPakaian4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblBlanketWashType, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlPakaian4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblBlanketDuration, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(24, Short.MAX_VALUE))
-        );
+        lblBlanketWeight.setText("20");
+        getContentPane().add(lblBlanketWeight);
+        lblBlanketWeight.setBounds(490, 360, 60, 26);
 
-        getContentPane().add(pnlPakaian4);
-        pnlPakaian4.setBounds(310, 280, 250, 140);
+        lblBlanketWashType.setText("Setrika");
+        getContentPane().add(lblBlanketWashType);
+        lblBlanketWashType.setBounds(470, 390, 80, 26);
 
-        setSize(new java.awt.Dimension(617, 687));
+        lblBlanketDuration.setText("12");
+        getContentPane().add(lblBlanketDuration);
+        lblBlanketDuration.setBounds(490, 430, 60, 26);
+
+        lblClothesWeight.setText("20");
+        getContentPane().add(lblClothesWeight);
+        lblClothesWeight.setBounds(190, 370, 90, 26);
+
+        lblClothesWashType.setText("Setrika");
+        getContentPane().add(lblClothesWashType);
+        lblClothesWashType.setBounds(190, 400, 90, 26);
+
+        lblClothesDuration.setText("1");
+        getContentPane().add(lblClothesDuration);
+        lblClothesDuration.setBounds(220, 430, 60, 26);
+        getContentPane().add(txtName);
+        txtName.setBounds(260, 190, 260, 22);
+        getContentPane().add(txtNoTelp);
+        txtNoTelp.setBounds(260, 230, 260, 22);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Belum Selesai", "Selesaikan", " " }));
+        getContentPane().add(jComboBox1);
+        jComboBox1.setBounds(260, 270, 102, 22);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("E:\\Kuliah\\Semester 3\\OOP\\Tugas\\UAS-Project\\Laundry\\img\\ALIF DETAIL PEMESANAN.png")); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 0, 600, 670);
+
+        setSize(new java.awt.Dimension(617, 709));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -328,17 +153,7 @@ public class OrderDetail extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lblBlanketDuration;
     private javax.swing.JLabel lblBlanketWashType;
     private javax.swing.JLabel lblBlanketWeight;
@@ -347,15 +162,8 @@ public class OrderDetail extends javax.swing.JFrame {
     private javax.swing.JLabel lblClothesDuration;
     private javax.swing.JLabel lblClothesWashType;
     private javax.swing.JLabel lblClothesWeight;
-    private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblShoesDuration;
     private javax.swing.JLabel lblShoesTotal;
-    private javax.swing.JLabel lblStatus;
-    private javax.swing.JLabel lblTelepon;
-    private javax.swing.JPanel pnlPakaian;
-    private javax.swing.JPanel pnlPakaian1;
-    private javax.swing.JPanel pnlPakaian3;
-    private javax.swing.JPanel pnlPakaian4;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtNoTelp;
     // End of variables declaration//GEN-END:variables
