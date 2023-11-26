@@ -37,7 +37,7 @@ public class UserController {
         userList.remove(user);
     }
     
-    public User getUser(int indeks) {
+    public User getUser(int indeks) { 
         return userList.get(indeks);
     }
     

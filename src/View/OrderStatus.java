@@ -12,14 +12,14 @@ import javax.swing.table.DefaultTableModel;
  * @author 62811
  */
 public class OrderStatus extends javax.swing.JFrame {
-    private UserController userController; 
+    //private UserController userController; 
     
     /**
      * Creates new form OrderStatus
      */
     public OrderStatus() {
         initComponents();
-        tampilkanData();
+        //tampilkanData();
     }
 
     /**
@@ -108,17 +108,17 @@ public class OrderStatus extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tampilkanData(){
-        DefaultTableModel model = (DefaultTableModel)table.getModel();    
-
-        for (int i = 0; i < userController.getJumlahUser(); i++) {
-            model.addRow(new Object[] {
-                userController.getUser(i).getName(),
-                userController.getUser(i).getPhoneNumber(),
-            });
-        }
-    }   
-    
+//    private void tampilkanData(){
+//        DefaultTableModel model = (DefaultTableModel)table.getModel();    
+//
+//        for (int i = 0; i < userController.getJumlahUser(); i++) {
+//            model.addRow(new Object[] {
+//                userController.getUser(i).getName(),
+//                userController.getUser(i).getPhoneNumber(),
+//            });
+//        }
+//    }   
+//    
     private void goToDetail_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goToDetail_btnActionPerformed
         DefaultTableModel model = (DefaultTableModel) table.getModel();
         int selectedRow = table.getSelectedRow();
