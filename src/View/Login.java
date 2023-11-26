@@ -1,22 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package View;
 
 import Controller.UserController;
 import Logic.User;
 import java.util.ArrayList;
 
-/**
- *
- * @author kimi reza
- */
 public class Login extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Login
-     */
     private UserController userController;
 
     public Login() {
@@ -66,7 +55,6 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setText("Register?");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(560, 350, 60, 16);
-
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Password.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 490);
@@ -93,6 +81,10 @@ public class Login extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
+    }//GEN-LAST:event_inputNamaActionPerformed
+
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+
         String nama;
         String nomorTelepon;
         nama = inputNama.getText();
@@ -107,14 +99,17 @@ public class Login extends javax.swing.JFrame {
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
         // TODO add your handling code here:
+        Dashboard mainMenu = new Dashboard();
+        mainMenu.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
         Register register = new Register();
         register.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnRegisterActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -137,9 +132,6 @@ public class Login extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */

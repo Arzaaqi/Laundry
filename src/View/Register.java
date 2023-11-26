@@ -1,20 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package View;
 
 import Controller.UserController;
 
-/**
- *
- * @author kimi reza
- */
 public class Register extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Register
-     */
+public class Register extends javax.swing.JFrame {
+
     private UserController userController;
 
     public Register() {
@@ -78,8 +69,8 @@ public class Register extends javax.swing.JFrame {
         });
         getContentPane().add(btnBack);
         btnBack.setBounds(250, 400, 72, 23);
-
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/register.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\kimi reza\\Downloads\\register.png")); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 0, 790, 490);
 
@@ -93,6 +84,9 @@ public class Register extends javax.swing.JFrame {
 
     private void btnRegistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistActionPerformed
         // TODO add your handling code here:
+    }//GEN-LAST:event_inputUsernameActionPerformed
+
+    private void btnRegistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistActionPerformed
         String nama;
         String nomorTelepon;
         nama = inputUsername.getText();
@@ -140,9 +134,6 @@ public class Register extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Register.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */

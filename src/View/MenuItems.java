@@ -43,8 +43,8 @@ public class MenuItems extends javax.swing.JFrame {
         jButton5.setBorder(null);
         getContentPane().add(jButton5);
         jButton5.setBounds(30, 430, 100, 16);
-
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/menu item.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\kimi reza\\Downloads\\menu item.png")); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 490);
 
@@ -125,9 +125,6 @@ public class MenuItems extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MenuItems.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */

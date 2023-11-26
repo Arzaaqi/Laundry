@@ -49,6 +49,7 @@
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Image/menu item.png"/>
+          <Image iconType="2" name="C:\Users\kimi reza\Downloads\menu item.png"/>
         </Property>
       </Properties>
       <Constraints>
