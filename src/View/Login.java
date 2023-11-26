@@ -25,7 +25,9 @@ public class Login extends javax.swing.JFrame {
         inputNama = new javax.swing.JTextField();
         inputPassword = new javax.swing.JTextField();
         btnLogin = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        btnRegister = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -47,11 +49,26 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnLogin);
-        btnLogin.setBounds(660, 400, 72, 23);
+        btnLogin.setBounds(670, 390, 72, 23);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\kimi reza\\Downloads\\Password.png")); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Register?");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(560, 350, 60, 16);
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 788, 490);
+        jLabel1.setBounds(0, 0, 790, 490);
+
+        btnRegister.setBackground(new java.awt.Color(76, 111, 191));
+        btnRegister.setForeground(new java.awt.Color(255, 255, 255));
+        btnRegister.setText("Register?");
+        btnRegister.setBorder(null);
+        btnRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisterActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnRegister);
+        btnRegister.setBounds(540, 350, 90, 20);
 
         setSize(new java.awt.Dimension(801, 496));
         setLocationRelativeTo(null);
@@ -72,6 +89,12 @@ public class Login extends javax.swing.JFrame {
         mainMenu.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
+        Register register = new Register();
+        register.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnRegisterActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -107,8 +130,10 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
+    private javax.swing.JButton btnRegister;
     private javax.swing.JTextField inputNama;
     private javax.swing.JTextField inputPassword;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

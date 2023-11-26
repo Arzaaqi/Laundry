@@ -57,10 +57,16 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void btnInputOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInputOrderActionPerformed
         // TODO add your handling code here:
+        OrderStatus orderStatus = new OrderStatus();
+        orderStatus.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnInputOrderActionPerformed
 
     private void btnOrderListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrderListActionPerformed
         // TODO add your handling code here:
+        OrderList orderList = new OrderList();
+        orderList.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnOrderListActionPerformed
 
     /**
