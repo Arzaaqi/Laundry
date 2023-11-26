@@ -4,6 +4,10 @@
  */
 package View;
 
+import Controller.UserController;
+import Logic.User;
+import java.util.ArrayList;
+
 /**
  *
  * @author kimi reza
@@ -13,8 +17,11 @@ public class Login extends javax.swing.JFrame {
     /**
      * Creates new form Login
      */
+    private UserController userController;
+
     public Login() {
         initComponents();
+
     }
 
     /**
@@ -26,23 +33,23 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        InputNama = new javax.swing.JTextField();
-        InputPassword = new javax.swing.JTextField();
+        inputNama = new javax.swing.JTextField();
+        inputPassword = new javax.swing.JTextField();
         btnLogin = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        InputNama.addActionListener(new java.awt.event.ActionListener() {
+        inputNama.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                InputNamaActionPerformed(evt);
+                inputNamaActionPerformed(evt);
             }
         });
-        getContentPane().add(InputNama);
-        InputNama.setBounds(560, 260, 110, 22);
-        getContentPane().add(InputPassword);
-        InputPassword.setBounds(560, 320, 110, 22);
+        getContentPane().add(inputNama);
+        inputNama.setBounds(560, 260, 110, 22);
+        getContentPane().add(inputPassword);
+        inputPassword.setBounds(560, 320, 110, 22);
 
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -61,16 +68,22 @@ public class Login extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void InputNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InputNamaActionPerformed
+    private void inputNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputNamaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_InputNamaActionPerformed
+    }//GEN-LAST:event_inputNamaActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
+        String nama;
+        String nomorTelepon;
+        nama = inputNama.getText();
+        nomorTelepon = inputPassword.getText();
+
+        userController.login(nama, nomorTelepon);
         MainMenu mainMenu = new MainMenu();
         mainMenu.setVisible(true);
         this.dispose();
-        
+
     }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
@@ -109,9 +122,9 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField InputNama;
-    private javax.swing.JTextField InputPassword;
     private javax.swing.JButton btnLogin;
+    private javax.swing.JTextField inputNama;
+    private javax.swing.JTextField inputPassword;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

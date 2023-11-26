@@ -4,6 +4,8 @@
  */
 package View;
 
+import Controller.UserController;
+
 /**
  *
  * @author kimi reza
@@ -13,8 +15,11 @@ public class Register extends javax.swing.JFrame {
     /**
      * Creates new form Register
      */
+    private UserController userController;
+
     public Register() {
         initComponents();
+        userController = new UserController();
     }
 
     /**
@@ -26,32 +31,23 @@ public class Register extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txtName = new javax.swing.JTextField();
-        txtPhoneNumber = new javax.swing.JTextField();
-        txtPassword = new javax.swing.JTextField();
+        inputUsername = new javax.swing.JTextField();
+        inputNomorhp = new javax.swing.JTextField();
         btnRegist = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        txtName.addActionListener(new java.awt.event.ActionListener() {
+        inputUsername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNameActionPerformed(evt);
+                inputUsernameActionPerformed(evt);
             }
         });
-        getContentPane().add(txtName);
-        txtName.setBounds(330, 270, 140, 22);
-        getContentPane().add(txtPhoneNumber);
-        txtPhoneNumber.setBounds(330, 310, 140, 20);
-
-        txtPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPasswordActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtPassword);
-        txtPassword.setBounds(330, 360, 140, 22);
+        getContentPane().add(inputUsername);
+        inputUsername.setBounds(330, 270, 140, 22);
+        getContentPane().add(inputNomorhp);
+        inputNomorhp.setBounds(330, 310, 140, 20);
 
         btnRegist.setText("Regist");
         btnRegist.addActionListener(new java.awt.event.ActionListener() {
@@ -70,16 +66,17 @@ public class Register extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
+    private void inputUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputUsernameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNameActionPerformed
-
-    private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPasswordActionPerformed
+    }//GEN-LAST:event_inputUsernameActionPerformed
 
     private void btnRegistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistActionPerformed
         // TODO add your handling code here:
+        String nama;
+        String nomorTelepon;
+        nama = inputUsername.getText();
+        nomorTelepon = inputNomorhp.getText();
+        userController.addCustomer(nama, nomorTelepon);
         Login login = new Login();
         login.setVisible(true);
         this.dispose();
@@ -122,9 +119,8 @@ public class Register extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRegist;
+    private javax.swing.JTextField inputNomorhp;
+    private javax.swing.JTextField inputUsername;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField txtName;
-    private javax.swing.JTextField txtPassword;
-    private javax.swing.JTextField txtPhoneNumber;
     // End of variables declaration//GEN-END:variables
 }
