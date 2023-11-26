@@ -36,6 +36,14 @@ public class UserController {
     public void removeUser(User user) {
         userList.remove(user);
     }
+    
+    public User getUser(int indeks) {
+        return userList.get(indeks);
+    }
+    
+    public int getJumlahUser(){
+        return userList.size();
+    }
 
     public User login(String nama, String nomorTelepon) {
         for (User user : userList) {

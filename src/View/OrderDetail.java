@@ -27,7 +27,6 @@ public class OrderDetail extends javax.swing.JFrame {
     private void initComponents() {
 
         jCheckBox1 = new javax.swing.JCheckBox();
-        btnKembali = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         lblCarpetTotal = new javax.swing.JLabel();
         lblCarpetDuration = new javax.swing.JLabel();
@@ -42,6 +41,7 @@ public class OrderDetail extends javax.swing.JFrame {
         txtName = new javax.swing.JTextField();
         txtNoTelp = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
+        btnKembali = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         jCheckBox1.setText("jCheckBox1");
@@ -49,18 +49,20 @@ public class OrderDetail extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        btnKembali.setText("Kembali");
-        btnKembali.addActionListener(new java.awt.event.ActionListener() {
+        jButton3.setBackground(new java.awt.Color(0, 0, 0, 0)
+        );
+        jButton3.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(240, 240, 240));
+        jButton3.setText("Proses");
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnKembaliActionPerformed(evt);
+                jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnKembali);
-        btnKembali.setBounds(340, 610, 110, 25);
-
-        jButton3.setText("Ubah Pesanan");
         getContentPane().add(jButton3);
-        jButton3.setBounds(470, 620, 110, 25);
+        jButton3.setBounds(468, 620, 110, 40);
+        jButton3.getAccessibleContext().setAccessibleName("Proses");
 
         lblCarpetTotal.setText("tes");
         getContentPane().add(lblCarpetTotal);
@@ -108,13 +110,27 @@ public class OrderDetail extends javax.swing.JFrame {
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Belum Selesai", "Selesaikan", " " }));
         getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(260, 270, 102, 22);
+        jComboBox1.setBounds(260, 270, 150, 22);
+
+        btnKembali.setBackground(new java.awt.Color(0, 0, 0, 0)
+        );
+        btnKembali.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
+        btnKembali.setForeground(new java.awt.Color(240, 240, 240));
+        btnKembali.setText("Kembali");
+        btnKembali.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnKembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKembaliActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnKembali);
+        btnKembali.setBounds(336, 620, 110, 40);
 
         jLabel3.setIcon(new javax.swing.ImageIcon("E:\\Kuliah\\Semester 3\\OOP\\Tugas\\UAS-Project\\Laundry\\img\\ALIF DETAIL PEMESANAN.png")); // NOI18N
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, 0, 600, 670);
+        jLabel3.setBounds(0, 0, 600, 680);
 
-        setSize(new java.awt.Dimension(617, 709));
+        setSize(new java.awt.Dimension(617, 718));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -123,6 +139,10 @@ public class OrderDetail extends javax.swing.JFrame {
         orderStatus.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnKembaliActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

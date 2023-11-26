@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package View;
+import Logic.*;
+import Controller.*;
 
 import javax.swing.table.DefaultTableModel;
 /**
@@ -10,13 +12,14 @@ import javax.swing.table.DefaultTableModel;
  * @author 62811
  */
 public class OrderStatus extends javax.swing.JFrame {
-
+    private UserController userController; 
+    
     /**
      * Creates new form OrderStatus
      */
     public OrderStatus() {
         initComponents();
-        
+        tampilkanData();
     }
 
     /**
@@ -59,6 +62,9 @@ public class OrderStatus extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(160, 90, 530, 300);
 
+        goToDetail_btn.setBackground(new java.awt.Color(0,0,0,0));
+        goToDetail_btn.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
+        goToDetail_btn.setForeground(new java.awt.Color(240, 240, 240));
         goToDetail_btn.setText("Detail");
         goToDetail_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,8 +72,12 @@ public class OrderStatus extends javax.swing.JFrame {
             }
         });
         getContentPane().add(goToDetail_btn);
-        goToDetail_btn.setBounds(650, 440, 120, 30);
+        goToDetail_btn.setBounds(655, 440, 119, 34);
 
+        goBack_btn.setBackground(new java.awt.Color(0,0,0,0)
+        );
+        goBack_btn.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
+        goBack_btn.setForeground(new java.awt.Color(240, 240, 240));
         goBack_btn.setText("Kembali");
         goBack_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,8 +85,11 @@ public class OrderStatus extends javax.swing.JFrame {
             }
         });
         getContentPane().add(goBack_btn);
-        goBack_btn.setBounds(390, 440, 120, 30);
+        goBack_btn.setBounds(391, 440, 121, 34);
 
+        deleteData_btn.setBackground(new java.awt.Color(0,0,0,0));
+        deleteData_btn.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
+        deleteData_btn.setForeground(new java.awt.Color(240, 240, 240));
         deleteData_btn.setText("Hapus");
         deleteData_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,7 +97,7 @@ public class OrderStatus extends javax.swing.JFrame {
             }
         });
         getContentPane().add(deleteData_btn);
-        deleteData_btn.setBounds(523, 440, 120, 30);
+        deleteData_btn.setBounds(525, 440, 118, 34);
 
         jLabel1.setIcon(new javax.swing.ImageIcon("E:\\Kuliah\\Semester 3\\OOP\\Tugas\\UAS-Project\\Laundry\\img\\Alin Status Order.png")); // NOI18N
         jLabel1.setText("jLabel1");
@@ -95,13 +108,24 @@ public class OrderStatus extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void tampilkanData(){
+        DefaultTableModel model = (DefaultTableModel)table.getModel();    
+
+        for (int i = 0; i < userController.getJumlahUser(); i++) {
+            model.addRow(new Object[] {
+                userController.getUser(i).getName(),
+                userController.getUser(i).getPhoneNumber(),
+            });
+        }
+    }   
+    
     private void goToDetail_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goToDetail_btnActionPerformed
-//        DefaultTableModel model = (DefaultTableModel) table.getModel();
-//        int selectedRow = table.getSelectedRow();
-//        
-//        if(selectedRow != -1){
-//            
-//        }
+        DefaultTableModel model = (DefaultTableModel) table.getModel();
+        int selectedRow = table.getSelectedRow();
+        
+        if(selectedRow != -1){
+            
+        }
         OrderDetail orderDetail = new OrderDetail();
         orderDetail.setVisible(true);
         dispose();
