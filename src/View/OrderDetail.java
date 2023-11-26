@@ -27,7 +27,7 @@ public class OrderDetail extends javax.swing.JFrame {
     private void initComponents() {
 
         jCheckBox1 = new javax.swing.JCheckBox();
-        jButton1 = new javax.swing.JButton();
+        btnKembali = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         lblCarpetTotal = new javax.swing.JLabel();
         lblCarpetDuration = new javax.swing.JLabel();
@@ -49,9 +49,14 @@ public class OrderDetail extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jButton1.setText("Kembali");
-        getContentPane().add(jButton1);
-        jButton1.setBounds(340, 610, 110, 25);
+        btnKembali.setText("Kembali");
+        btnKembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKembaliActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnKembali);
+        btnKembali.setBounds(340, 610, 110, 25);
 
         jButton3.setText("Ubah Pesanan");
         getContentPane().add(jButton3);
@@ -113,6 +118,12 @@ public class OrderDetail extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
+        OrderStatus orderStatus = new OrderStatus();
+        orderStatus.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnKembaliActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -149,7 +160,7 @@ public class OrderDetail extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnKembali;
     private javax.swing.JButton jButton3;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JComboBox<String> jComboBox1;

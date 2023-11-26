@@ -69,10 +69,20 @@ public class OrderStatus extends javax.swing.JFrame {
         goToDetail_btn.setBounds(650, 440, 120, 30);
 
         goBack_btn.setText("Kembali");
+        goBack_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                goBack_btnActionPerformed(evt);
+            }
+        });
         getContentPane().add(goBack_btn);
         goBack_btn.setBounds(390, 440, 120, 30);
 
         deleteData_btn.setText("Hapus");
+        deleteData_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteData_btnActionPerformed(evt);
+            }
+        });
         getContentPane().add(deleteData_btn);
         deleteData_btn.setBounds(523, 440, 120, 30);
 
@@ -86,11 +96,24 @@ public class OrderStatus extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void goToDetail_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goToDetail_btnActionPerformed
-        DefaultTableModel model = (DefaultTableModel) table.getModel();
-        int selectedRow = table.getSelectedRow();
-        
-        
+//        DefaultTableModel model = (DefaultTableModel) table.getModel();
+//        int selectedRow = table.getSelectedRow();
+//        
+//        if(selectedRow != -1){
+//            
+//        }
+        OrderDetail orderDetail = new OrderDetail();
+        orderDetail.setVisible(true);
+        dispose();
     }//GEN-LAST:event_goToDetail_btnActionPerformed
+
+    private void goBack_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goBack_btnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_goBack_btnActionPerformed
+
+    private void deleteData_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteData_btnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_deleteData_btnActionPerformed
 
     /**
      * @param args the command line arguments
