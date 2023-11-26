@@ -48,7 +48,7 @@ public class Dashboard extends javax.swing.JFrame {
         getContentPane().add(btnOrderList);
         btnOrderList.setBounds(480, 360, 170, 30);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/PilihanMenu.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/dashboard.png"))); // NOI18N
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, 0, 790, 490);
 
@@ -56,17 +56,11 @@ public class Dashboard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnInputOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInputOrderActionPerformed
-        // TODO add your handling code here:
-        OrderStatus orderStatus = new OrderStatus();
-        orderStatus.setVisible(true);
-        this.dispose();
+
     }//GEN-LAST:event_btnInputOrderActionPerformed
 
     private void btnOrderListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrderListActionPerformed
-        // TODO add your handling code here:
-        OrderList orderList = new OrderList();
-        orderList.setVisible(true);
-        this.dispose();
+
     }//GEN-LAST:event_btnOrderListActionPerformed
 
     /**

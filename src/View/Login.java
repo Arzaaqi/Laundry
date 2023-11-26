@@ -1,12 +1,8 @@
 package View;
 
-import Controller.UserController;
-import Logic.User;
 import java.util.ArrayList;
 
 public class Login extends javax.swing.JFrame {
-
-    private UserController userController;
 
     public Login() {
         initComponents();
@@ -55,7 +51,8 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setText("Register?");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(560, 350, 60, 16);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Password.png"))); // NOI18N
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/login.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 490);
 
@@ -80,34 +77,11 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_inputNamaActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inputNamaActionPerformed
-
-    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-
-        String nama;
-        String nomorTelepon;
-        nama = inputNama.getText();
-        nomorTelepon = inputPassword.getText();
-
-        userController.login(nama, nomorTelepon);
-        MainMenu mainMenu = new MainMenu();
-        mainMenu.setVisible(true);
-        this.dispose();
 
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-        // TODO add your handling code here:
-        Dashboard mainMenu = new Dashboard();
-        mainMenu.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_btnLoginActionPerformed
 
-    private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-        Register register = new Register();
-        register.setVisible(true);
-        this.dispose();
     }//GEN-LAST:event_btnRegisterActionPerformed
 
     public static void main(String args[]) {

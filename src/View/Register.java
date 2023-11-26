@@ -1,16 +1,9 @@
 package View;
 
-import Controller.UserController;
-
 public class Register extends javax.swing.JFrame {
-
-public class Register extends javax.swing.JFrame {
-
-    private UserController userController;
 
     public Register() {
         initComponents();
-        userController = new UserController();
     }
 
     /**
@@ -79,34 +72,19 @@ public class Register extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void inputUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputUsernameActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_inputUsernameActionPerformed
-
+                     
     private void btnRegistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inputUsernameActionPerformed
 
-    private void btnRegistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistActionPerformed
-        String nama;
-        String nomorTelepon;
-        nama = inputUsername.getText();
-        nomorTelepon = inputNomorhp.getText();
-        userController.addCustomer(nama, nomorTelepon);
-        Login login = new Login();
-        login.setVisible(true);
-        this.dispose();
     }//GEN-LAST:event_btnRegistActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        // TODO add your handling code here:
-        Login login = new Login();
-        login.setVisible(true);
-        this.dispose();
+
     }//GEN-LAST:event_btnBackActionPerformed
 
     /**
