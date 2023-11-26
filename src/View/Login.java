@@ -66,8 +66,6 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setText("Register?");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(560, 350, 60, 16);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\kimi reza\\Downloads\\Password.png")); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 490);
 
@@ -99,7 +97,7 @@ public class Login extends javax.swing.JFrame {
         nomorTelepon = inputPassword.getText();
 
         userController.login(nama, nomorTelepon);
-        MainMenu mainMenu = new MainMenu();
+        Dashboard mainMenu = new Dashboard();
         mainMenu.setVisible(true);
         this.dispose();
 
