@@ -27,84 +27,89 @@ public class Keranjang extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnKembali = new javax.swing.JButton();
-        btnPesan = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        inpNama = new javax.swing.JTextField();
+        inpNomor = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblKeranjang = new javax.swing.JTable();
+        inpTotalHarga = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        inpNama = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        inpNomortelp = new javax.swing.JTextField();
+        btnKembali = new javax.swing.JButton();
+        btnPesan = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(788, 490));
+        getContentPane().setLayout(null);
 
-        btnKembali.setText("Kembali");
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Kembali");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(50, 420, 60, 30);
 
-        btnPesan.setText("Pesan");
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setText(" Total Harga   :");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(170, 390, 110, 30);
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Pesan");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(680, 420, 50, 30);
+        getContentPane().add(inpNama);
+        inpNama.setBounds(280, 105, 270, 25);
+        getContentPane().add(inpNomor);
+        inpNomor.setBounds(280, 140, 270, 25);
+
+        tblKeranjang.setBackground(new java.awt.Color(204, 204, 204));
         tblKeranjang.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Cucian", "Jumlah/Berat", "Jenis Cucian", "Waktu Pengerjaan", "Harga"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(tblKeranjang);
+        if (tblKeranjang.getColumnModel().getColumnCount() > 0) {
+            tblKeranjang.getColumnModel().getColumn(0).setResizable(false);
+            tblKeranjang.getColumnModel().getColumn(1).setResizable(false);
+            tblKeranjang.getColumnModel().getColumn(2).setResizable(false);
+            tblKeranjang.getColumnModel().getColumn(3).setResizable(false);
+            tblKeranjang.getColumnModel().getColumn(4).setResizable(false);
+        }
 
-        jLabel1.setText("Nama");
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(100, 170, 600, 220);
 
-        jLabel2.setText("Nomor telp");
+        inpTotalHarga.setEnabled(false);
+        getContentPane().add(inpTotalHarga);
+        inpTotalHarga.setBounds(280, 395, 270, 25);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(125, 125, 125)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 515, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(35, 35, 35)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(inpNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(inpNomortelp, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(btnKembali)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnPesan)
-                .addGap(123, 123, 123))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(inpNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(inpNomortelp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(5, 5, 5)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnKembali)
-                    .addComponent(btnPesan))
-                .addGap(12, 12, 12))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon("E:\\Kuliah 2023\\OOP\\UAS_Laundry\\src\\Image\\Keranjang.png")); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 790, 480);
 
-        pack();
+        btnKembali.setText("kembali");
+        getContentPane().add(btnKembali);
+        btnKembali.setBounds(20, 420, 120, 30);
+
+        btnPesan.setText("Pesan");
+        getContentPane().add(btnPesan);
+        btnPesan.setBounds(645, 420, 120, 30);
+
+        setSize(new java.awt.Dimension(802, 517));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -153,9 +158,12 @@ public class Keranjang extends javax.swing.JDialog {
     private javax.swing.JButton btnKembali;
     private javax.swing.JButton btnPesan;
     private javax.swing.JTextField inpNama;
-    private javax.swing.JTextField inpNomortelp;
+    private javax.swing.JTextField inpNomor;
+    private javax.swing.JTextField inpTotalHarga;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblKeranjang;
     // End of variables declaration//GEN-END:variables
