@@ -73,7 +73,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblBlanketWeight">
+    <Component class="javax.swing.JLabel" name="lblJumlahSelimut">
       <Properties>
         <Property name="text" type="java.lang.String" value="20"/>
       </Properties>
@@ -83,7 +83,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblBlanketWashType">
+    <Component class="javax.swing.JLabel" name="lblTipeCuciSelimut">
       <Properties>
         <Property name="text" type="java.lang.String" value="Setrika"/>
       </Properties>
@@ -93,7 +93,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblBlanketDuration">
+    <Component class="javax.swing.JLabel" name="lblLamaPengerjaanSelimut">
       <Properties>
         <Property name="text" type="java.lang.String" value="12"/>
       </Properties>
@@ -103,7 +103,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblClothesWeight">
+    <Component class="javax.swing.JLabel" name="lblBeratBaju">
       <Properties>
         <Property name="text" type="java.lang.String" value="20"/>
       </Properties>
@@ -113,7 +113,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblClothesWashType">
+    <Component class="javax.swing.JLabel" name="lblTipeCuciBaju">
       <Properties>
         <Property name="text" type="java.lang.String" value="Setrika"/>
       </Properties>
@@ -123,7 +123,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblClothesDuration">
+    <Component class="javax.swing.JLabel" name="lblLamaPengerjaanBaju">
       <Properties>
         <Property name="text" type="java.lang.String" value="1"/>
       </Properties>

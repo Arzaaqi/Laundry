@@ -3,18 +3,26 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package View;
+import Logic.*;
+import Controller.*;
 
 /**
  *
  * @author 62811
  */
-public class OrderDetail extends javax.swing.JFrame {
+public class OrderDetail extends ViewController {
 
     /**
      * Creates new form OrderDetail
      */
-    public OrderDetail() {
+    public OrderDetail(Order order) {
         initComponents();
+        lblBeratBaju.setText("" + order.getBeratCucianBaju());
+        lblTipeCuciBaju.setText("" + order.getJenisCuciBaju());
+        lblLamaPengerjaanBaju.setText("" + order.getWaktuPengerjaanBaju());
+        lblJumlahSelimut.setText("" + order.getJumlahCucianSelimut());
+        lblTipeCuciSelimut.setText("" + order.getJenisCuciSelimut());
+        lblLamaPengerjaanSelimut.setText("" + order.getWaktuPengerjaanSelimut());
     }
 
     /**
@@ -31,12 +39,12 @@ public class OrderDetail extends javax.swing.JFrame {
         lblCarpetDuration = new javax.swing.JLabel();
         lblShoesTotal = new javax.swing.JLabel();
         lblShoesDuration = new javax.swing.JLabel();
-        lblBlanketWeight = new javax.swing.JLabel();
-        lblBlanketWashType = new javax.swing.JLabel();
-        lblBlanketDuration = new javax.swing.JLabel();
-        lblClothesWeight = new javax.swing.JLabel();
-        lblClothesWashType = new javax.swing.JLabel();
-        lblClothesDuration = new javax.swing.JLabel();
+        lblJumlahSelimut = new javax.swing.JLabel();
+        lblTipeCuciSelimut = new javax.swing.JLabel();
+        lblLamaPengerjaanSelimut = new javax.swing.JLabel();
+        lblBeratBaju = new javax.swing.JLabel();
+        lblTipeCuciBaju = new javax.swing.JLabel();
+        lblLamaPengerjaanBaju = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
         txtNoTelp = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
@@ -65,29 +73,29 @@ public class OrderDetail extends javax.swing.JFrame {
         getContentPane().add(lblShoesDuration);
         lblShoesDuration.setBounds(230, 550, 50, 26);
 
-        lblBlanketWeight.setText("20");
-        getContentPane().add(lblBlanketWeight);
-        lblBlanketWeight.setBounds(490, 360, 60, 26);
+        lblJumlahSelimut.setText("20");
+        getContentPane().add(lblJumlahSelimut);
+        lblJumlahSelimut.setBounds(490, 360, 60, 26);
 
-        lblBlanketWashType.setText("Setrika");
-        getContentPane().add(lblBlanketWashType);
-        lblBlanketWashType.setBounds(470, 390, 80, 26);
+        lblTipeCuciSelimut.setText("Setrika");
+        getContentPane().add(lblTipeCuciSelimut);
+        lblTipeCuciSelimut.setBounds(470, 390, 80, 26);
 
-        lblBlanketDuration.setText("12");
-        getContentPane().add(lblBlanketDuration);
-        lblBlanketDuration.setBounds(490, 430, 60, 26);
+        lblLamaPengerjaanSelimut.setText("12");
+        getContentPane().add(lblLamaPengerjaanSelimut);
+        lblLamaPengerjaanSelimut.setBounds(490, 430, 60, 26);
 
-        lblClothesWeight.setText("20");
-        getContentPane().add(lblClothesWeight);
-        lblClothesWeight.setBounds(190, 370, 90, 26);
+        lblBeratBaju.setText("20");
+        getContentPane().add(lblBeratBaju);
+        lblBeratBaju.setBounds(190, 370, 90, 26);
 
-        lblClothesWashType.setText("Setrika");
-        getContentPane().add(lblClothesWashType);
-        lblClothesWashType.setBounds(190, 400, 90, 26);
+        lblTipeCuciBaju.setText("Setrika");
+        getContentPane().add(lblTipeCuciBaju);
+        lblTipeCuciBaju.setBounds(190, 400, 90, 26);
 
-        lblClothesDuration.setText("1");
-        getContentPane().add(lblClothesDuration);
-        lblClothesDuration.setBounds(220, 430, 60, 26);
+        lblLamaPengerjaanBaju.setText("1");
+        getContentPane().add(lblLamaPengerjaanBaju);
+        lblLamaPengerjaanBaju.setBounds(220, 430, 60, 26);
         getContentPane().add(txtName);
         txtName.setBounds(260, 190, 260, 22);
         getContentPane().add(txtNoTelp);
@@ -169,7 +177,7 @@ public class OrderDetail extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new OrderDetail().setVisible(true);
+                new OrderDetail(null).setVisible(true);
             }
         });
     }
@@ -180,16 +188,16 @@ public class OrderDetail extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel lblBlanketDuration;
-    private javax.swing.JLabel lblBlanketWashType;
-    private javax.swing.JLabel lblBlanketWeight;
+    private javax.swing.JLabel lblBeratBaju;
     private javax.swing.JLabel lblCarpetDuration;
     private javax.swing.JLabel lblCarpetTotal;
-    private javax.swing.JLabel lblClothesDuration;
-    private javax.swing.JLabel lblClothesWashType;
-    private javax.swing.JLabel lblClothesWeight;
+    private javax.swing.JLabel lblJumlahSelimut;
+    private javax.swing.JLabel lblLamaPengerjaanBaju;
+    private javax.swing.JLabel lblLamaPengerjaanSelimut;
     private javax.swing.JLabel lblShoesDuration;
     private javax.swing.JLabel lblShoesTotal;
+    private javax.swing.JLabel lblTipeCuciBaju;
+    private javax.swing.JLabel lblTipeCuciSelimut;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtNoTelp;
     // End of variables declaration//GEN-END:variables

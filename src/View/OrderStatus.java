@@ -3,20 +3,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package View;
+import Controller.*;
+import Logic.*;
 
 import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author 62811
  */
-public class OrderStatus extends javax.swing.JFrame {
+public class OrderStatus extends ViewController {
 
     /**
      * Creates new form OrderStatus
      */
     public OrderStatus() {
         initComponents();
-        
+        menampilkanTabel();
     }
 
     /**
@@ -104,32 +106,30 @@ public class OrderStatus extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-//    private void menampilkanTabel(){
-//        DefaultTableModel model = (DefaultTableModel)table.getModel();    
-//
-//        // Dapatkan data transaksi dari objek ListTransactions dan tambahkan ke tabel
-//        for (int i = 0; i < listTransactions.getTransactionCount(); i++) {
-//            boolean status = listTransactions.getTransaction(i).isStatus();
-//            String statusText = status ? "Sudah" : "Belum";
-//
-//            model.addRow(new Object[] {
-//                listTransactions.getTransaction(i).getCustomer().getName(),
-//                listTransactions.getTransaction(i).getCustomer().getPhoneNumber(),
-//                statusText
-//            });
-//        }
-//    }
+    private void menampilkanTabel(){
+        DefaultTableModel model = (DefaultTableModel)table.getModel();    
+
+        // Dapatkan data transaksi dari objek ListTransactions dan tambahkan ke tabel
+        for (int i = 0; i < getOrderController().getOrderSize(); i++) {
+
+            model.addRow(new Object[] {
+                getOrderController().getOrder(i).getNamaPelanggan(),
+                getOrderController().getOrder(i).getNomorTeleponPelanggan(),
+            });
+        }
+    }
     
     private void btn_detailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_detailActionPerformed
-//        DefaultTableModel model = (DefaultTableModel) table.getModel();
-//        int selectedRow = table.getSelectedRow();
-//        
-//        if(selectedRow != -1){
-//            
-//        }
-        OrderDetail orderDetail = new OrderDetail();
-        orderDetail.setVisible(true);
-        dispose();
+        DefaultTableModel model = (DefaultTableModel) table.getModel();
+        int selectedRow = table.getSelectedRow();
+        
+        if(selectedRow != -1){
+            Order order = getOrderController().getOrder(selectedRow);
+            
+            OrderDetail detail = new OrderDetail(order);
+            detail.setVisible(true);
+            this.setVisible(false);
+        }
     }//GEN-LAST:event_btn_detailActionPerformed
 
     private void btn_kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_kembaliActionPerformed

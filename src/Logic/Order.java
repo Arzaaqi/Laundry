@@ -4,25 +4,39 @@ public class Order {
 
     private String namaPelanggan;
     private String nomorTeleponPelanggan;
-    private String jenisBarang;
-    private String jenisCuci;
-    private double beratBarang;
-    private int jumlahBarang;
-    private int durasiCuci;
-
-    public Order(String jenisBarang, String jenisCuci, double beratBarang, int durasiCuci) {
-        this.jenisBarang = jenisBarang;
-        this.jenisCuci = jenisCuci;
-        this.beratBarang = beratBarang;
-        this.durasiCuci = durasiCuci;
+    private double beratCucianBaju;
+    private String jenisCuciBaju;
+    private int waktuPengerjaanBaju;
+    private int jumlahCucianSelimut;
+    private String jenisCuciSelimut;
+    private int waktuPengerjaanSelimut;
+    private int jumlahCucianSepatu;
+    private int waktuPengerjaanSepatu;
+    private int jumlahCucianKarpet;
+    private int waktuPengerjaanKarpet;
+    
+    public void tambahBaju(double beratCucianBaju, String jenisCucianBaju, int waktuPengerjaanBaju){
+        this.beratCucianBaju = beratCucianBaju;
+        this.jenisCuciBaju = jenisCuciBaju;
+        this.waktuPengerjaanBaju = waktuPengerjaanBaju;
     }
-
-    public Order(String jenisBarang, int jumlahBarang, int durasiCuci) {
-        this.jenisBarang = jenisBarang;
-        this.jumlahBarang = jumlahBarang;
-        this.durasiCuci = durasiCuci;
+    
+    public void tambahSelimut(int jumlahCucianSelimut, String jenisCucianSelimut, int waktuPengerjaanSelimut){
+        this.jumlahCucianSelimut = jumlahCucianSelimut;
+        this.jenisCuciSelimut = jenisCuciSelimut;
+        this.waktuPengerjaanBaju = waktuPengerjaanSelimut;
     }
-
+    
+    public void tambahSepatu(int jumlahCucianSepatu, int waktuPengerjaanSepatu){
+        this.jumlahCucianSepatu = jumlahCucianSepatu;
+        this.waktuPengerjaanSepatu = waktuPengerjaanSepatu;
+    }
+    
+    public void tambahKarpet(int jumlahCucianKarpet, int waktuPengerjaanKarpet){
+        this.jumlahCucianKarpet = jumlahCucianKarpet;
+        this.waktuPengerjaanKarpet = waktuPengerjaanKarpet;
+    }
+    
     public String getNamaPelanggan() {
         return namaPelanggan;
     }
@@ -31,52 +45,85 @@ public class Order {
         return nomorTeleponPelanggan;
     }
 
-    public String getJenisBarang() {
-        return jenisBarang;
+    public double getBeratCucianBaju() {
+        return beratCucianBaju;
     }
 
-    public String getJenisCuci() {
-        return jenisCuci;
+    public void setBeratCucianBaju(double beratCucianBaju) {
+        this.beratCucianBaju = beratCucianBaju;
     }
 
-    public double getBeratBarang() {
-        return beratBarang;
+    public String getJenisCuciBaju() {
+        return jenisCuciBaju;
     }
 
-    public int getJumlahBarang() {
-        return jumlahBarang;
+    public void setJenisCuciBaju(String jenisCuciBaju) {
+        this.jenisCuciBaju = jenisCuciBaju;
     }
 
-    public int getDurasiCuci() {
-        return durasiCuci;
+    public int getWaktuPengerjaanBaju() {
+        return waktuPengerjaanBaju;
     }
 
-    public void setNamaPelanggan(String namaPelanggan) {
-        this.namaPelanggan = namaPelanggan;
+    public void setWaktuPengerjaanBaju(int waktuPengerjaanBaju) {
+        this.waktuPengerjaanBaju = waktuPengerjaanBaju;
     }
 
-    public void setNomorTeleponPelanggan(String nomorTeleponPelanggan) {
-        this.nomorTeleponPelanggan = nomorTeleponPelanggan;
+    public int getJumlahCucianSelimut() {
+        return jumlahCucianSelimut;
     }
 
-    public void setJenisBarang(String jenisBarang) {
-        this.jenisBarang = jenisBarang;
+    public void setJumlahCucianSelimut(int jumlahCucianSelimut) {
+        this.jumlahCucianSelimut = jumlahCucianSelimut;
     }
 
-    public void setJenisCuci(String jenisCuci) {
-        this.jenisCuci = jenisCuci;
+    public String getJenisCuciSelimut() {
+        return jenisCuciSelimut;
     }
 
-    public void setBeratBarang(double beratBarang) {
-        this.beratBarang = beratBarang;
+    public void setJenisCuciSelimut(String jenisCuciSelimut) {
+        this.jenisCuciSelimut = jenisCuciSelimut;
     }
 
-    public void setJumlahBarang(int jumlahBarang) {
-        this.jumlahBarang = jumlahBarang;
+    public int getWaktuPengerjaanSelimut() {
+        return waktuPengerjaanSelimut;
     }
 
-    public void setDurasiCuci(int durasiCuci) {
-        this.durasiCuci = durasiCuci;
+    public void setWaktuPengerjaanSelimut(int waktuPengerjaanSelimut) {
+        this.waktuPengerjaanSelimut = waktuPengerjaanSelimut;
     }
 
+    public int getJumlahCucianSepatu() {
+        return jumlahCucianSepatu;
+    }
+
+    public void setJumlahCucianSepatu(int jumlahCucianSepatu) {
+        this.jumlahCucianSepatu = jumlahCucianSepatu;
+    }
+
+    public int getWaktuPengerjaanSepatu() {
+        return waktuPengerjaanSepatu;
+    }
+
+    public void setWaktuPengerjaanSepatu(int waktuPengerjaanSepatu) {
+        this.waktuPengerjaanSepatu = waktuPengerjaanSepatu;
+    }
+
+    public int getJumlahCucianKarpet() {
+        return jumlahCucianKarpet;
+    }
+
+    public void setJumlahCucianKarpet(int jumlahCucianKarpet) {
+        this.jumlahCucianKarpet = jumlahCucianKarpet;
+    }
+
+    public int getWaktuPengerjaanKarpet() {
+        return waktuPengerjaanKarpet;
+    }
+
+    public void setWaktuPengerjaanKarpet(int waktuPengerjaanKarpet) {
+        this.waktuPengerjaanKarpet = waktuPengerjaanKarpet;
+    }
+
+    
 }

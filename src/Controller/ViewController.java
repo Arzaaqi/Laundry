@@ -10,6 +10,11 @@ public class ViewController extends JFrame {
     private UserController userController = new UserController();
     private OrderController orderController = new OrderController();
     
+    public ViewController() {
+        orderController.tambahOrderBaju(2.0, "Kering", 3);
+        //orderController.tambahOrderSelimut(2, "Setrika", 3);
+    }
+    
     public void loadController(UserController userController, OrderController orderController) {
         this.userController = userController;
         this.orderController = orderController;
