@@ -2,13 +2,13 @@ package View;
 
 import java.util.ArrayList;
 import java.awt.Image;
-
-public class Login extends javax.swing.JFrame {
-   
-import Controller.*;
-import Logic.*;
 import javax.swing.JOptionPane;
 
+import Controller.*;
+import Logic.*;
+
+public class Login extends ViewController {
+   
     public Login() {
         initComponents();
     }
@@ -57,10 +57,6 @@ import javax.swing.JOptionPane;
         btnLogin.setBounds(670, 390, 72, 23);
 
         jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Kuliah\\Tugas\\Semester 3\\Pemrograman Berorientasi Objek\\Laundry\\src\\Image\\login.png")); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Register?");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(560, 350, 60, 16);
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 490);
 
@@ -82,7 +78,7 @@ import javax.swing.JOptionPane;
     }//GEN-LAST:event_inputNamaActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        User user = getUserController().login(inputNama.getText(), new String(inputPassword.getText()));
+        User user = getUserController().login(inputNama.getText(), inputPassword.getText());
 
         if (user == null) {
             JOptionPane.showMessageDialog(this, "Email atau password salah!", "Login gagal", JOptionPane.WARNING_MESSAGE);
@@ -92,10 +88,7 @@ import javax.swing.JOptionPane;
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnRegistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistActionPerformed
-        // TODO add your handling code here:
-        Register register = new Register();
-        register.setVisible(true);
-        this.dispose();
+        openFrame("register");
     }//GEN-LAST:event_btnRegistActionPerformed
 
     public static void main(String args[]) {
