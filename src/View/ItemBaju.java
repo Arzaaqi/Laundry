@@ -6,14 +6,14 @@ package View;
 
 /**
  *
- * @author ZAQI
+ * @author 62811
  */
-public class OrderToPick extends javax.swing.JFrame {
+public class ItemBaju extends javax.swing.JFrame {
 
     /**
-     * Creates new form OrderToPick
+     * Creates new form ItemBaju
      */
-    public OrderToPick() {
+    public ItemBaju() {
         initComponents();
     }
 
@@ -26,37 +26,11 @@ public class OrderToPick extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnKembali = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(788, 490));
+        setPreferredSize(new java.awt.Dimension(829, 490));
         getContentPane().setLayout(null);
 
-        btnKembali.setText("Kembali");
-        getContentPane().add(btnKembali);
-        btnKembali.setBounds(12, 434, 77, 25);
-
-        jButton1.setText("Selimut");
-        getContentPane().add(jButton1);
-        jButton1.setBounds(327, 98, 116, 101);
-
-        jButton2.setText("Sepatu");
-        getContentPane().add(jButton2);
-        jButton2.setBounds(101, 289, 116, 101);
-
-        jButton3.setText("Karpet");
-        getContentPane().add(jButton3);
-        jButton3.setBounds(327, 289, 116, 101);
-
-        jButton4.setText("Baju");
-        getContentPane().add(jButton4);
-        jButton4.setBounds(101, 98, 116, 101);
-
-        setSize(new java.awt.Dimension(564, 509));
+        setSize(new java.awt.Dimension(843, 527));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -77,29 +51,24 @@ public class OrderToPick extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(OrderToPick.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ItemBaju.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(OrderToPick.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ItemBaju.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(OrderToPick.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ItemBaju.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(OrderToPick.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ItemBaju.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new OrderToPick().setVisible(true);
+                new ItemBaju().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnKembali;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     // End of variables declaration//GEN-END:variables
 }
