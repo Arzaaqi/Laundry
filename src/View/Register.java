@@ -21,7 +21,6 @@ public class Register extends ViewController {
         inputUsername = new javax.swing.JTextField();
         inputNomorhp = new javax.swing.JTextField();
         btnRegist = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
@@ -34,9 +33,9 @@ public class Register extends ViewController {
             }
         });
         getContentPane().add(inputUsername);
-        inputUsername.setBounds(330, 270, 140, 22);
+        inputUsername.setBounds(330, 280, 140, 22);
         getContentPane().add(inputNomorhp);
-        inputNomorhp.setBounds(330, 310, 140, 20);
+        inputNomorhp.setBounds(330, 330, 140, 20);
 
         btnRegist.setText("Regist");
         btnRegist.addActionListener(new java.awt.event.ActionListener() {
@@ -46,16 +45,6 @@ public class Register extends ViewController {
         });
         getContentPane().add(btnRegist);
         btnRegist.setBounds(470, 400, 72, 23);
-
-        jButton1.setBackground(new java.awt.Color(76, 111, 191));
-        jButton1.setBorder(null);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(320, 340, 90, 23);
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -82,12 +71,10 @@ public class Register extends ViewController {
 
     }//GEN-LAST:event_btnRegistActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-
+        Login login = new Login();
+        login.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnBackActionPerformed
 
     /**
@@ -130,7 +117,6 @@ public class Register extends ViewController {
     private javax.swing.JButton btnRegist;
     private javax.swing.JTextField inputNomorhp;
     private javax.swing.JTextField inputUsername;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
