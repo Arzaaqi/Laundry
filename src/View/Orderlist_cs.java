@@ -29,8 +29,11 @@ public class Orderlist_cs extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         btn_kembali = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -56,11 +59,25 @@ public class Orderlist_cs extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(370, 430, 60, 30);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/orderlist_cus.png"))); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
+        jLabel4.setText("Nama pokok");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(260, 110, 80, 20);
+
+        jLabel5.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
+        jLabel5.setText("no.telepon");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(260, 140, 80, 20);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/order_list.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 490);
         getContentPane().add(btn_kembali);
         btn_kembali.setBounds(340, 430, 110, 30);
+
+        jLabel3.setText("jLabel3");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(270, 140, 38, 16);
 
         setSize(new java.awt.Dimension(799, 497));
         setLocationRelativeTo(null);
@@ -105,6 +122,9 @@ public class Orderlist_cs extends javax.swing.JFrame {
     private javax.swing.JButton btn_kembali;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
