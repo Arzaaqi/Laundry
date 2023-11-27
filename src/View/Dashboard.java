@@ -48,7 +48,7 @@ public class Dashboard extends javax.swing.JFrame {
         getContentPane().add(btnOrderList);
         btnOrderList.setBounds(480, 360, 170, 30);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/dashboard.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon("A:\\backuptugas\\documents\\OOP\\Laundry\\src\\Image\\dashboard.png")); // NOI18N
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, 0, 790, 490);
 
