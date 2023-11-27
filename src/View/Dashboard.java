@@ -19,6 +19,7 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         btnOrderList = new javax.swing.JButton();
+        btnLogout = new javax.swing.JButton();
         btnInputOrder = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -28,13 +29,13 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Input Order");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(160, 360, 100, 25);
+        jLabel1.setBounds(160, 330, 100, 25);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Order List");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(520, 360, 100, 25);
+        jLabel2.setBounds(520, 330, 100, 25);
 
         jLabel3.setIcon(new javax.swing.ImageIcon("A:\\backuptugas\\documents\\OOP\\Laundry\\src\\Image\\dashboard.png")); // NOI18N
         getContentPane().add(jLabel3);
@@ -51,7 +52,16 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnOrderList);
-        btnOrderList.setBounds(470, 350, 210, 50);
+        btnOrderList.setBounds(470, 320, 210, 50);
+
+        btnLogout.setText("Logout");
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogoutActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnLogout);
+        btnLogout.setBounds(350, 420, 100, 40);
 
         btnInputOrder.setBackground(new java.awt.Color(94, 23, 235));
         btnInputOrder.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -64,7 +74,7 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnInputOrder);
-        btnInputOrder.setBounds(120, 350, 220, 50);
+        btnInputOrder.setBounds(120, 320, 220, 50);
 
         setSize(new java.awt.Dimension(804, 498));
         setLocationRelativeTo(null);
@@ -77,6 +87,13 @@ public class Dashboard extends javax.swing.JFrame {
     private void btnOrderListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrderListActionPerformed
         
     }//GEN-LAST:event_btnOrderListActionPerformed
+
+    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
+        // TODO add your handling code here:
+        Login login = new Login();
+        login.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnLogoutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -116,6 +133,7 @@ public class Dashboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnInputOrder;
+    private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnOrderList;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
