@@ -15,7 +15,7 @@ public class Order {
     private int jumlahCucianKarpet;
     private int waktuPengerjaanKarpet;
     
-    public void tambahBaju(double beratCucianBaju, String jenisCucianBaju, int waktuPengerjaanBaju){
+    public void tambahBaju(double beratCucianBaju, String jenisCuciBaju, int waktuPengerjaanBaju){
         this.beratCucianBaju = beratCucianBaju;
         this.jenisCuciBaju = jenisCuciBaju;
         this.waktuPengerjaanBaju = waktuPengerjaanBaju;

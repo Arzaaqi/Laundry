@@ -18,7 +18,7 @@ public class OrderDetail extends ViewController {
     public OrderDetail(Order order) {
         initComponents();
         lblBeratBaju.setText("" + order.getBeratCucianBaju());
-        lblTipeCuciBaju.setText("" + order.getJenisCuciBaju());
+        lblTipeCuciBaju.setText(order.getJenisCuciBaju());
         lblLamaPengerjaanBaju.setText("" + order.getWaktuPengerjaanBaju());
         lblJumlahSelimut.setText("" + order.getJumlahCucianSelimut());
         lblTipeCuciSelimut.setText("" + order.getJenisCuciSelimut());
