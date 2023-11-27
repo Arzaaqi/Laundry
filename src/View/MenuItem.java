@@ -15,42 +15,26 @@ public class MenuItem extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnBaju = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        btnKeranjang = new javax.swing.JButton();
+        btnSelimut = new javax.swing.JButton();
         btnSepatu = new javax.swing.JButton();
         btnKarpet = new javax.swing.JButton();
-        btnSelimut = new javax.swing.JButton();
-        btnKeranjang = new javax.swing.JButton();
+        btnBaju = new javax.swing.JButton();
         btnKembali = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
-        btnBaju.setText("Baju");
-        btnBaju.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBajuActionPerformed(evt);
-            }
-        });
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setText("Kembali");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(50, 430, 80, 20);
 
-        btnSepatu.setText("Sepatu");
-        btnSepatu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSepatuActionPerformed(evt);
-            }
-        });
-
-        btnKarpet.setText("Karpet");
-        btnKarpet.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnKarpetActionPerformed(evt);
-            }
-        });
-
-        btnSelimut.setText("Selimut");
-        btnSelimut.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSelimutActionPerformed(evt);
-            }
-        });
+        jLabel1.setIcon(new javax.swing.ImageIcon("A:\\backuptugas\\documents\\OOP\\Laundry\\src\\Image\\menu item.png")); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 790, 490);
 
         btnKeranjang.setText("Keranjang");
         btnKeranjang.addActionListener(new java.awt.event.ActionListener() {
@@ -58,6 +42,44 @@ public class MenuItem extends javax.swing.JFrame {
                 btnKeranjangActionPerformed(evt);
             }
         });
+        getContentPane().add(btnKeranjang);
+        btnKeranjang.setBounds(650, 80, 110, 40);
+
+        btnSelimut.setText("Selimut");
+        btnSelimut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSelimutActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnSelimut);
+        btnSelimut.setBounds(430, 300, 160, 110);
+
+        btnSepatu.setText("Sepatu");
+        btnSepatu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSepatuActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnSepatu);
+        btnSepatu.setBounds(430, 150, 160, 110);
+
+        btnKarpet.setText("Karpet");
+        btnKarpet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKarpetActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnKarpet);
+        btnKarpet.setBounds(200, 300, 160, 110);
+
+        btnBaju.setText("Baju");
+        btnBaju.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBajuActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnBaju);
+        btnBaju.setBounds(200, 150, 160, 110);
 
         btnKembali.setText("Kembali");
         btnKembali.addActionListener(new java.awt.event.ActionListener() {
@@ -65,48 +87,10 @@ public class MenuItem extends javax.swing.JFrame {
                 btnKembaliActionPerformed(evt);
             }
         });
+        getContentPane().add(btnKembali);
+        btnKembali.setBounds(20, 430, 110, 23);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnKeranjang)
-                .addGap(34, 34, 34))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(133, 133, 133)
-                        .addComponent(btnBaju)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnSepatu)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnKarpet)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnSelimut))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(btnKembali)))
-                .addContainerGap(145, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(btnKeranjang)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 200, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBaju)
-                    .addComponent(btnSepatu)
-                    .addComponent(btnKarpet)
-                    .addComponent(btnSelimut))
-                .addGap(130, 130, 130)
-                .addComponent(btnKembali)
-                .addGap(27, 27, 27))
-        );
-
-        pack();
+        setBounds(0, 0, 804, 498);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBajuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBajuActionPerformed
@@ -180,5 +164,7 @@ public class MenuItem extends javax.swing.JFrame {
     private javax.swing.JButton btnKeranjang;
     private javax.swing.JButton btnSelimut;
     private javax.swing.JButton btnSepatu;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
