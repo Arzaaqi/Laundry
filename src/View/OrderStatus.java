@@ -30,9 +30,9 @@ public class OrderStatus extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
-        goToDetail_btn = new javax.swing.JButton();
-        goBack_btn = new javax.swing.JButton();
-        deleteData_btn = new javax.swing.JButton();
+        btn_detail = new javax.swing.JButton();
+        btn_kembali = new javax.swing.JButton();
+        btn_hapus = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -59,34 +59,43 @@ public class OrderStatus extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(160, 90, 530, 300);
 
-        goToDetail_btn.setText("Detail");
-        goToDetail_btn.addActionListener(new java.awt.event.ActionListener() {
+        btn_detail.setBackground(new java.awt.Color(0,0,0,0));
+        btn_detail.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
+        btn_detail.setForeground(new java.awt.Color(240, 240, 240));
+        btn_detail.setText("Detail");
+        btn_detail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                goToDetail_btnActionPerformed(evt);
+                btn_detailActionPerformed(evt);
             }
         });
-        getContentPane().add(goToDetail_btn);
-        goToDetail_btn.setBounds(650, 440, 120, 30);
+        getContentPane().add(btn_detail);
+        btn_detail.setBounds(655, 440, 120, 33);
 
-        goBack_btn.setText("Kembali");
-        goBack_btn.addActionListener(new java.awt.event.ActionListener() {
+        btn_kembali.setBackground(new java.awt.Color(0,0,0,0));
+        btn_kembali.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
+        btn_kembali.setForeground(new java.awt.Color(240, 240, 240));
+        btn_kembali.setText("Kembali");
+        btn_kembali.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                goBack_btnActionPerformed(evt);
+                btn_kembaliActionPerformed(evt);
             }
         });
-        getContentPane().add(goBack_btn);
-        goBack_btn.setBounds(390, 440, 120, 30);
+        getContentPane().add(btn_kembali);
+        btn_kembali.setBounds(394, 440, 118, 33);
 
-        deleteData_btn.setText("Hapus");
-        deleteData_btn.addActionListener(new java.awt.event.ActionListener() {
+        btn_hapus.setBackground(new java.awt.Color(0,0,0,0));
+        btn_hapus.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
+        btn_hapus.setForeground(new java.awt.Color(240, 240, 240));
+        btn_hapus.setText("Hapus");
+        btn_hapus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteData_btnActionPerformed(evt);
+                btn_hapusActionPerformed(evt);
             }
         });
-        getContentPane().add(deleteData_btn);
-        deleteData_btn.setBounds(523, 440, 120, 30);
+        getContentPane().add(btn_hapus);
+        btn_hapus.setBounds(525, 440, 118, 33);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("E:\\Kuliah\\Semester 3\\OOP\\Tugas\\UAS-Project\\Laundry\\img\\Alin Status Order.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("E:\\Kuliah\\Semester 3\\OOP\\Tugas\\UAS-Project\\Laundry\\src\\Image\\gambarListPemesanan.png")); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 490);
@@ -95,7 +104,23 @@ public class OrderStatus extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void goToDetail_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goToDetail_btnActionPerformed
+//    private void menampilkanTabel(){
+//        DefaultTableModel model = (DefaultTableModel)table.getModel();    
+//
+//        // Dapatkan data transaksi dari objek ListTransactions dan tambahkan ke tabel
+//        for (int i = 0; i < listTransactions.getTransactionCount(); i++) {
+//            boolean status = listTransactions.getTransaction(i).isStatus();
+//            String statusText = status ? "Sudah" : "Belum";
+//
+//            model.addRow(new Object[] {
+//                listTransactions.getTransaction(i).getCustomer().getName(),
+//                listTransactions.getTransaction(i).getCustomer().getPhoneNumber(),
+//                statusText
+//            });
+//        }
+//    }
+    
+    private void btn_detailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_detailActionPerformed
 //        DefaultTableModel model = (DefaultTableModel) table.getModel();
 //        int selectedRow = table.getSelectedRow();
 //        
@@ -105,15 +130,15 @@ public class OrderStatus extends javax.swing.JFrame {
         OrderDetail orderDetail = new OrderDetail();
         orderDetail.setVisible(true);
         dispose();
-    }//GEN-LAST:event_goToDetail_btnActionPerformed
+    }//GEN-LAST:event_btn_detailActionPerformed
 
-    private void goBack_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goBack_btnActionPerformed
+    private void btn_kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_kembaliActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_goBack_btnActionPerformed
+    }//GEN-LAST:event_btn_kembaliActionPerformed
 
-    private void deleteData_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteData_btnActionPerformed
+    private void btn_hapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_hapusActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_deleteData_btnActionPerformed
+    }//GEN-LAST:event_btn_hapusActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,9 +176,9 @@ public class OrderStatus extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton deleteData_btn;
-    private javax.swing.JButton goBack_btn;
-    private javax.swing.JButton goToDetail_btn;
+    private javax.swing.JButton btn_detail;
+    private javax.swing.JButton btn_hapus;
+    private javax.swing.JButton btn_kembali;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable table;

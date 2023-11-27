@@ -27,8 +27,6 @@ public class OrderDetail extends javax.swing.JFrame {
     private void initComponents() {
 
         jCheckBox1 = new javax.swing.JCheckBox();
-        btnKembali = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         lblCarpetTotal = new javax.swing.JLabel();
         lblCarpetDuration = new javax.swing.JLabel();
         lblShoesTotal = new javax.swing.JLabel();
@@ -42,25 +40,14 @@ public class OrderDetail extends javax.swing.JFrame {
         txtName = new javax.swing.JTextField();
         txtNoTelp = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
+        btn_proses = new javax.swing.JButton();
+        btn_embali = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         jCheckBox1.setText("jCheckBox1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
-
-        btnKembali.setText("Kembali");
-        btnKembali.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnKembaliActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnKembali);
-        btnKembali.setBounds(340, 610, 110, 25);
-
-        jButton3.setText("Ubah Pesanan");
-        getContentPane().add(jButton3);
-        jButton3.setBounds(470, 620, 110, 25);
 
         lblCarpetTotal.setText("tes");
         getContentPane().add(lblCarpetTotal);
@@ -108,9 +95,33 @@ public class OrderDetail extends javax.swing.JFrame {
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Belum Selesai", "Selesaikan", " " }));
         getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(260, 270, 102, 22);
+        jComboBox1.setBounds(260, 270, 140, 22);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("E:\\Kuliah\\Semester 3\\OOP\\Tugas\\UAS-Project\\Laundry\\img\\ALIF DETAIL PEMESANAN.png")); // NOI18N
+        btn_proses.setBackground(new java.awt.Color(0,0,0,0));
+        btn_proses.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
+        btn_proses.setForeground(new java.awt.Color(240, 240, 240));
+        btn_proses.setText("Proses");
+        btn_proses.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_prosesActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_proses);
+        btn_proses.setBounds(468, 618, 110, 34);
+
+        btn_embali.setBackground(new java.awt.Color(0,0,0,0));
+        btn_embali.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
+        btn_embali.setForeground(new java.awt.Color(240, 240, 240));
+        btn_embali.setText("Kembali");
+        btn_embali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_embaliActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_embali);
+        btn_embali.setBounds(336, 618, 110, 34);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("E:\\Kuliah\\Semester 3\\OOP\\Tugas\\UAS-Project\\Laundry\\src\\Image\\gambarDetailPemesanan.png")); // NOI18N
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, 0, 600, 670);
 
@@ -118,11 +129,15 @@ public class OrderDetail extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
+    private void btn_embaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_embaliActionPerformed
         OrderStatus orderStatus = new OrderStatus();
         orderStatus.setVisible(true);
         dispose();
-    }//GEN-LAST:event_btnKembaliActionPerformed
+    }//GEN-LAST:event_btn_embaliActionPerformed
+
+    private void btn_prosesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_prosesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_prosesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -160,8 +175,8 @@ public class OrderDetail extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnKembali;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btn_embali;
+    private javax.swing.JButton btn_proses;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel3;
