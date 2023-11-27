@@ -4,6 +4,8 @@
  */
 package View;
 
+import Logic.*;
+
 /**
  *
  * @author ZAQI
@@ -15,6 +17,7 @@ public class Kalkulator extends javax.swing.JFrame {
      */
     public Kalkulator() {
         initComponents();
+
     }
 
     /**
@@ -26,18 +29,152 @@ public class Kalkulator extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblBackground = new javax.swing.JLabel();
+        PindahPanel = new javax.swing.JTabbedPane();
+        pnlBaju = new javax.swing.JPanel();
+        inpBerat = new javax.swing.JTextField();
+        cmbJenisCucian = new javax.swing.JComboBox<>();
+        cmbLamaPengerjaan = new javax.swing.JComboBox<>();
+        inpHarga = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        pnlSelimut = new javax.swing.JPanel();
+        pnlSepatu = new javax.swing.JPanel();
+        pnlKarpet = new javax.swing.JPanel();
+        lblKembali = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        btnKembali = new javax.swing.JButton();
+        btnHitung = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        lblBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/KalkulatorLaundry.png"))); // NOI18N
-        getContentPane().add(lblBackground);
-        lblBackground.setBounds(0, 0, 790, 490);
+        PindahPanel.setBackground(new java.awt.Color(102, 153, 255));
+        PindahPanel.setForeground(new java.awt.Color(255, 255, 255));
+        PindahPanel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
-        setSize(new java.awt.Dimension(802, 497));
+        pnlBaju.setBackground(new java.awt.Color(255, 255, 255));
+        pnlBaju.setPreferredSize(new java.awt.Dimension(610, 230));
+        pnlBaju.setLayout(null);
+        pnlBaju.add(inpBerat);
+        inpBerat.setBounds(321, 52, 220, 30);
+
+        cmbJenisCucian.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cuci Kering", "Cuci Kering + Setrika", "Setrika" }));
+        cmbJenisCucian.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbJenisCucianActionPerformed(evt);
+            }
+        });
+        pnlBaju.add(cmbJenisCucian);
+        cmbJenisCucian.setBounds(320, 100, 220, 30);
+
+        cmbLamaPengerjaan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Expres", "Standar" }));
+        pnlBaju.add(cmbLamaPengerjaan);
+        cmbLamaPengerjaan.setBounds(320, 150, 220, 30);
+        pnlBaju.add(inpHarga);
+        inpHarga.setBounds(170, 10, 260, 30);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("E:\\Kuliah 2023\\OOP\\UAS_Laundry\\src\\Image\\KalkulatorBaju.png")); // NOI18N
+        pnlBaju.add(jLabel3);
+        jLabel3.setBounds(0, 0, 610, 230);
+
+        PindahPanel.addTab("Baju", pnlBaju);
+        pnlBaju.getAccessibleContext().setAccessibleDescription("");
+
+        javax.swing.GroupLayout pnlSelimutLayout = new javax.swing.GroupLayout(pnlSelimut);
+        pnlSelimut.setLayout(pnlSelimutLayout);
+        pnlSelimutLayout.setHorizontalGroup(
+            pnlSelimutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 610, Short.MAX_VALUE)
+        );
+        pnlSelimutLayout.setVerticalGroup(
+            pnlSelimutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 229, Short.MAX_VALUE)
+        );
+
+        PindahPanel.addTab("Selimut", pnlSelimut);
+
+        pnlSepatu.setLayout(null);
+        PindahPanel.addTab("Sepatu", pnlSepatu);
+
+        pnlKarpet.setPreferredSize(new java.awt.Dimension(610, 230));
+
+        javax.swing.GroupLayout pnlKarpetLayout = new javax.swing.GroupLayout(pnlKarpet);
+        pnlKarpet.setLayout(pnlKarpetLayout);
+        pnlKarpetLayout.setHorizontalGroup(
+            pnlKarpetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 610, Short.MAX_VALUE)
+        );
+        pnlKarpetLayout.setVerticalGroup(
+            pnlKarpetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 229, Short.MAX_VALUE)
+        );
+
+        PindahPanel.addTab("Karpet", pnlKarpet);
+
+        getContentPane().add(PindahPanel);
+        PindahPanel.setBounds(80, 140, 610, 260);
+
+        lblKembali.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblKembali.setForeground(new java.awt.Color(255, 255, 255));
+        lblKembali.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblKembali.setText("Kembali");
+        lblKembali.setToolTipText("");
+        lblKembali.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        lblKembali.setPreferredSize(new java.awt.Dimension(61, 25));
+        getContentPane().add(lblKembali);
+        lblKembali.setBounds(50, 420, 90, 40);
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Hitung");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(660, 430, 70, 20);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("E:\\Kuliah 2023\\OOP\\UAS_Laundry\\src\\Image\\KalkulatorLaundry.png")); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(-3, -4, 790, 490);
+
+        btnKembali.setText("Kembali");
+        getContentPane().add(btnKembali);
+        btnKembali.setBounds(40, 420, 110, 40);
+
+        btnHitung.setText("Hitung");
+        btnHitung.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHitungActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnHitung);
+        btnHitung.setBounds(640, 420, 110, 40);
+
+        setSize(new java.awt.Dimension(797, 518));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cmbJenisCucianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbJenisCucianActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbJenisCucianActionPerformed
+
+    private void btnHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungActionPerformed
+        int selectedIndex = PindahPanel.getSelectedIndex();
+
+        // Check which panel is currently active
+        if (selectedIndex == 0) { // pnlBaju
+            KalkulatorBaju baju = new KalkulatorBaju();
+            int berat = Integer.parseInt(inpBerat.getText());
+            String jenisCucian = (String) cmbJenisCucian.getSelectedItem();
+            String lamaPengerjaan = (String) cmbLamaPengerjaan.getSelectedItem();
+
+            baju.setBerat(berat);
+            baju.setJenisCucian(jenisCucian);
+            baju.setJenisPengerjaan(lamaPengerjaan);
+
+            inpHarga.setText(String.valueOf(baju.hitung()));
+
+        }
+    }//GEN-LAST:event_btnHitungActionPerformed
 
     /**
      * @param args the command line arguments
@@ -65,6 +202,7 @@ public class Kalkulator extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Kalkulator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -75,6 +213,20 @@ public class Kalkulator extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel lblBackground;
+    private javax.swing.JTabbedPane PindahPanel;
+    private javax.swing.JButton btnHitung;
+    private javax.swing.JButton btnKembali;
+    private javax.swing.JComboBox<String> cmbJenisCucian;
+    private javax.swing.JComboBox<String> cmbLamaPengerjaan;
+    private javax.swing.JTextField inpBerat;
+    private javax.swing.JTextField inpHarga;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel lblKembali;
+    private javax.swing.JPanel pnlBaju;
+    private javax.swing.JPanel pnlKarpet;
+    private javax.swing.JPanel pnlSelimut;
+    private javax.swing.JPanel pnlSepatu;
     // End of variables declaration//GEN-END:variables
 }

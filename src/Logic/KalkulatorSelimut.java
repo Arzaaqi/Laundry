@@ -8,13 +8,12 @@ package Logic;
  *
  * @author ZAQI
  */
-public class KalkulatorBaju implements Kalkulator {
-
+public class KalkulatorSelimut implements Kalkulator{
     private int berat;
     private String jenisPengerjaan;
     private String jenisCucian;
 
-    public KalkulatorBaju() {
+    public KalkulatorSelimut() {
 
     }
 
@@ -33,11 +32,11 @@ public class KalkulatorBaju implements Kalkulator {
     private int biayaCucian() {
         int biayaCucian = 0;
         if (jenisCucian.equalsIgnoreCase("Cuci Kering")) {
-            biayaCucian = 3000;
+            biayaCucian = 2000;
         } else if (jenisCucian.equalsIgnoreCase("Cuci Kering + Setrika")) {
-            biayaCucian = 4000;
-        } else if (jenisCucian.equalsIgnoreCase("Setrika")) {
             biayaCucian = 3000;
+        } else if (jenisCucian.equalsIgnoreCase("Setrika")) {
+            biayaCucian = 2000;
         } else {
             // Handle unknown jenisCucian
             System.out.println("Jenis Cucian tidak valid.");
