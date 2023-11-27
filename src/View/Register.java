@@ -1,6 +1,9 @@
 package View;
 
-public class Register extends javax.swing.JFrame {
+import Controller.*;
+import View.*;
+
+public class Register extends ViewController {
 
     public Register() {
         initComponents();
@@ -62,8 +65,8 @@ public class Register extends javax.swing.JFrame {
         });
         getContentPane().add(btnBack);
         btnBack.setBounds(250, 400, 72, 23);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/register.png"))); // NOI18N
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\kimi reza\\Downloads\\register.png")); // NOI18N
+
+        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Kuliah\\Tugas\\Semester 3\\Pemrograman Berorientasi Objek\\Laundry\\src\\Image\\register.png")); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 0, 790, 490);
 

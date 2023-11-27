@@ -1,12 +1,16 @@
 package View;
 
 import java.util.ArrayList;
+import java.awt.Image;
 
-public class Login extends javax.swing.JFrame {
+import Controller.*;
+import Logic.*;
+import javax.swing.JOptionPane;
+
+public class Login extends ViewController {
 
     public Login() {
         initComponents();
-
     }
 
     /**
@@ -52,7 +56,7 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(560, 350, 60, 16);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/login.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Kuliah\\Tugas\\Semester 3\\Pemrograman Berorientasi Objek\\Laundry\\src\\Image\\login.png")); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 490);
 
@@ -73,11 +77,17 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void inputNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputNamaActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_inputNamaActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        User user = getUserController().login(inputNama.getText(), new String(inputPassword.getText()));
 
+        if (user == null) {
+            JOptionPane.showMessageDialog(this, "Email atau password salah!", "Login gagal", JOptionPane.WARNING_MESSAGE);
+        } else {
+            openFrame("dashboard");
+        }
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
