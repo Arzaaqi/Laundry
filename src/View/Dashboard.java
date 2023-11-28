@@ -86,7 +86,7 @@ public class Dashboard extends ViewController {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnInputOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInputOrderActionPerformed
-        
+        openFrame("menu_item");
     }//GEN-LAST:event_btnInputOrderActionPerformed
 
     private void btnOrderListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrderListActionPerformed

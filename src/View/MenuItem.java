@@ -1,6 +1,8 @@
 package View;
 
-public class MenuItem extends javax.swing.JFrame {
+import Controller.*;
+
+public class MenuItem extends ViewController {
 
     public MenuItem() {
         initComponents();
@@ -119,7 +121,7 @@ public class MenuItem extends javax.swing.JFrame {
     }//GEN-LAST:event_btnKeranjangActionPerformed
 
     private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
-        
+        openFrame("dashboard");
     }//GEN-LAST:event_btnKembaliActionPerformed
 
     /**

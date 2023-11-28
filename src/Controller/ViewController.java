@@ -28,6 +28,7 @@ public class ViewController extends JFrame {
                 case "register" -> new Register();
                 case "dashboard" -> new Dashboard();
                 case "order_status" -> new OrderStatus();
+                case "menu_item" -> new MenuItem();
                 default -> null;
             };
     }
