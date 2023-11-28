@@ -1,10 +1,14 @@
 package View;
 
+import Logic.LogicKeranjang;
+
 public class ItemKarpet extends Item {
 
-    public ItemKarpet(java.awt.Frame parent, boolean modal) {
+    LogicKeranjang keranjang;
+    public ItemKarpet(java.awt.Frame parent, boolean modal, LogicKeranjang keranjang) {
         super(parent, modal);
         initComponents();
+        this.keranjang = keranjang;
     }
 
     /**
@@ -56,6 +60,13 @@ public class ItemKarpet extends Item {
         // TODO add your handling code here:
     }//GEN-LAST:event_cmbWaktuActionPerformed
 
+    @Override
+    public void btnTambahActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        keranjang.setJumlahCucianKarpet(Integer.parseInt(inpJumlah.getText()));
+        keranjang.setWaktuPengerjaanKarpet(cmbWaktu.getSelectedItem().toString());
+        System.out.println("" + keranjang.getJumlahCucianKarpet());
+    }
     /**
      * @param args the command line arguments
      */
@@ -84,18 +95,18 @@ public class ItemKarpet extends Item {
         //</editor-fold>
 
         /* Create and display the dialog */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                ItemKarpet dialog = new ItemKarpet(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
-        });
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                ItemKarpet dialog = new ItemKarpet(new javax.swing.JFrame(), true);
+//                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+//                    @Override
+//                    public void windowClosing(java.awt.event.WindowEvent e) {
+//                        System.exit(0);
+//                    }
+//                });
+//                dialog.setVisible(true);
+//            }
+//        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

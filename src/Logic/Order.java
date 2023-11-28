@@ -8,17 +8,17 @@ public class Order {
 
     private double beratCucianBaju;
     private String jenisCuciBaju;
-    private int waktuPengerjaanBaju;
+    private String waktuPengerjaanBaju;
 
     private int jumlahCucianSelimut;
     private String jenisCuciSelimut;
-    private int waktuPengerjaanSelimut;
+    private String waktuPengerjaanSelimut;
 
     private int jumlahCucianSepatu;
-    private int waktuPengerjaanSepatu;
+    private String waktuPengerjaanSepatu;
 
     private int jumlahCucianKarpet;
-    private int waktuPengerjaanKarpet;
+    private String waktuPengerjaanKarpet;
 
     public String getNamaPelanggan() {
         return namaPelanggan;
@@ -40,7 +40,7 @@ public class Order {
         return jenisCuciBaju;
     }
 
-    public int getWaktuPengerjaanBaju() {
+    public String getWaktuPengerjaanBaju() {
         return waktuPengerjaanBaju;
     }
 
@@ -52,7 +52,7 @@ public class Order {
         return jenisCuciSelimut;
     }
 
-    public int getWaktuPengerjaanSelimut() {
+    public String getWaktuPengerjaanSelimut() {
         return waktuPengerjaanSelimut;
     }
 
@@ -60,7 +60,7 @@ public class Order {
         return jumlahCucianSepatu;
     }
 
-    public int getWaktuPengerjaanSepatu() {
+    public String getWaktuPengerjaanSepatu() {
         return waktuPengerjaanSepatu;
     }
 
@@ -68,7 +68,7 @@ public class Order {
         return jumlahCucianKarpet;
     }
 
-    public int getWaktuPengerjaanKarpet() {
+    public String getWaktuPengerjaanKarpet() {
         return waktuPengerjaanKarpet;
     }
 
@@ -88,7 +88,7 @@ public class Order {
         this.jenisCuciBaju = jenisCuciBaju;
     }
 
-    public void setWaktuPengerjaanBaju(int waktuPengerjaanBaju) {
+    public void setWaktuPengerjaanBaju(String waktuPengerjaanBaju) {
         this.waktuPengerjaanBaju = waktuPengerjaanBaju;
     }
 
@@ -100,7 +100,7 @@ public class Order {
         this.jenisCuciSelimut = jenisCuciSelimut;
     }
 
-    public void setWaktuPengerjaanSelimut(int waktuPengerjaanSelimut) {
+    public void setWaktuPengerjaanSelimut(String waktuPengerjaanSelimut) {
         this.waktuPengerjaanSelimut = waktuPengerjaanSelimut;
     }
 
@@ -108,7 +108,7 @@ public class Order {
         this.jumlahCucianSepatu = jumlahCucianSepatu;
     }
 
-    public void setWaktuPengerjaanSepatu(int waktuPengerjaanSepatu) {
+    public void setWaktuPengerjaanSepatu(String waktuPengerjaanSepatu) {
         this.waktuPengerjaanSepatu = waktuPengerjaanSepatu;
     }
 
@@ -116,7 +116,7 @@ public class Order {
         this.jumlahCucianKarpet = jumlahCucianKarpet;
     }
 
-    public void setWaktuPengerjaanKarpet(int waktuPengerjaanKarpet) {
+    public void setWaktuPengerjaanKarpet(String waktuPengerjaanKarpet) {
         this.waktuPengerjaanKarpet = waktuPengerjaanKarpet;
     }
 

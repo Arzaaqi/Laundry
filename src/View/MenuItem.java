@@ -1,11 +1,15 @@
 package View;
 
 import Controller.*;
+import Logic.LogicKeranjang;
 
 public class MenuItem extends ViewController {
 
+    LogicKeranjang keranjang;
+    
     public MenuItem() {
         initComponents();
+        this.keranjang = new LogicKeranjang();
     }
 
     /**
@@ -33,8 +37,6 @@ public class MenuItem extends ViewController {
         jLabel2.setText("Kembali");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(50, 430, 80, 20);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("A:\\backuptugas\\documents\\OOP\\Laundry\\src\\Image\\menu item.png")); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 490);
 
@@ -92,32 +94,32 @@ public class MenuItem extends ViewController {
         getContentPane().add(btnKembali);
         btnKembali.setBounds(20, 430, 110, 23);
 
-        setBounds(0, 0, 804, 498);
+        setSize(new java.awt.Dimension(804, 498));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBajuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBajuActionPerformed
-        ItemBaju itemBaju = new ItemBaju(this, true);
+        ItemBaju itemBaju = new ItemBaju(this, true, keranjang);
         itemBaju.setVisible(true);
     }//GEN-LAST:event_btnBajuActionPerformed
 
     private void btnSepatuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSepatuActionPerformed
-        ItemSepatu ItemSepatu = new ItemSepatu(this, true);
-        ItemSepatu.setVisible(true);
+        ItemSepatu itemSepatu = new ItemSepatu(this, true, keranjang);
+        itemSepatu.setVisible(true);
     }//GEN-LAST:event_btnSepatuActionPerformed
 
     private void btnKarpetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKarpetActionPerformed
-        ItemKarpet ItemKarpet = new ItemKarpet(this, true);
-        ItemKarpet.setVisible(true);
+        ItemKarpet itemKarpet = new ItemKarpet(this, true, keranjang);
+        itemKarpet.setVisible(true);
     }//GEN-LAST:event_btnKarpetActionPerformed
 
     private void btnSelimutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelimutActionPerformed
-        ItemSelimut ItemSelimut = new ItemSelimut(this, true);
-        ItemSelimut.setVisible(true);
+        ItemSelimut itemSelimut = new ItemSelimut(this, true, keranjang);
+        itemSelimut.setVisible(true);
     }//GEN-LAST:event_btnSelimutActionPerformed
 
     private void btnKeranjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeranjangActionPerformed
-//        Keranjang keranjang = new Keranjang(this, true);
-//        Keranjang.setVisible(true);
+        openFrame("keranjang", keranjang);
     }//GEN-LAST:event_btnKeranjangActionPerformed
 
     private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed

@@ -12,12 +12,15 @@ public class OrderController {
         this.listOrder = new ArrayList<Order>();
     }
     
-    public void addOrder(String namaPelanggan, String nomorTelepon) {
+    public void addOrder(){
+        listOrder.add(order);
+    }
+    
+    public void tambahNama(String namaPelanggan, String nomorTelepon) {
         this.order = new Order();
         order.setNamaPelanggan(namaPelanggan);
         order.setNomorTeleponPelanggan(nomorTelepon);
         order.setStatusOrderan("Belum Selesai");
-        listOrder.add(order);
     }
     
     public void hapusOrder(int index) {
@@ -25,24 +28,26 @@ public class OrderController {
         order = null;
     }
     
-    public void tambahBaju(double beratCucianBaju, String jenisCuciBaju, int waktuPengerjaanBaju){
+    public void tambahBaju(double beratCucianBaju, String jenisCuciBaju, String waktuPengerjaanBaju){
         order.setBeratCucianBaju(beratCucianBaju);
         order.setJenisCuciBaju(jenisCuciBaju);
         order.setWaktuPengerjaanBaju(waktuPengerjaanBaju);
     }
     
-    public void tambahSelimut(int jumlahCucianSelimut, String jenisCucianSelimut, int waktuPengerjaanSelimut){
+    public void tambahSelimut(int jumlahCucianSelimut, String jenisCucianSelimut, String waktuPengerjaanSelimut){
         order.setJumlahCucianSelimut(jumlahCucianSelimut);
         order.setJenisCuciSelimut(jenisCucianSelimut);
         order.setWaktuPengerjaanSelimut(waktuPengerjaanSelimut);
     }
     
-    public void tambahSepatu(int jumlahCucianSepatu, int waktuPengerjaanSepatu){
-        
+    public void tambahSepatu(int jumlahCucianSepatu, String waktuPengerjaanSepatu){
+        order.setJumlahCucianSepatu(jumlahCucianSepatu);
+        order.setWaktuPengerjaanSepatu(waktuPengerjaanSepatu);
     }
     
-    public void tambahKarpet(int jumlahCucianKarpet, int waktuPengerjaanKarpet){
-        
+    public void tambahKarpet(int jumlahCucianKarpet, String waktuPengerjaanKarpet){
+        order.setJumlahCucianKarpet(jumlahCucianKarpet);
+        order.setWaktuPengerjaanKarpet(waktuPengerjaanKarpet);
     }
     
     public ArrayList<Order> cariOrder(String nama, String nomorTelepon) {

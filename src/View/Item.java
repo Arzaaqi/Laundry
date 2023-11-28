@@ -24,10 +24,20 @@ public class Item extends javax.swing.JDialog {
         getContentPane().setLayout(null);
 
         btnKembali.setText("Kembali");
+        btnKembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKembaliActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnKembali);
         btnKembali.setBounds(20, 430, 160, 40);
 
         btnTambah.setText("Tambah ke Keranjang");
+        btnTambah.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTambahActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnTambah);
         btnTambah.setBounds(620, 420, 150, 50);
         getContentPane().add(jLabel1);
@@ -36,6 +46,14 @@ public class Item extends javax.swing.JDialog {
         setSize(new java.awt.Dimension(804, 498));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    public void btnTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahActionPerformed
+        
+    }//GEN-LAST:event_btnTambahActionPerformed
+
+    private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnKembaliActionPerformed
 
     /**
      * @param args the command line arguments
@@ -84,7 +102,7 @@ public class Item extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnKembali;
-    private javax.swing.JButton btnTambah;
+    public javax.swing.JButton btnTambah;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
