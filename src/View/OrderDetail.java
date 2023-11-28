@@ -129,7 +129,7 @@ public class OrderDetail extends ViewController {
         getContentPane().add(btn_embali);
         btn_embali.setBounds(336, 618, 110, 34);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("E:\\Kuliah\\Semester 3\\OOP\\Tugas\\UAS-Project\\Laundry\\src\\Image\\gambarDetailPemesanan.png")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon("E:\\Kuliah\\Semester 3\\OOP\\Tugas\\UAS-Project\\Laundry\\src\\Image\\gambarDetailPemesananBaru.png")); // NOI18N
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, 0, 600, 670);
 
