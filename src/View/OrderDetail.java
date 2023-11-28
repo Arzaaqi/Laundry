@@ -1,28 +1,38 @@
 package View;
+
 import Logic.*;
 import Controller.*;
 
-public class OrderDetail extends javax.swing.JFrame {
+public class OrderDetail extends ViewController {
 
     private Order order;
-    
+
     public OrderDetail(Order order) {
         initComponents();
         this.order = order;
         boolean orderStatus = order.isStatusOrderan();
-        System.out.println(orderStatus);
+        if (!orderStatus == false) {
+            cmbStatus.setSelectedItem("Selesai");
+        } else {
+            cmbStatus.setSelectedItem("Belum Selesai");
+        }
+
         txtName.setText(order.getNamaPelanggan());
         txtNoTelp.setText(order.getNomorTeleponPelanggan());
+
         lblBeratBaju.setText("" + order.getBeratCucianBaju());
         lblTipeCuciBaju.setText(order.getJenisCuciBaju());
         lblLamaPengerjaanBaju.setText("" + order.getWaktuPengerjaanBaju());
+
         lblJumlahSelimut.setText("" + order.getJumlahCucianSelimut());
         lblTipeCuciSelimut.setText(order.getJenisCuciSelimut());
         lblLamaPengerjaanSelimut.setText("" + order.getWaktuPengerjaanSelimut());
-        if (!orderStatus == false) 
-            cmbStatus.setSelectedItem("Selesai");
-        else
-            cmbStatus.setSelectedItem("Belum Selesai");
+
+        lblShoesTotal.setText("" + order.getJumlahCucianSepatu());
+        lblShoesDuration.setText("" + order.getWaktuPengerjaanSepatu());
+        
+        lblCarpetTotal.setText("" + order.getJumlahCucianKarpet());
+        lblCarpetDuration.setText("" + order.getWaktuPengerjaanKarpet());
     }
 
     /**
@@ -136,9 +146,7 @@ public class OrderDetail extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
-        OrderStatus orderStatus = new OrderStatus();
-        orderStatus.setVisible(true);
-        dispose();
+        openFrame("order_status");
     }//GEN-LAST:event_btnKembaliActionPerformed
 
     private void btnProsesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProsesActionPerformed
@@ -146,41 +154,6 @@ public class OrderDetail extends javax.swing.JFrame {
         order.setNomorTeleponPelanggan(txtNoTelp.getText());
         order.setStatusOrderan(cmbStatus.getSelectedItem().toString());
     }//GEN-LAST:event_btnProsesActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(OrderDetail.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(OrderDetail.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(OrderDetail.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(OrderDetail.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new OrderDetail(null).setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnKembali;

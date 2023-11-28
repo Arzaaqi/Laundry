@@ -8,6 +8,12 @@ public class User {
     private String nomorTelepon;
     private String role;
 
+    public User(String nama, String nomorTelepon, String role) {
+        this.nama = nama;
+        this.nomorTelepon = nomorTelepon;
+        this.role = role;
+    }
+
     public String getName() {
         return nama;
     }
@@ -15,7 +21,7 @@ public class User {
     public String getPhoneNumber() {
         return nomorTelepon;
     }
-    
+
     public String getRole() {
         return role;
     }
@@ -27,8 +33,8 @@ public class User {
     public void setPhoneNumber(String nomorTelepon) {
         this.nomorTelepon = nomorTelepon;
     }
-   
+
     public void setRole(String role) {
         this.role = role;
-    } 
+    }
 }

@@ -40,28 +40,34 @@ public class ViewController extends JFrame {
         };
     }
 
-    public void openFrame(String name) {
-        ViewController frame = getFrame(name);
-
+    private void openFrame(ViewController frame) {
         if (frame == null) {
             JOptionPane.showMessageDialog(this, "Frame tidak ditemukan!", "Error", JOptionPane.WARNING_MESSAGE);
         } else {
             frame.loadController(userController, orderController);
             frame.setLocationRelativeTo(this);
+            frame.afterOpen();
             this.dispose();
             frame.setVisible(true);
         }
     }
 
-    public void openFrame(String name, LogicKeranjang keranjang) {
-        ViewController frame = new ViewKeranjang(keranjang);
+    public void openFrame(String viewName) {
+        ViewController frame = getFrame(viewName);
+        openFrame(frame);
+    }
 
-        if (frame == null) {
-            JOptionPane.showMessageDialog(this, "Frame tidak ditemukan!", "Error", JOptionPane.WARNING_MESSAGE);
-        } else {
-            frame.loadController(userController, orderController);
-            frame.setLocationRelativeTo(this);
-            frame.setVisible(true);
-        }
+    public void openFrame(Order order) {
+        ViewController frame = new OrderDetail(order);
+        openFrame(frame);
+    }
+
+    public void openFrame(LogicKeranjang keranjang) {
+        ViewController frame = new ViewKeranjang(keranjang);
+        openFrame(frame);
+    }
+
+    public void afterOpen() {
+
     }
 }
