@@ -207,8 +207,7 @@ public class Keranjang extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(this, "Nomor Harus Diisi!",
                     "Nomor", JOptionPane.WARNING_MESSAGE);
         } else {
-            PilihPembayaran bayar = new PilihPembayaran(this, true);
-            bayar.setVisible(true);
+            
         }
     }//GEN-LAST:event_btnPesanActionPerformed
 
