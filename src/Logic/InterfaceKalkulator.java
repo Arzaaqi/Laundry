@@ -8,7 +8,7 @@ package Logic;
  *
  * @author ZAQI
  */
-public interface Kalkulator {
+public interface InterfaceKalkulator {
     public int hitung();
     public int ubahJenisPengerjaan();
 }

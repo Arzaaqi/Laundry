@@ -8,7 +8,7 @@ package Logic;
  *
  * @author ZAQI
  */
-public class KalkulatorBaju implements Kalkulator {
+public class KalkulatorBaju implements InterfaceKalkulator {
 
     private int berat;
     private String jenisPengerjaan;
@@ -25,7 +25,7 @@ public class KalkulatorBaju implements Kalkulator {
     public void setJenisPengerjaan(String jenisPengerjaan) {
         this.jenisPengerjaan = jenisPengerjaan;
     }
-    
+
     public void setJenisCucian(String jenisCucian) {
         this.jenisCucian = jenisCucian;
     }
@@ -59,9 +59,11 @@ public class KalkulatorBaju implements Kalkulator {
     @Override
     public int ubahJenisPengerjaan() {
         int biayaPengerjaan = 0;
-        if (jenisPengerjaan.equalsIgnoreCase("Expres")) {
+        if (jenisPengerjaan.equalsIgnoreCase("Express")) {
             biayaPengerjaan = 4000;
         } else if (jenisPengerjaan.equalsIgnoreCase("Standar")) {
+            biayaPengerjaan = 3000;
+        } else if (jenisPengerjaan.equalsIgnoreCase("Hemat")) {
             biayaPengerjaan = 2000;
         } else {
             // Handle unknown jenisCucian

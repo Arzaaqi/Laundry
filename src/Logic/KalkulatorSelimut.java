@@ -8,8 +8,9 @@ package Logic;
  *
  * @author ZAQI
  */
-public class KalkulatorSelimut implements Kalkulator{
-    private int berat;
+public class KalkulatorSelimut implements InterfaceKalkulator {
+
+    private int jumlah;
     private String jenisPengerjaan;
     private String jenisCucian;
 
@@ -17,14 +18,14 @@ public class KalkulatorSelimut implements Kalkulator{
 
     }
 
-    public void setBerat(int berat) {
-        this.berat = berat;
+    public void setJumlah(int jumlah) {
+        this.jumlah = jumlah;
     }
 
     public void setJenisPengerjaan(String jenisPengerjaan) {
         this.jenisPengerjaan = jenisPengerjaan;
     }
-    
+
     public void setJenisCucian(String jenisCucian) {
         this.jenisCucian = jenisCucian;
     }
@@ -49,7 +50,7 @@ public class KalkulatorSelimut implements Kalkulator{
         int biayaCucian = biayaCucian();
         int biayaPengerjaan = ubahJenisPengerjaan();
 
-        int totalBiaya = berat * biayaCucian + biayaPengerjaan;
+        int totalBiaya = jumlah * biayaCucian + biayaPengerjaan;
 
         return totalBiaya;
 
@@ -58,10 +59,12 @@ public class KalkulatorSelimut implements Kalkulator{
     @Override
     public int ubahJenisPengerjaan() {
         int biayaPengerjaan = 0;
-        if (jenisPengerjaan.equalsIgnoreCase("Expres")) {
+        if (jenisPengerjaan.equalsIgnoreCase("Express")) {
             biayaPengerjaan = 4000;
         } else if (jenisPengerjaan.equalsIgnoreCase("Standar")) {
             biayaPengerjaan = 2000;
+        } else if (jenisPengerjaan.equalsIgnoreCase("Hemat")) {
+            biayaPengerjaan = 1000;
         } else {
             // Handle unknown jenisCucian
             System.out.println("Jenis Pengerjaan tidak valid.");

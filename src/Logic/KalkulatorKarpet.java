@@ -8,7 +8,7 @@ package Logic;
  *
  * @author ZAQI
  */
-public class KalkulatorKarpet implements Kalkulator {
+public class KalkulatorKarpet implements InterfaceKalkulator {
 
     private int jumlah;
     private String jenisPengerjaan;
@@ -37,10 +37,12 @@ public class KalkulatorKarpet implements Kalkulator {
     @Override
     public int ubahJenisPengerjaan() {
         int biayaPengerjaan = 0;
-        if (jenisPengerjaan.equalsIgnoreCase("Expres")) {
+        if (jenisPengerjaan.equalsIgnoreCase("Express")) {
             biayaPengerjaan = 20000;
         } else if (jenisPengerjaan.equalsIgnoreCase("Standar")) {
             biayaPengerjaan = 15000;
+        } else if (jenisPengerjaan.equalsIgnoreCase("Hemat")) {
+            biayaPengerjaan = 10000;
         } else {
             // Handle unknown jenisCucian
             System.out.println("Jenis Pengerjaan tidak valid.");
