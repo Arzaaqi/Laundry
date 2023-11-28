@@ -1,18 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package View;
 
-/**
- *
- * @author ZAQI
- */
 public class OrderToPick extends javax.swing.JFrame {
 
-    /**
-     * Creates new form OrderToPick
-     */
     public OrderToPick() {
         initComponents();
     }
@@ -26,39 +15,107 @@ public class OrderToPick extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnKeranjang = new javax.swing.JButton();
+        btnSelimut = new javax.swing.JButton();
+        btnSepatu = new javax.swing.JButton();
+        btnKarpet = new javax.swing.JButton();
+        btnPakaian = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         btnKembali = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(788, 490));
         getContentPane().setLayout(null);
 
+        btnKeranjang.setText("Keranjang");
+        btnKeranjang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKeranjangActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnKeranjang);
+        btnKeranjang.setBounds(650, 30, 110, 40);
+
+        btnSelimut.setText("Selimut");
+        btnSelimut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSelimutActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnSelimut);
+        btnSelimut.setBounds(430, 260, 160, 110);
+
+        btnSepatu.setText("Sepatu");
+        btnSepatu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSepatuActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnSepatu);
+        btnSepatu.setBounds(430, 110, 160, 110);
+
+        btnKarpet.setText("Karpet");
+        btnKarpet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKarpetActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnKarpet);
+        btnKarpet.setBounds(200, 260, 160, 110);
+
+        btnPakaian.setText("Pakaian");
+        btnPakaian.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPakaianActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnPakaian);
+        btnPakaian.setBounds(200, 110, 160, 110);
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 790, 490);
+
         btnKembali.setText("Kembali");
+        btnKembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKembaliActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnKembali);
-        btnKembali.setBounds(12, 434, 77, 25);
+        btnKembali.setBounds(40, 410, 120, 40);
 
-        jButton1.setText("Selimut");
-        getContentPane().add(jButton1);
-        jButton1.setBounds(327, 98, 116, 101);
-
-        jButton2.setText("Sepatu");
-        getContentPane().add(jButton2);
-        jButton2.setBounds(101, 289, 116, 101);
-
-        jButton3.setText("Karpet");
-        getContentPane().add(jButton3);
-        jButton3.setBounds(327, 289, 116, 101);
-
-        jButton4.setText("Baju");
-        getContentPane().add(jButton4);
-        jButton4.setBounds(101, 98, 116, 101);
-
-        setSize(new java.awt.Dimension(564, 509));
+        setSize(new java.awt.Dimension(804, 525));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnPakaianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPakaianActionPerformed
+        ItemPakaian itemPakaian = new ItemPakaian(this, true);
+        itemPakaian.setVisible(true);
+    }//GEN-LAST:event_btnPakaianActionPerformed
+
+    private void btnSepatuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSepatuActionPerformed
+        ItemSepatu ItemSepatu = new ItemSepatu(this, true);
+        ItemSepatu.setVisible(true);
+    }//GEN-LAST:event_btnSepatuActionPerformed
+
+    private void btnKarpetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKarpetActionPerformed
+        ItemKarpet ItemKarpet = new ItemKarpet(this, true);
+        ItemKarpet.setVisible(true);
+    }//GEN-LAST:event_btnKarpetActionPerformed
+
+    private void btnSelimutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelimutActionPerformed
+        ItemSelimut ItemSelimut = new ItemSelimut(this, true);
+        ItemSelimut.setVisible(true);
+    }//GEN-LAST:event_btnSelimutActionPerformed
+
+    private void btnKeranjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeranjangActionPerformed
+//        Keranjang keranjang = new Keranjang(this, true);
+//        Keranjang.setVisible(true);
+    }//GEN-LAST:event_btnKeranjangActionPerformed
+
+    private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
+        OrderToPick orderToPick = new OrderToPick();
+        orderToPick.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnKembaliActionPerformed
 
     /**
      * @param args the command line arguments
@@ -86,6 +143,13 @@ public class OrderToPick extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(OrderToPick.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -96,10 +160,12 @@ public class OrderToPick extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnKarpet;
     private javax.swing.JButton btnKembali;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btnKeranjang;
+    private javax.swing.JButton btnPakaian;
+    private javax.swing.JButton btnSelimut;
+    private javax.swing.JButton btnSepatu;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
