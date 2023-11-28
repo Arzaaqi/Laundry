@@ -4,17 +4,20 @@
  */
 package View;
 
+import javax.swing.JLabel;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author ACER
  */
 public class Orderlist_cs extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Orderlist_cs
-     */
+    private DefaultTableModel isitabel;
     public Orderlist_cs() {
         initComponents();
+        ContentTable();
     }
 
     /**
@@ -27,7 +30,7 @@ public class Orderlist_cs extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabel = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -38,7 +41,7 @@ public class Orderlist_cs extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabel.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -46,10 +49,10 @@ public class Orderlist_cs extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Tanggal", "Title 2", "Status", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tabel);
 
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(170, 170, 452, 250);
@@ -72,6 +75,12 @@ public class Orderlist_cs extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/order_list.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 490);
+
+        btn_kembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_kembaliActionPerformed(evt);
+            }
+        });
         getContentPane().add(btn_kembali);
         btn_kembali.setBounds(340, 430, 110, 30);
 
@@ -82,6 +91,26 @@ public class Orderlist_cs extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(799, 497));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_kembaliActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_kembaliActionPerformed
+
+
+    public void ContentTable() {
+        isitabel = (DefaultTableModel)tabel.getModel();
+        isitabel.setRowCount(0);
+
+        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+        centerRenderer.setHorizontalAlignment(JLabel.CENTER);
+        tabel.setDefaultRenderer(Object.class, centerRenderer);
+
+//        for (int i = 0; i < bank.getJumlahNasabah(); i++) {
+//            Nasabah nasabah = bank.getNasabah(i);
+//
+//            tabel.addRow(new Object[]{nasabah.getNoRek(),nasabah.getNamaAwal(), nasabah.getNamaAkhir()});
+//        }
+    }
 
     /**
      * @param args the command line arguments
@@ -126,6 +155,6 @@ public class Orderlist_cs extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tabel;
     // End of variables declaration//GEN-END:variables
 }
