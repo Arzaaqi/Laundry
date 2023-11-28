@@ -5,34 +5,44 @@ import Logic.*;
 
 public class OrderController {
     
+    private Order order;
     private ArrayList<Order> listOrder;
     
     public OrderController() {
         this.listOrder = new ArrayList<Order>();
     }
     
-    public void tambahOrderBaju(double beratBarang, String jenisCuci, int durasiCuci) {
-        Order order = new Order();
+    public void addOrder(String namaPelanggan, String nomorTelepon) {
+        this.order = new Order();
+        order.setNamaPelanggan(namaPelanggan);
+        order.setNomorTeleponPelanggan(nomorTelepon);
+        order.setStatusOrderan("Belum Selesai");
         listOrder.add(order);
-        order.tambahBaju(beratBarang, jenisCuci, durasiCuci);
     }
     
-    public void tambahOrderSelimut(int jumlahBarang, String jenisCuci, int durasiCuci) {
-        Order order = new Order();
-        listOrder.add(order);
-        order.tambahSelimut(jumlahBarang, jenisCuci, durasiCuci);
+    public void hapusOrder(int index) {
+        listOrder.remove(index);
+        order = null;
     }
     
-    public void tambahOrderSepatu(int jumlahBarang, int durasiCuci) {
-        Order order = new Order();
-        listOrder.add(order);
-        order.tambahSepatu(jumlahBarang, durasiCuci);
+    public void tambahBaju(double beratCucianBaju, String jenisCuciBaju, int waktuPengerjaanBaju){
+        order.setBeratCucianBaju(beratCucianBaju);
+        order.setJenisCuciBaju(jenisCuciBaju);
+        order.setWaktuPengerjaanBaju(waktuPengerjaanBaju);
     }
-
-    public void tambahOrderKarpet(int jumlahBarang, int durasiCuci) {
-        Order order = new Order();
-        listOrder.add(order);
-        order.tambahKarpet(jumlahBarang, durasiCuci);
+    
+    public void tambahSelimut(int jumlahCucianSelimut, String jenisCucianSelimut, int waktuPengerjaanSelimut){
+        order.setJumlahCucianSelimut(jumlahCucianSelimut);
+        order.setJenisCuciSelimut(jenisCucianSelimut);
+        order.setWaktuPengerjaanSelimut(waktuPengerjaanSelimut);
+    }
+    
+    public void tambahSepatu(int jumlahCucianSepatu, int waktuPengerjaanSepatu){
+        
+    }
+    
+    public void tambahKarpet(int jumlahCucianKarpet, int waktuPengerjaanKarpet){
+        
     }
     
     public ArrayList<Order> cariOrder(String nama, String nomorTelepon) {
@@ -59,10 +69,6 @@ public class OrderController {
         return hasilCari;
     }
     
-    public void hapusOrder(Order order) {
-        this.listOrder.remove(order);
-    }
-
     public Order getOrder(int index) {
         return listOrder.get(index);
     }

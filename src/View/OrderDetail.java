@@ -1,28 +1,28 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package View;
 import Logic.*;
 import Controller.*;
 
-/**
- *
- * @author 62811
- */
-public class OrderDetail extends ViewController {
+public class OrderDetail extends javax.swing.JFrame {
 
-    /**
-     * Creates new form OrderDetail
-     */
+    private Order order;
+    
     public OrderDetail(Order order) {
         initComponents();
+        this.order = order;
+        boolean orderStatus = order.isStatusOrderan();
+        System.out.println(orderStatus);
+        txtName.setText(order.getNamaPelanggan());
+        txtNoTelp.setText(order.getNomorTeleponPelanggan());
         lblBeratBaju.setText("" + order.getBeratCucianBaju());
         lblTipeCuciBaju.setText(order.getJenisCuciBaju());
         lblLamaPengerjaanBaju.setText("" + order.getWaktuPengerjaanBaju());
         lblJumlahSelimut.setText("" + order.getJumlahCucianSelimut());
-        lblTipeCuciSelimut.setText("" + order.getJenisCuciSelimut());
+        lblTipeCuciSelimut.setText(order.getJenisCuciSelimut());
         lblLamaPengerjaanSelimut.setText("" + order.getWaktuPengerjaanSelimut());
+        if (!orderStatus == false) 
+            cmbStatus.setSelectedItem("Selesai");
+        else
+            cmbStatus.setSelectedItem("Belum Selesai");
     }
 
     /**
@@ -47,9 +47,9 @@ public class OrderDetail extends ViewController {
         lblLamaPengerjaanBaju = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
         txtNoTelp = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        btn_proses = new javax.swing.JButton();
-        btn_embali = new javax.swing.JButton();
+        cmbStatus = new javax.swing.JComboBox<>();
+        btnProses = new javax.swing.JButton();
+        btnKembali = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         jCheckBox1.setText("jCheckBox1");
@@ -101,35 +101,33 @@ public class OrderDetail extends ViewController {
         getContentPane().add(txtNoTelp);
         txtNoTelp.setBounds(260, 230, 260, 22);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Belum Selesai", "Selesaikan", " " }));
-        getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(260, 270, 140, 22);
+        cmbStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Belum Selesai", "Selesai", "" }));
+        getContentPane().add(cmbStatus);
+        cmbStatus.setBounds(260, 270, 140, 22);
 
-        btn_proses.setBackground(new java.awt.Color(0,0,0,0));
-        btn_proses.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
-        btn_proses.setForeground(new java.awt.Color(240, 240, 240));
-        btn_proses.setText("Proses");
-        btn_proses.addActionListener(new java.awt.event.ActionListener() {
+        btnProses.setBackground(new java.awt.Color(0,0,0,0));
+        btnProses.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
+        btnProses.setForeground(new java.awt.Color(240, 240, 240));
+        btnProses.setText("Proses");
+        btnProses.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_prosesActionPerformed(evt);
+                btnProsesActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_proses);
-        btn_proses.setBounds(468, 618, 110, 34);
+        getContentPane().add(btnProses);
+        btnProses.setBounds(468, 618, 110, 34);
 
-        btn_embali.setBackground(new java.awt.Color(0,0,0,0));
-        btn_embali.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
-        btn_embali.setForeground(new java.awt.Color(240, 240, 240));
-        btn_embali.setText("Kembali");
-        btn_embali.addActionListener(new java.awt.event.ActionListener() {
+        btnKembali.setBackground(new java.awt.Color(0,0,0,0));
+        btnKembali.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
+        btnKembali.setForeground(new java.awt.Color(240, 240, 240));
+        btnKembali.setText("Kembali");
+        btnKembali.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_embaliActionPerformed(evt);
+                btnKembaliActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_embali);
-        btn_embali.setBounds(336, 618, 110, 34);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("E:\\Kuliah\\Semester 3\\OOP\\Tugas\\UAS-Project\\Laundry\\src\\Image\\gambarDetailPemesanan.png")); // NOI18N
+        getContentPane().add(btnKembali);
+        btnKembali.setBounds(336, 618, 110, 34);
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, 0, 600, 670);
 
@@ -137,15 +135,17 @@ public class OrderDetail extends ViewController {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_embaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_embaliActionPerformed
+    private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
         OrderStatus orderStatus = new OrderStatus();
         orderStatus.setVisible(true);
         dispose();
-    }//GEN-LAST:event_btn_embaliActionPerformed
+    }//GEN-LAST:event_btnKembaliActionPerformed
 
-    private void btn_prosesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_prosesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_prosesActionPerformed
+    private void btnProsesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProsesActionPerformed
+        order.setNamaPelanggan(txtName.getText());
+        order.setNomorTeleponPelanggan(txtNoTelp.getText());
+        order.setStatusOrderan(cmbStatus.getSelectedItem().toString());
+    }//GEN-LAST:event_btnProsesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -183,10 +183,10 @@ public class OrderDetail extends ViewController {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_embali;
-    private javax.swing.JButton btn_proses;
+    private javax.swing.JButton btnKembali;
+    private javax.swing.JButton btnProses;
+    private javax.swing.JComboBox<String> cmbStatus;
     private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lblBeratBaju;
     private javax.swing.JLabel lblCarpetDuration;

@@ -6,15 +6,9 @@ import View.*;
 
 public class ViewController extends JFrame {
     
-    
-    private UserController userController = new UserController();
+        private UserController userController = new UserController();
     private OrderController orderController = new OrderController();
-    
-    public ViewController() {
-        orderController.tambahOrderBaju(2.0, "Kering", 3);
-        //orderController.tambahOrderSelimut(2, "Setrika", 3);
-    }
-    
+        
     public void loadController(UserController userController, OrderController orderController) {
         this.userController = userController;
         this.orderController = orderController;
@@ -29,14 +23,13 @@ public class ViewController extends JFrame {
     }
     
     private ViewController getFrame(String viewName) {
-        if(viewName.equals("login")){
-            return new Login();
-        } else if(viewName.equals("register")) {
-            return new Register();
-        } else if(viewName.equals("dashboard")) {
-            return new Dashboard();
-        } else
-            return null;
+            return switch (viewName) {
+                case "login" -> new Login();
+                case "register" -> new Register();
+                case "dashboard" -> new Dashboard();
+                case "order_status" -> new OrderStatus();
+                default -> null;
+            };
     }
     
     public void openFrame(String name) {

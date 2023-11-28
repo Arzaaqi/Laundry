@@ -1,21 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package View;
 import Controller.*;
 import Logic.*;
 
 import javax.swing.table.DefaultTableModel;
-/**
- *
- * @author 62811
- */
+
 public class OrderStatus extends ViewController {
 
-    /**
-     * Creates new form OrderStatus
-     */
     public OrderStatus() {
         initComponents();
         menampilkanTabel();
@@ -109,7 +99,6 @@ public class OrderStatus extends ViewController {
     private void menampilkanTabel(){
         DefaultTableModel model = (DefaultTableModel)table.getModel();    
 
-        // Dapatkan data transaksi dari objek ListTransactions dan tambahkan ke tabel
         for (int i = 0; i < getOrderController().getOrderSize(); i++) {
 
             model.addRow(new Object[] {
@@ -133,11 +122,18 @@ public class OrderStatus extends ViewController {
     }//GEN-LAST:event_btn_detailActionPerformed
 
     private void btn_kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_kembaliActionPerformed
-        // TODO add your handling code here:
+        openFrame("dashboard");
     }//GEN-LAST:event_btn_kembaliActionPerformed
 
     private void btn_hapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_hapusActionPerformed
-        // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) table.getModel();
+        int selectedRow = table.getSelectedRow();
+        
+        if(selectedRow != -1){
+            getOrderController().hapusOrder(selectedRow);
+            model.removeRow(selectedRow);
+            model.fireTableDataChanged();
+        }
     }//GEN-LAST:event_btn_hapusActionPerformed
 
     /**

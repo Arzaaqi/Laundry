@@ -90,7 +90,7 @@ public class Dashboard extends ViewController {
     }//GEN-LAST:event_btnInputOrderActionPerformed
 
     private void btnOrderListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrderListActionPerformed
-        
+        openFrame("order_status");
     }//GEN-LAST:event_btnOrderListActionPerformed
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
