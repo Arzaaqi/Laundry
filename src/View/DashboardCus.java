@@ -1,18 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package View;
 
-/**
- *
- * @author belli
- */
-public class DashboardCus extends javax.swing.JFrame {
+import Controller.*;
 
-    /**
-     * Creates new form DashboardCus
-     */
+public class DashboardCus extends ViewController {
+
     public DashboardCus() {
         initComponents();
     }
@@ -26,15 +17,52 @@ public class DashboardCus extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         btnStatusOrder = new javax.swing.JButton();
         btn_Kalkulator = new javax.swing.JButton();
         btn_Order = new javax.swing.JButton();
         btn_Kembali = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(785, 490));
+        setPreferredSize(new java.awt.Dimension(785, 520));
         getContentPane().setLayout(null);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Keluar");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(357, 420, 70, 40);
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Status Order");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(90, 285, 107, 35);
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Kalkulator Laundry");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(307, 286, 180, 35);
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("Order to Pick");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(577, 286, 130, 35);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Kuliah\\Tugas\\Semester 3\\Pemrograman Berorientasi Objek\\Laundry\\src\\Image\\dashboardCustomer.png")); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 788, 490);
 
         btnStatusOrder.setBackground(new java.awt.Color(0, 204, 204));
         btnStatusOrder.setFont(new java.awt.Font("Stencil Std", 1, 14)); // NOI18N
@@ -87,69 +115,43 @@ public class DashboardCus extends javax.swing.JFrame {
         getContentPane().add(btn_Kembali);
         btn_Kembali.setBounds(310, 420, 170, 40);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/BARU GUYS.png"))); // NOI18N
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 790, 490);
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Keluar");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(357, 420, 70, 40);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_KalkulatorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_KalkulatorActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_btn_KalkulatorActionPerformed
 
     private void btn_OrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_OrderActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_btn_OrderActionPerformed
 
     private void btn_KembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_KembaliActionPerformed
-        // TODO add your handling code here:
+        getUserController().logout();
+        openFrame("login");
     }//GEN-LAST:event_btn_KembaliActionPerformed
 
     private void btnStatusOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStatusOrderActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnStatusOrderActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DashboardCus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DashboardCus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DashboardCus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DashboardCus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new DashboardCus().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnStatusOrder;
     private javax.swing.JButton btn_Kalkulator;
     private javax.swing.JButton btn_Kembali;
     private javax.swing.JButton btn_Order;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 }

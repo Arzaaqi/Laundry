@@ -36,7 +36,7 @@ public class Dashboard extends ViewController {
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Order List");
+        jLabel2.setText("Status Order");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(520, 330, 100, 25);
         getContentPane().add(jLabel3);

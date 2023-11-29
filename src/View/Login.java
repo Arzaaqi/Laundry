@@ -8,7 +8,7 @@ import Controller.*;
 import Logic.*;
 
 public class Login extends ViewController {
-   
+
     public Login() {
         initComponents();
     }
@@ -83,7 +83,13 @@ public class Login extends ViewController {
         if (user == null) {
             JOptionPane.showMessageDialog(this, "Email atau password salah!", "Login gagal", JOptionPane.WARNING_MESSAGE);
         } else {
-            openFrame("dashboard");
+            if ("pelanggan".equals(user.getRole())) {
+                openFrame("dashboard_customer");
+            } else if ("pegawai".equals(user.getRole())) {
+                openFrame("dashboard");
+            } else {
+                JOptionPane.showMessageDialog(this, "Role tidak valid", "Login gagal", JOptionPane.WARNING_MESSAGE);
+            }
         }
     }//GEN-LAST:event_btnLoginActionPerformed
 
