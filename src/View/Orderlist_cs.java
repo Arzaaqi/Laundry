@@ -43,13 +43,13 @@ public class Orderlist_cs extends javax.swing.JFrame {
 
         tabel.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
-                "Tanggal", "Title 2", "Status", "Title 4"
+                "Barang", "Title 2"
             }
         ));
         jScrollPane1.setViewportView(tabel);
@@ -57,7 +57,7 @@ public class Orderlist_cs extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(170, 170, 452, 250);
 
-        jLabel2.setFont(new java.awt.Font("Myriad Pro", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Myriad Pro", 1, 15)); // NOI18N
         jLabel2.setText("Kembali");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(370, 430, 60, 30);
@@ -72,7 +72,7 @@ public class Orderlist_cs extends javax.swing.JFrame {
         getContentPane().add(jLabel5);
         jLabel5.setBounds(260, 140, 80, 20);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/order_list.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/status_order.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 490);
 
