@@ -75,6 +75,10 @@ public class OrderController {
         order.setJumlahCucianKarpet(jumlahCucianKarpet);
         order.setWaktuPengerjaanKarpet(waktuPengerjaanKarpet);
     }
+    
+    public void addHarga(double totalHarga){
+        order.setTotalHarga(totalHarga);
+    }
 
     public ArrayList<Order> cariOrder(String nama, String nomorTelepon) {
         ArrayList<Order> hasilCari = new ArrayList<Order>();

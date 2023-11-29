@@ -13,11 +13,11 @@ import javax.swing.text.BadLocationException;
 import javax.swing.text.Document;
 import javax.swing.text.DocumentFilter;
 
-public class ViewKeranjang extends ViewController {
+public class OtpViewKeranjang extends ViewController {
 
     public LogicKeranjang keranjang;
 
-    public ViewKeranjang(LogicKeranjang keranjang) {
+    public OtpViewKeranjang(LogicKeranjang keranjang) {
         initComponents();
         javax.swing.text.Document doc = inpNomor.getDocument();
         if (doc instanceof javax.swing.text.AbstractDocument) {
@@ -25,6 +25,7 @@ public class ViewKeranjang extends ViewController {
         }
         this.keranjang = keranjang;
         menampilkanTabel();
+        
         
         inpTotalHarga.setText("" + keranjang.getTotalHarga());
     }
@@ -208,8 +209,6 @@ public class ViewKeranjang extends ViewController {
         inpTotalHarga.setEnabled(false);
         getContentPane().add(inpTotalHarga);
         inpTotalHarga.setBounds(340, 385, 160, 25);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Kuliah\\Tugas\\Semester 3\\Pemrograman Berorientasi Objek\\Laundry\\src\\Image\\Keranjang.png")); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 480);
 
@@ -245,15 +244,15 @@ public class ViewKeranjang extends ViewController {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnPesanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesanActionPerformed
-        if (inpNama.getText().equals("")) {
-            JOptionPane.showMessageDialog(this, "Nama Harus Diisi!",
-                    "Nama", JOptionPane.WARNING_MESSAGE);
-        } else if (inpNomor.getText().equals("")) {
-            JOptionPane.showMessageDialog(this, "Nomor Harus Diisi!",
-                    "Nomor", JOptionPane.WARNING_MESSAGE);
-        } else {
-            getOrderController().buatOrder(inpNama.getText(), inpNomor.getText());
-            getOrderController().addItemToOrder("Pakaian", keranjang.getBeratCucianBaju(), keranjang.getJenisCuciBaju(), keranjang.getWaktuPengerjaanBaju(), 0);
+//        if (inpNama.getText().equals("")) {
+//            JOptionPane.showMessageDialog(this, "Nama Harus Diisi!",
+//                    "Nama", JOptionPane.WARNING_MESSAGE);
+//        } else if (inpNomor.getText().equals("")) {
+//            JOptionPane.showMessageDialog(this, "Nomor Harus Diisi!",
+//                    "Nomor", JOptionPane.WARNING_MESSAGE);
+//        } else {
+            getOrderController().buatOrder(getUserController().getCurrentUser().getName(), getUserController().getCurrentUser().getPhoneNumber());
+            getOrderController().addItemToOrder("Pakaian", 0, keranjang.getJenisCuciBaju(), keranjang.getWaktuPengerjaanBaju(), 0);
             getOrderController().addItemToOrder("Selimut", 0, keranjang.getJenisCuciSelimut(), keranjang.getWaktuPengerjaanSelimut(), keranjang.getJumlahCucianSelimut());
             getOrderController().addItemToOrder("Sepatu", 0, null, keranjang.getWaktuPengerjaanSepatu(), keranjang.getJumlahCucianSepatu());
             getOrderController().addItemToOrder("Karpet", 0, null, keranjang.getWaktuPengerjaanKarpet(), keranjang.getJumlahCucianKarpet());
@@ -262,13 +261,13 @@ public class ViewKeranjang extends ViewController {
             
             JOptionPane.showMessageDialog(this, "Berhasil Memesan", "Pesan", JOptionPane.INFORMATION_MESSAGE);
 
-            openFrame("menu_item");
+            openFrame("order_to_pick");
             this.dispose();
-        }
+//        }
     }//GEN-LAST:event_btnPesanActionPerformed
 
     private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
-        openFrame("menu_item");
+        openFrame("order_to_pick");
     }//GEN-LAST:event_btnKembaliActionPerformed
 
     private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed

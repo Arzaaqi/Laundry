@@ -20,40 +20,41 @@ public class OrderDetail extends ViewController {
 
         inpNama.setText(order.getNamaPelanggan());
         inpNoTelp.setText(order.getNomorTeleponPelanggan());
-        
-        if(order.getBeratCucianBaju() == 0){
-            lblBeratBaju.setText("-");
+        lblHarga.setText(" " + order.getTotalHarga());
+
+        if (order.getBeratCucianBaju() == 0 && order.getJenisCuciBaju() == null) {
+            inpBeratPakaian.setText("-");
             lblTipeCuciBaju.setText("-");
             lblLamaPengerjaanBaju.setText("-");
-        }else{
-            lblBeratBaju.setText("" + order.getBeratCucianBaju());
+        } else {
+            inpBeratPakaian.setText("" + order.getBeratCucianBaju());
             lblTipeCuciBaju.setText(order.getJenisCuciBaju());
             lblLamaPengerjaanBaju.setText("" + order.getWaktuPengerjaanBaju());
         }
-        
-        if(order.getJumlahCucianSelimut() == 0){
-            lblJumlahSelimut.setText("-");
+
+        if (order.getJumlahCucianSelimut() == 0) {
+            inpJumlahSelimut.setText("-");
             lblTipeCuciSelimut.setText("-");
             lblLamaPengerjaanSelimut.setText("-");
-        }else{
-            lblJumlahSelimut.setText("" + order.getJumlahCucianSelimut());
+        } else {
+            inpJumlahSelimut.setText("" + order.getJumlahCucianSelimut());
             lblTipeCuciSelimut.setText(order.getJenisCuciSelimut());
             lblLamaPengerjaanSelimut.setText("" + order.getWaktuPengerjaanSelimut());
         }
-        
-        if(order.getJumlahCucianSepatu() == 0){
-            lblShoesTotal.setText("-");
+
+        if (order.getJumlahCucianSepatu() == 0) {
+            inpJumlahSepatu.setText("-");
             lblShoesDuration.setText("-");
-        }else{
-            lblShoesTotal.setText("" + order.getJumlahCucianSepatu());
+        } else {
+            inpJumlahSepatu.setText("" + order.getJumlahCucianSepatu());
             lblShoesDuration.setText("" + order.getWaktuPengerjaanSepatu());
         }
-        
-        if(order.getJumlahCucianKarpet() == 0){
-            lblCarpetTotal.setText("-");
+
+        if (order.getJumlahCucianKarpet() == 0) {
+            inpJumlahKarpet.setText("-");
             lblCarpetDuration.setText("-");
-        }else{
-            lblCarpetTotal.setText("" + order.getJumlahCucianKarpet());
+        } else {
+            inpJumlahKarpet.setText("" + order.getJumlahCucianKarpet());
             lblCarpetDuration.setText("" + order.getWaktuPengerjaanKarpet());
         }
     }
@@ -68,23 +69,23 @@ public class OrderDetail extends ViewController {
     private void initComponents() {
 
         jCheckBox1 = new javax.swing.JCheckBox();
-        lblCarpetTotal = new javax.swing.JLabel();
         lblCarpetDuration = new javax.swing.JLabel();
-        lblShoesTotal = new javax.swing.JLabel();
         lblShoesDuration = new javax.swing.JLabel();
-        lblJumlahSelimut = new javax.swing.JLabel();
         lblTipeCuciSelimut = new javax.swing.JLabel();
         lblLamaPengerjaanSelimut = new javax.swing.JLabel();
-        lblBeratBaju = new javax.swing.JLabel();
         lblTipeCuciBaju = new javax.swing.JLabel();
         lblLamaPengerjaanBaju = new javax.swing.JLabel();
         inpNama = new javax.swing.JTextField();
-        inpNoTelp = new javax.swing.JTextField();
+        inpAlamat = new javax.swing.JTextField();
         cmbStatus = new javax.swing.JComboBox<>();
         btnProses = new javax.swing.JButton();
         btnKembali = new javax.swing.JButton();
-        inpNoTelp1 = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        inpNoTelp = new javax.swing.JTextField();
+        inpBeratPakaian = new javax.swing.JTextField();
+        inpJumlahSepatu = new javax.swing.JTextField();
+        inpJumlahSelimut = new javax.swing.JTextField();
+        inpJumlahKarpet = new javax.swing.JTextField();
+        lblHarga = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         jCheckBox1.setText("jCheckBox1");
@@ -92,30 +93,15 @@ public class OrderDetail extends ViewController {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        lblCarpetTotal.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
-        lblCarpetTotal.setText("tes");
-        getContentPane().add(lblCarpetTotal);
-        lblCarpetTotal.setBounds(450, 513, 110, 26);
-
         lblCarpetDuration.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
         lblCarpetDuration.setText("12");
         getContentPane().add(lblCarpetDuration);
         lblCarpetDuration.setBounds(450, 541, 110, 26);
 
-        lblShoesTotal.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
-        lblShoesTotal.setText("1");
-        getContentPane().add(lblShoesTotal);
-        lblShoesTotal.setBounds(150, 518, 127, 26);
-
         lblShoesDuration.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
         lblShoesDuration.setText("2");
         getContentPane().add(lblShoesDuration);
         lblShoesDuration.setBounds(150, 544, 140, 26);
-
-        lblJumlahSelimut.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
-        lblJumlahSelimut.setText("20");
-        getContentPane().add(lblJumlahSelimut);
-        lblJumlahSelimut.setBounds(470, 368, 90, 26);
 
         lblTipeCuciSelimut.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
         lblTipeCuciSelimut.setText("Setrika");
@@ -126,11 +112,6 @@ public class OrderDetail extends ViewController {
         lblLamaPengerjaanSelimut.setText("12");
         getContentPane().add(lblLamaPengerjaanSelimut);
         lblLamaPengerjaanSelimut.setBounds(470, 425, 90, 26);
-
-        lblBeratBaju.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
-        lblBeratBaju.setText("20");
-        getContentPane().add(lblBeratBaju);
-        lblBeratBaju.setBounds(190, 371, 90, 26);
 
         lblTipeCuciBaju.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
         lblTipeCuciBaju.setText("Setrika");
@@ -143,8 +124,8 @@ public class OrderDetail extends ViewController {
         lblLamaPengerjaanBaju.setBounds(180, 425, 110, 26);
         getContentPane().add(inpNama);
         inpNama.setBounds(260, 165, 260, 22);
-        getContentPane().add(inpNoTelp);
-        inpNoTelp.setBounds(260, 215, 260, 22);
+        getContentPane().add(inpAlamat);
+        inpAlamat.setBounds(260, 215, 260, 22);
 
         cmbStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Belum Selesai", "Selesai", "" }));
         getContentPane().add(cmbStatus);
@@ -175,16 +156,24 @@ public class OrderDetail extends ViewController {
         });
         getContentPane().add(btnKembali);
         btnKembali.setBounds(336, 618, 110, 34);
-        getContentPane().add(inpNoTelp1);
-        inpNoTelp1.setBounds(260, 190, 260, 22);
+        getContentPane().add(inpNoTelp);
+        inpNoTelp.setBounds(260, 190, 260, 22);
+        getContentPane().add(inpBeratPakaian);
+        inpBeratPakaian.setBounds(190, 372, 90, 22);
+        getContentPane().add(inpJumlahSepatu);
+        inpJumlahSepatu.setBounds(150, 520, 132, 22);
+        getContentPane().add(inpJumlahSelimut);
+        inpJumlahSelimut.setBounds(470, 370, 80, 22);
+        getContentPane().add(inpJumlahKarpet);
+        inpJumlahKarpet.setBounds(450, 515, 100, 22);
 
-        jLabel1.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel1.setText("Rp");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(260, 243, 260, 20);
+        lblHarga.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
+        lblHarga.setForeground(new java.awt.Color(240, 240, 240));
+        lblHarga.setText("Rp");
+        getContentPane().add(lblHarga);
+        lblHarga.setBounds(260, 243, 260, 20);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("E:\\Kuliah\\Semester 3\\OOP\\Tugas\\UAS-Project\\Laundry\\src\\Image\\gambarDetailPesanan.png")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon("E:\\Kuliah 2023\\OOP\\UAS_Laundry\\src\\Image\\gambarDetailPesanan.png")); // NOI18N
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, 0, 600, 670);
 
@@ -197,41 +186,51 @@ public class OrderDetail extends ViewController {
     }//GEN-LAST:event_btnKembaliActionPerformed
 
     private void btnProsesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProsesActionPerformed
-        if(inpNama.getText().equals(""))
-            JOptionPane.showMessageDialog(this, "Nama belum diisi", 
+        if (inpNama.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Nama belum diisi",
                     "Nama", JOptionPane.WARNING_MESSAGE);
-        else if(inpNoTelp.getText().equals(""))
-            JOptionPane.showMessageDialog(this, "Nomor Telepon belum diisi", 
+        } else if (inpNoTelp.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Nomor Telepon belum diisi",
                     "Nomor", JOptionPane.WARNING_MESSAGE);
-        else{
+        } else {
+            KalkulatorPakaian pakaian = new KalkulatorPakaian();
+            order.setBeratCucianBaju(Double.parseDouble(inpBeratPakaian.getText()));
+            
+            pakaian.setBerat(Double.parseDouble(inpBeratPakaian.getText()));
+            pakaian.setJenisCucian(order.getJenisCuciBaju());
+            pakaian.setJenisPengerjaan(order.getWaktuPengerjaanBaju());           
+            //Masih Error
+            order.setTotalHarga(order.getTotalHarga() + pakaian.hitung());
+            //
             order.setNamaPelanggan(inpNama.getText());
             order.setNomorTeleponPelanggan(inpNoTelp.getText());
             order.setStatusOrderan(cmbStatus.getSelectedItem().toString());
-            JOptionPane.showMessageDialog(this
-                    , "Pesanan atas nama "+
-                    order.getNamaPelanggan()+" telah selesai.", "Pesanan", JOptionPane.WARNING_MESSAGE);
+
+            JOptionPane.showMessageDialog(this,
+                     "Pesanan atas nama "
+                    + order.getNamaPelanggan() + " telah selesai.", "Pesanan", JOptionPane.INFORMATION_MESSAGE);
         }
-        
+
     }//GEN-LAST:event_btnProsesActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnKembali;
     private javax.swing.JButton btnProses;
     private javax.swing.JComboBox<String> cmbStatus;
+    private javax.swing.JTextField inpAlamat;
+    private javax.swing.JTextField inpBeratPakaian;
+    private javax.swing.JTextField inpJumlahKarpet;
+    private javax.swing.JTextField inpJumlahSelimut;
+    private javax.swing.JTextField inpJumlahSepatu;
     private javax.swing.JTextField inpNama;
     private javax.swing.JTextField inpNoTelp;
-    private javax.swing.JTextField inpNoTelp1;
     private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel lblBeratBaju;
     private javax.swing.JLabel lblCarpetDuration;
-    private javax.swing.JLabel lblCarpetTotal;
-    private javax.swing.JLabel lblJumlahSelimut;
+    private javax.swing.JLabel lblHarga;
     private javax.swing.JLabel lblLamaPengerjaanBaju;
     private javax.swing.JLabel lblLamaPengerjaanSelimut;
     private javax.swing.JLabel lblShoesDuration;
-    private javax.swing.JLabel lblShoesTotal;
     private javax.swing.JLabel lblTipeCuciBaju;
     private javax.swing.JLabel lblTipeCuciSelimut;
     // End of variables declaration//GEN-END:variables

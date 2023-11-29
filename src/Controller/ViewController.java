@@ -38,7 +38,11 @@ public class ViewController extends JFrame {
             case "menu_item" ->
                 new MenuItem();
             case "kalkulator_customer" ->
-                new Kalkulator();
+                new ViewKalkulator();
+            case "order_to_pick" ->
+                new OrderToPick();
+            case "order_list_cust" ->
+                new Orderlist_cs();
             default ->
                 null;
         };
@@ -68,6 +72,11 @@ public class ViewController extends JFrame {
 
     public void openFrame(LogicKeranjang keranjang) {
         ViewController frame = new ViewKeranjang(keranjang);
+        openFrame(frame);
+    }
+    
+    public void openFrameCustomer(LogicKeranjang keranjang) {
+        ViewController frame = new OtpViewKeranjang(keranjang);
         openFrame(frame);
     }
 

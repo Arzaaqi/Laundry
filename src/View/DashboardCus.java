@@ -130,7 +130,7 @@ public class DashboardCus extends ViewController {
     }//GEN-LAST:event_btn_KalkulatorActionPerformed
 
     private void btn_OrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_OrderActionPerformed
-        
+        openFrame("order_to_pick");
     }//GEN-LAST:event_btn_OrderActionPerformed
 
     private void btn_KembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_KembaliActionPerformed
@@ -139,7 +139,7 @@ public class DashboardCus extends ViewController {
     }//GEN-LAST:event_btn_KembaliActionPerformed
 
     private void btnStatusOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStatusOrderActionPerformed
-        
+        openFrame("order_list_cust");
     }//GEN-LAST:event_btnStatusOrderActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

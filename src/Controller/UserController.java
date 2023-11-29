@@ -1,6 +1,5 @@
 package Controller;
 
-import java.util.Optional;
 import java.util.ArrayList;
 import Logic.*;
 
@@ -12,10 +11,11 @@ public class UserController {
     public UserController() {
         userList = new ArrayList<User>();
         addEmployee("admin", "123");
+        addCustomer("jeki", "123");
     }
 
-    public Optional<User> getCurrentUser() {
-        return Optional.ofNullable(currentUser);
+    public User getCurrentUser() {
+        return currentUser;
     }
 
     public void addEmployee(String nama, String nomorTelepon) {

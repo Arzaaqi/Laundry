@@ -19,6 +19,9 @@ public class Order {
 
     private int jumlahCucianKarpet;
     private String waktuPengerjaanKarpet;
+    
+    private double totalHarga;
+    
 
     public String getNamaPelanggan() {
         return namaPelanggan;
@@ -126,4 +129,14 @@ public class Order {
         else
             this.statusOrderan = false;
     }
+
+    public double getTotalHarga() {
+        return totalHarga;
+    }
+
+    public void setTotalHarga(double totalHarga) {
+        this.totalHarga = totalHarga;
+    }
+    
+    
 }

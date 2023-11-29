@@ -3,9 +3,9 @@ package View;
 import Controller.*;
 import Logic.*;
 
-public class Kalkulator extends ViewController {
+public class ViewKalkulator extends ViewController {
 
-    public Kalkulator() {
+    public ViewKalkulator() {
         initComponents();
     }
 

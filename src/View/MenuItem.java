@@ -5,7 +5,7 @@ import Logic.LogicKeranjang;
 
 public class MenuItem extends ViewController {
 
-    LogicKeranjang keranjang;
+    private LogicKeranjang keranjang;
     
     public MenuItem() {
         initComponents();
