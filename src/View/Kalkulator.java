@@ -200,7 +200,6 @@ public class Kalkulator extends javax.swing.JFrame {
     private void btnHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungActionPerformed
         int selectedIndex = PindahPanel.getSelectedIndex();
 
-        // Check which panel is currently active
         if (selectedIndex == 0) { // pnlBaju
             KalkulatorBaju baju = new KalkulatorBaju();
             int berat = Integer.parseInt(inpBeratPakaian.getText());
@@ -241,16 +240,13 @@ public class Kalkulator extends javax.swing.JFrame {
     }//GEN-LAST:event_btnHitungActionPerformed
 
     private void inpJumlahKarpetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inpJumlahKarpetActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_inpJumlahKarpetActionPerformed
 
     private void cmbWaktuPengerjaanSepatuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbWaktuPengerjaanSepatuActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_cmbWaktuPengerjaanSepatuActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

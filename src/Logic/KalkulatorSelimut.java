@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Logic;
 
-/**
- *
- * @author ZAQI
- */
 public class KalkulatorSelimut implements InterfaceKalkulator {
 
     private int jumlah;
@@ -39,7 +31,6 @@ public class KalkulatorSelimut implements InterfaceKalkulator {
         } else if (jenisCucian.equalsIgnoreCase("Setrika")) {
             biayaCucian = 2000;
         } else {
-            // Handle unknown jenisCucian
             System.out.println("Jenis Cucian tidak valid.");
         }
         return biayaCucian;
@@ -66,7 +57,6 @@ public class KalkulatorSelimut implements InterfaceKalkulator {
         } else if (jenisPengerjaan.equalsIgnoreCase("Hemat")) {
             biayaPengerjaan = 1000;
         } else {
-            // Handle unknown jenisCucian
             System.out.println("Jenis Pengerjaan tidak valid.");
         }
         return biayaPengerjaan;

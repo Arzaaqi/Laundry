@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Logic;
 
-/**
- *
- * @author ZAQI
- */
 public class KalkulatorSepatu implements InterfaceKalkulator {
 
     private int jumlah;
@@ -44,7 +36,6 @@ public class KalkulatorSepatu implements InterfaceKalkulator {
         } else if (jenisPengerjaan.equalsIgnoreCase("Hemat")) {
             biayaPengerjaan = 10000;
         } else {
-            // Handle unknown jenisCucian
             System.out.println("Jenis Pengerjaan tidak valid.");
         }
         return biayaPengerjaan;
