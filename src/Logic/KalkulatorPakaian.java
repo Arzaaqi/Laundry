@@ -1,16 +1,13 @@
 package Logic;
 
-public class KalkulatorBaju implements InterfaceKalkulator {
+public class KalkulatorPakaian implements InterfaceKalkulator {
 
-    private int berat;
+    private double berat;
     private String jenisPengerjaan;
     private String jenisCucian;
+    
 
-    public KalkulatorBaju() {
-
-    }
-
-    public void setBerat(int berat) {
+    public void setBerat(double berat) {
         this.berat = berat;
     }
 
@@ -31,17 +28,17 @@ public class KalkulatorBaju implements InterfaceKalkulator {
         } else if (jenisCucian.equalsIgnoreCase("Setrika")) {
             biayaCucian = 3000;
         } else {
-            System.out.println("Jenis Cucian tidak valid.");
+            biayaCucian = 0;
         }
         return biayaCucian;
     }
 
     @Override
-    public int hitung() {
+    public double hitung() {
         int biayaCucian = biayaCucian();
         int biayaPengerjaan = ubahJenisPengerjaan();
 
-        int totalBiaya = berat * biayaCucian + biayaPengerjaan;
+        double totalBiaya = berat * biayaCucian + biayaPengerjaan;
 
         return totalBiaya;
 
@@ -50,16 +47,17 @@ public class KalkulatorBaju implements InterfaceKalkulator {
     @Override
     public int ubahJenisPengerjaan() {
         int biayaPengerjaan = 0;
-        if (jenisPengerjaan.equalsIgnoreCase("Express")) {
+        if (jenisPengerjaan.equalsIgnoreCase("Express (1 Hari)")) {
             biayaPengerjaan = 4000;
-        } else if (jenisPengerjaan.equalsIgnoreCase("Standar")) {
+        } else if (jenisPengerjaan.equalsIgnoreCase("Standar (3 Hari)")) {
             biayaPengerjaan = 3000;
-        } else if (jenisPengerjaan.equalsIgnoreCase("Hemat")) {
+        } else if (jenisPengerjaan.equalsIgnoreCase("Hemat (5 Hari)")) {
             biayaPengerjaan = 2000;
         } else {
-            System.out.println("Jenis Pengerjaan tidak valid.");
+            biayaPengerjaan = 0;
         }
         return biayaPengerjaan;
+        
     }
 
 }

@@ -25,6 +25,8 @@ public class ViewKeranjang extends ViewController {
         }
         this.keranjang = keranjang;
         menampilkanTabel();
+        
+        inpTotalHarga.setText("" + keranjang.getTotalHarga());
     }
 
     private void menampilkanTabel() {
@@ -75,6 +77,7 @@ public class ViewKeranjang extends ViewController {
         tblKeranjangSelimut = new javax.swing.JTable();
         jScrollPane5 = new javax.swing.JScrollPane();
         tblKeranjangKarpet = new javax.swing.JTable();
+        inpAlamat = new javax.swing.JTextField();
         inpNama = new javax.swing.JTextField();
         inpNomor = new javax.swing.JTextField();
         inpTotalHarga = new javax.swing.JTextField();
@@ -188,17 +191,25 @@ public class ViewKeranjang extends ViewController {
         jTabbedPane1.addTab("Karpet", jScrollPane5);
 
         getContentPane().add(jTabbedPane1);
-        jTabbedPane1.setBounds(100, 180, 600, 190);
+        jTabbedPane1.setBounds(100, 210, 600, 160);
+
+        inpAlamat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inpAlamatActionPerformed(evt);
+            }
+        });
+        getContentPane().add(inpAlamat);
+        inpAlamat.setBounds(280, 170, 270, 25);
         getContentPane().add(inpNama);
-        inpNama.setBounds(280, 105, 270, 25);
+        inpNama.setBounds(280, 100, 270, 25);
         getContentPane().add(inpNomor);
-        inpNomor.setBounds(280, 140, 270, 25);
+        inpNomor.setBounds(280, 135, 270, 25);
 
         inpTotalHarga.setEnabled(false);
         getContentPane().add(inpTotalHarga);
         inpTotalHarga.setBounds(340, 385, 160, 25);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("E:\\Kuliah 2023\\OOP\\UAS_Laundry\\src\\Image\\Keranjang.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Kuliah\\Tugas\\Semester 3\\Pemrograman Berorientasi Objek\\Laundry\\src\\Image\\Keranjang.png")); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 480);
 
@@ -306,10 +317,15 @@ public class ViewKeranjang extends ViewController {
         }
     }//GEN-LAST:event_btnHapusActionPerformed
 
+    private void inpAlamatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inpAlamatActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inpAlamatActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnHapus;
     private javax.swing.JButton btnKembali;
     private javax.swing.JButton btnPesan;
+    private javax.swing.JTextField inpAlamat;
     private javax.swing.JTextField inpNama;
     private javax.swing.JTextField inpNomor;
     private javax.swing.JTextField inpTotalHarga;

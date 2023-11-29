@@ -9,6 +9,6 @@ package Logic;
  * @author ZAQI
  */
 public interface InterfaceKalkulator {
-    public int hitung();
+    public double hitung();
     public int ubahJenisPengerjaan();
 }

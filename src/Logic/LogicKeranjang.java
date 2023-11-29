@@ -9,6 +9,7 @@ package Logic;
  * @author ZAQI
  */
 public class LogicKeranjang {
+
     private double beratCucianBaju;
     private String jenisCuciBaju;
     private String waktuPengerjaanBaju;
@@ -101,5 +102,57 @@ public class LogicKeranjang {
 
     public void setWaktuPengerjaanKarpet(String waktuPengerjaanKarpet) {
         this.waktuPengerjaanKarpet = waktuPengerjaanKarpet;
+    }
+
+    public double hargaBaju() {
+        if (jenisCuciBaju == null || waktuPengerjaanBaju == null || beratCucianBaju == 0) {
+            return 0;
+        } else {
+            KalkulatorPakaian baju = new KalkulatorPakaian();
+            baju.setBerat(beratCucianBaju);
+            baju.setJenisCucian(jenisCuciBaju);
+            baju.setJenisPengerjaan(waktuPengerjaanBaju);
+            return baju.hitung();
+        }
+    }
+
+    public double hargaSelimut() {
+        if (jenisCuciSelimut == null || waktuPengerjaanSelimut == null || jumlahCucianSelimut == 0) {
+            return 0;
+        } else {
+            KalkulatorSelimut selimut = new KalkulatorSelimut();
+            selimut.setJenisCucian(jenisCuciSelimut);
+            selimut.setJenisPengerjaan(waktuPengerjaanSelimut);
+            selimut.setJumlah(jumlahCucianSelimut);
+            return selimut.hitung();
+        }
+
+    }
+
+    public double hargaSepatu() {
+        if (waktuPengerjaanSepatu == null || jumlahCucianSepatu == 0) {
+            return 0;
+        } else {
+            KalkulatorSepatu sepatu = new KalkulatorSepatu();
+            sepatu.setJenisPengerjaan(waktuPengerjaanSepatu);
+            sepatu.setJumlah(jumlahCucianSepatu);
+            return sepatu.hitung();
+        }
+    }
+
+    public double hargaKarpet() {
+        if (waktuPengerjaanKarpet == null || jumlahCucianKarpet == 0) {
+            return 0;
+        } else {
+            KalkulatorKarpet karpet = new KalkulatorKarpet();
+            karpet.setJenisPengerjaan(waktuPengerjaanKarpet);
+            karpet.setJumlah(jumlahCucianKarpet);
+            return karpet.hitung();
+        }
+    }
+
+    public double getTotalHarga() {
+        double total = hargaBaju() + hargaKarpet() + hargaSelimut() + hargaSepatu();
+        return total;
     }
 }

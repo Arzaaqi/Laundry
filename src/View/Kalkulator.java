@@ -1,16 +1,14 @@
 package View;
 
+import Controller.*;
 import Logic.*;
 
-public class Kalkulator extends javax.swing.JFrame {
+public class Kalkulator extends ViewController {
 
     public Kalkulator() {
         initComponents();
-        
-        
     }
-    
-   
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -66,15 +64,13 @@ public class Kalkulator extends javax.swing.JFrame {
         pnlBaju.add(cmbJenisCucianPakaian);
         cmbJenisCucianPakaian.setBounds(340, 80, 220, 30);
 
-        cmbLamaPengerjaanPakaian.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Express", "Standar", "Hemat" }));
+        cmbLamaPengerjaanPakaian.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Express (1 Hari)", "Standar (3 Hari)", "Hemat (5 Hari)" }));
         pnlBaju.add(cmbLamaPengerjaanPakaian);
         cmbLamaPengerjaanPakaian.setBounds(340, 130, 220, 30);
 
         inpHargaPakaian.setEnabled(false);
         pnlBaju.add(inpHargaPakaian);
         inpHargaPakaian.setBounds(340, 180, 220, 30);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("E:\\Kuliah 2023\\OOP\\UAS_Laundry\\src\\Image\\KalkulatorBaju.png")); // NOI18N
         pnlBaju.add(jLabel3);
         jLabel3.setBounds(0, 0, 610, 230);
 
@@ -83,21 +79,19 @@ public class Kalkulator extends javax.swing.JFrame {
 
         pnlSelimut.setLayout(null);
         pnlSelimut.add(inpJumlahSelimut);
-        inpJumlahSelimut.setBounds(340, 80, 220, 30);
+        inpJumlahSelimut.setBounds(340, 40, 220, 30);
 
         cmbJenisCucianSelimut.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cuci Kering", "Cuci Kering + Setrika", "Setrika" }));
         pnlSelimut.add(cmbJenisCucianSelimut);
-        cmbJenisCucianSelimut.setBounds(340, 40, 220, 30);
+        cmbJenisCucianSelimut.setBounds(340, 80, 220, 30);
 
-        cmbLamaPengerjaanSelimut.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Express", "Standar", "Hemat" }));
+        cmbLamaPengerjaanSelimut.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Express (1 Hari)", "Standar (3 Hari)", "Hemat (5 Hari)" }));
         pnlSelimut.add(cmbLamaPengerjaanSelimut);
         cmbLamaPengerjaanSelimut.setBounds(340, 120, 220, 30);
 
         inpHargaSelimut.setEnabled(false);
         pnlSelimut.add(inpHargaSelimut);
         inpHargaSelimut.setBounds(340, 160, 220, 30);
-
-        jLabel4.setIcon(new javax.swing.ImageIcon("E:\\Kuliah 2023\\OOP\\UAS_Laundry\\src\\Image\\KalkulatorSelimut.png")); // NOI18N
         pnlSelimut.add(jLabel4);
         jLabel4.setBounds(0, 0, 610, 230);
 
@@ -107,7 +101,7 @@ public class Kalkulator extends javax.swing.JFrame {
         pnlSepatu.add(inpJumlahSepatu);
         inpJumlahSepatu.setBounds(340, 50, 220, 30);
 
-        cmbWaktuPengerjaanSepatu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Express", "Standar", "Hemat" }));
+        cmbWaktuPengerjaanSepatu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Express (1 Hari)", "Standar (3 Hari)", "Hemat (5 Hari)" }));
         cmbWaktuPengerjaanSepatu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbWaktuPengerjaanSepatuActionPerformed(evt);
@@ -119,8 +113,6 @@ public class Kalkulator extends javax.swing.JFrame {
         inpHargaSepatu.setEnabled(false);
         pnlSepatu.add(inpHargaSepatu);
         inpHargaSepatu.setBounds(340, 160, 220, 30);
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("E:\\Kuliah 2023\\OOP\\UAS_Laundry\\src\\Image\\KalkulatorSepatu.png")); // NOI18N
         pnlSepatu.add(jLabel5);
         jLabel5.setBounds(0, 0, 610, 230);
 
@@ -137,15 +129,13 @@ public class Kalkulator extends javax.swing.JFrame {
         pnlKarpet.add(inpJumlahKarpet);
         inpJumlahKarpet.setBounds(340, 50, 220, 30);
 
-        cmbWaktuPengerjaanKarpet.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Express", "Standar", "Hemat" }));
+        cmbWaktuPengerjaanKarpet.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Express (1 Hari)", "Standar (3 Hari)", "Hemat (5 Hari)" }));
         pnlKarpet.add(cmbWaktuPengerjaanKarpet);
         cmbWaktuPengerjaanKarpet.setBounds(340, 100, 220, 30);
 
         inpHargaKarpet.setEnabled(false);
         pnlKarpet.add(inpHargaKarpet);
         inpHargaKarpet.setBounds(340, 150, 220, 30);
-
-        bgrKarpet.setIcon(new javax.swing.ImageIcon("E:\\Kuliah 2023\\OOP\\UAS_Laundry\\src\\Image\\KalkulatorKarpet.png")); // NOI18N
         pnlKarpet.add(bgrKarpet);
         bgrKarpet.setBounds(0, 0, 610, 230);
 
@@ -171,12 +161,16 @@ public class Kalkulator extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(660, 425, 80, 25);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("E:\\Kuliah 2023\\OOP\\UAS_Laundry\\src\\Image\\KalkulatorLaundry.png")); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(-3, -4, 790, 490);
 
         btnKembali.setText("Kembali");
+        btnKembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKembaliActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnKembali);
         btnKembali.setBounds(40, 420, 110, 40);
 
@@ -200,12 +194,12 @@ public class Kalkulator extends javax.swing.JFrame {
     private void btnHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungActionPerformed
         int selectedIndex = PindahPanel.getSelectedIndex();
 
-        if (selectedIndex == 0) { // pnlBaju
-            KalkulatorBaju baju = new KalkulatorBaju();
+        if (selectedIndex == 0) {
+            KalkulatorPakaian baju = new KalkulatorPakaian();
             int berat = Integer.parseInt(inpBeratPakaian.getText());
             String jenisCucian = (String) cmbJenisCucianPakaian.getSelectedItem();
             String waktuPengerjaan = (String) cmbLamaPengerjaanPakaian.getSelectedItem();
-            
+
             baju.setBerat(berat);
             baju.setJenisCucian(jenisCucian);
             baju.setJenisPengerjaan(waktuPengerjaan);
@@ -215,7 +209,7 @@ public class Kalkulator extends javax.swing.JFrame {
             int jumlah = Integer.parseInt(inpJumlahSelimut.getText());
             String jenisCucian = (String) cmbJenisCucianSelimut.getSelectedItem();
             String waktuPengerjaan = (String) cmbLamaPengerjaanSelimut.getSelectedItem();
-            
+
             selimut.setJumlah(jumlah);
             selimut.setJenisCucian(jenisCucian);
             selimut.setJenisPengerjaan(waktuPengerjaan);
@@ -224,15 +218,15 @@ public class Kalkulator extends javax.swing.JFrame {
             KalkulatorSepatu sepatu = new KalkulatorSepatu();
             int jumlah = Integer.parseInt(inpJumlahSepatu.getText());
             String waktuPengerjaan = (String) cmbWaktuPengerjaanSepatu.getSelectedItem();
-            
+
             sepatu.setJumlah(jumlah);
             sepatu.setJenisPengerjaan(waktuPengerjaan);
             inpHargaSepatu.setText(String.valueOf(sepatu.hitung()));
-        }else if (selectedIndex == 3) {
+        } else if (selectedIndex == 3) {
             KalkulatorKarpet karpet = new KalkulatorKarpet();
             int jumlah = Integer.parseInt(inpJumlahKarpet.getText());
             String waktuPengerjaan = (String) cmbWaktuPengerjaanKarpet.getSelectedItem();
-            
+
             karpet.setJumlah(jumlah);
             karpet.setJenisPengerjaan(waktuPengerjaan);
             inpHargaKarpet.setText(String.valueOf(karpet.hitung()));
@@ -240,14 +234,18 @@ public class Kalkulator extends javax.swing.JFrame {
     }//GEN-LAST:event_btnHitungActionPerformed
 
     private void inpJumlahKarpetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inpJumlahKarpetActionPerformed
-        
+
     }//GEN-LAST:event_inpJumlahKarpetActionPerformed
 
     private void cmbWaktuPengerjaanSepatuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbWaktuPengerjaanSepatuActionPerformed
-        
+
     }//GEN-LAST:event_cmbWaktuPengerjaanSepatuActionPerformed
 
-   
+    private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
+        openFrame("dashboard_customer");
+    }//GEN-LAST:event_btnKembaliActionPerformed
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane PindahPanel;
     private javax.swing.JLabel bgrKarpet;

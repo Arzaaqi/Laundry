@@ -17,7 +17,7 @@ public class KalkulatorKarpet implements InterfaceKalkulator {
     }
 
     @Override
-    public int hitung() {
+    public double hitung() {
         int biayaPengerjaan = ubahJenisPengerjaan();
 
         int totalBiaya = jumlah * biayaPengerjaan;
@@ -29,14 +29,14 @@ public class KalkulatorKarpet implements InterfaceKalkulator {
     @Override
     public int ubahJenisPengerjaan() {
         int biayaPengerjaan = 0;
-        if (jenisPengerjaan.equalsIgnoreCase("Express")) {
+        if (jenisPengerjaan.equalsIgnoreCase("Express (1 Hari)")) {
             biayaPengerjaan = 20000;
-        } else if (jenisPengerjaan.equalsIgnoreCase("Standar")) {
+        } else if (jenisPengerjaan.equalsIgnoreCase("Standar (3 Hari)")) {
             biayaPengerjaan = 15000;
-        } else if (jenisPengerjaan.equalsIgnoreCase("Hemat")) {
+        } else if (jenisPengerjaan.equalsIgnoreCase("Hemat (5 Hari)")) {
             biayaPengerjaan = 10000;
         } else {
-            System.out.println("Jenis Pengerjaan tidak valid.");
+            biayaPengerjaan = 0;
         }
         return biayaPengerjaan;
     }

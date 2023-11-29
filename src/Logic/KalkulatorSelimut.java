@@ -31,13 +31,13 @@ public class KalkulatorSelimut implements InterfaceKalkulator {
         } else if (jenisCucian.equalsIgnoreCase("Setrika")) {
             biayaCucian = 2000;
         } else {
-            System.out.println("Jenis Cucian tidak valid.");
+            biayaCucian = 0;
         }
         return biayaCucian;
     }
 
     @Override
-    public int hitung() {
+    public double hitung() {
         int biayaCucian = biayaCucian();
         int biayaPengerjaan = ubahJenisPengerjaan();
 
@@ -50,14 +50,14 @@ public class KalkulatorSelimut implements InterfaceKalkulator {
     @Override
     public int ubahJenisPengerjaan() {
         int biayaPengerjaan = 0;
-        if (jenisPengerjaan.equalsIgnoreCase("Express")) {
+        if (jenisPengerjaan.equalsIgnoreCase("Express (1 Hari)")) {
             biayaPengerjaan = 4000;
-        } else if (jenisPengerjaan.equalsIgnoreCase("Standar")) {
+        } else if (jenisPengerjaan.equalsIgnoreCase("Standar (3 Hari)")) {
             biayaPengerjaan = 2000;
-        } else if (jenisPengerjaan.equalsIgnoreCase("Hemat")) {
+        } else if (jenisPengerjaan.equalsIgnoreCase("Hemat (5 Hari)")) {
             biayaPengerjaan = 1000;
         } else {
-            System.out.println("Jenis Pengerjaan tidak valid.");
+            biayaPengerjaan = 0;
         }
         return biayaPengerjaan;
     }

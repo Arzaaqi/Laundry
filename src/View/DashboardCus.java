@@ -126,7 +126,7 @@ public class DashboardCus extends ViewController {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_KalkulatorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_KalkulatorActionPerformed
-        
+        openFrame("kalkulator_customer");
     }//GEN-LAST:event_btn_KalkulatorActionPerformed
 
     private void btn_OrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_OrderActionPerformed

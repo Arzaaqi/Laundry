@@ -37,6 +37,8 @@ public class ViewController extends JFrame {
                 new OrderStatus();
             case "menu_item" ->
                 new MenuItem();
+            case "kalkulator_customer" ->
+                new Kalkulator();
             default ->
                 null;
         };
