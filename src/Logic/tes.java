@@ -1,8 +1,8 @@
 package Logic;
 
 public class tes {
-
-    public void test() {
+    
+    public void test(){
         System.out.println("Hello");
     }
 }
