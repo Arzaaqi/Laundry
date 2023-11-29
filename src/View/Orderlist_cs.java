@@ -43,13 +43,13 @@ public class Orderlist_cs extends javax.swing.JFrame {
 
         tabel.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Barang", "Title 2"
+                "Tanggal", "Harga", "Status"
             }
         ));
         jScrollPane1.setViewportView(tabel);
