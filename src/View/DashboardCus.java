@@ -33,6 +33,7 @@ public class DashboardCus extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(785, 490));
         getContentPane().setLayout(null);
 
         btnStatusOrder.setBackground(new java.awt.Color(0, 204, 204));
