@@ -1,19 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
- */
 package View;
 
-/**
- *
- * @author bagas
- */
-public class Item extends javax.swing.JDialog {
+public class OtpItemPakaian extends OtpItem {
 
-    /**
-     * Creates new form ItemSepatu
-     */
-    public Item(java.awt.Frame parent, boolean modal) {
+    public OtpItemPakaian(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
@@ -27,46 +16,46 @@ public class Item extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
-        btnProses = new javax.swing.JButton();
-        btnKembali = new javax.swing.JButton();
+        cmbWaktu = new javax.swing.JComboBox<>();
+        cmbJenis = new javax.swing.JComboBox<>();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 790, 140);
 
-        btnProses.setText("Proses");
-        btnProses.addActionListener(new java.awt.event.ActionListener() {
+        cmbWaktu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hemat (5 Hari)", "Standar (3 Hari)", "Express (1 Hari)" }));
+        cmbWaktu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnProsesActionPerformed(evt);
+                cmbWaktuActionPerformed(evt);
             }
         });
-        getContentPane().add(btnProses);
-        btnProses.setBounds(620, 380, 120, 40);
+        getContentPane().add(cmbWaktu);
+        cmbWaktu.setBounds(430, 230, 160, 40);
 
-        btnKembali.setText("Kembali");
-        btnKembali.addActionListener(new java.awt.event.ActionListener() {
+        cmbJenis.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Setrika", "Cuci Kering", "Cuci Kering + Setrika" }));
+        cmbJenis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnKembaliActionPerformed(evt);
+                cmbJenisActionPerformed(evt);
             }
         });
-        getContentPane().add(btnKembali);
-        btnKembali.setBounds(50, 380, 120, 40);
+        getContentPane().add(cmbJenis);
+        cmbJenis.setBounds(430, 170, 160, 40);
+
+        jLabel4.setText("jLabel4");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(0, 0, 790, 460);
 
         setSize(new java.awt.Dimension(804, 498));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
-        OrderToPick orderToPick = new OrderToPick();
-        orderToPick.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_btnKembaliActionPerformed
-
-    private void btnProsesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProsesActionPerformed
+    private void cmbJenisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbJenisActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnProsesActionPerformed
+    }//GEN-LAST:event_cmbJenisActionPerformed
+
+    private void cmbWaktuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbWaktuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbWaktuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -85,13 +74,13 @@ public class Item extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Item.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OtpItemPakaian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Item.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OtpItemPakaian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Item.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OtpItemPakaian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Item.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OtpItemPakaian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -113,7 +102,7 @@ public class Item extends javax.swing.JDialog {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Item dialog = new Item(new javax.swing.JFrame(), true);
+                OtpItemPakaian dialog = new OtpItemPakaian(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -126,8 +115,8 @@ public class Item extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnKembali;
-    private javax.swing.JButton btnProses;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JComboBox<String> cmbJenis;
+    private javax.swing.JComboBox<String> cmbWaktu;
+    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }

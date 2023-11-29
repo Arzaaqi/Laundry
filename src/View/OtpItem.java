@@ -8,12 +8,12 @@ package View;
  *
  * @author bagas
  */
-public class ItemSepatu extends Item {
+public class OtpItem extends javax.swing.JDialog {
 
     /**
      * Creates new form ItemSepatu
      */
-    public ItemSepatu(java.awt.Frame parent, boolean modal) {
+    public OtpItem(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
@@ -27,43 +27,46 @@ public class ItemSepatu extends Item {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        inpJumlah = new javax.swing.JTextField();
-        cmbWaktu = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
+        btnProses = new javax.swing.JButton();
+        btnKembali = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
-
-        inpJumlah.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inpJumlahActionPerformed(evt);
-            }
-        });
-        getContentPane().add(inpJumlah);
-        inpJumlah.setBounds(430, 170, 160, 40);
-
-        cmbWaktu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hemat (5 Hari)", "Standar (3 Hari)", "Express (1 Hari)" }));
-        cmbWaktu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbWaktuActionPerformed(evt);
-            }
-        });
-        getContentPane().add(cmbWaktu);
-        cmbWaktu.setBounds(430, 230, 160, 40);
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 0, 790, 140);
+
+        btnProses.setText("Proses");
+        btnProses.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProsesActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnProses);
+        btnProses.setBounds(620, 380, 120, 40);
+
+        btnKembali.setText("Kembali");
+        btnKembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKembaliActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnKembali);
+        btnKembali.setBounds(50, 380, 120, 40);
 
         setSize(new java.awt.Dimension(804, 498));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void inpJumlahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inpJumlahActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inpJumlahActionPerformed
+    private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
+        OrderToPick orderToPick = new OrderToPick();
+        orderToPick.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnKembaliActionPerformed
 
-    private void cmbWaktuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbWaktuActionPerformed
+    private void btnProsesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProsesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cmbWaktuActionPerformed
+    }//GEN-LAST:event_btnProsesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -82,14 +85,42 @@ public class ItemSepatu extends Item {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ItemSepatu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OtpItem.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ItemSepatu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OtpItem.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ItemSepatu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OtpItem.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ItemSepatu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OtpItem.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -98,7 +129,7 @@ public class ItemSepatu extends Item {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                ItemSepatu dialog = new ItemSepatu(new javax.swing.JFrame(), true);
+                OtpItem dialog = new OtpItem(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -111,8 +142,8 @@ public class ItemSepatu extends Item {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> cmbWaktu;
-    private javax.swing.JTextField inpJumlah;
+    private javax.swing.JButton btnKembali;
+    private javax.swing.JButton btnProses;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

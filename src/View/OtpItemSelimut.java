@@ -1,8 +1,8 @@
 package View;
 
-public class ItemPakaian extends Item {
+public class OtpItemSelimut extends OtpItem {
 
-    public ItemPakaian(java.awt.Frame parent, boolean modal) {
+    public OtpItemSelimut(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
@@ -16,12 +16,30 @@ public class ItemPakaian extends Item {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        cmbWaktu = new javax.swing.JComboBox<>();
+        inpJumlah = new javax.swing.JTextField();
         cmbJenis = new javax.swing.JComboBox<>();
+        cmbWaktu = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
+
+        inpJumlah.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inpJumlahActionPerformed(evt);
+            }
+        });
+        getContentPane().add(inpJumlah);
+        inpJumlah.setBounds(430, 170, 160, 40);
+
+        cmbJenis.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cuci Kering", "Cuci Kering + Setrika" }));
+        cmbJenis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbJenisActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cmbJenis);
+        cmbJenis.setBounds(430, 230, 160, 40);
 
         cmbWaktu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hemat (5 Hari)", "Standar (3 Hari)", "Express (1 Hari)" }));
         cmbWaktu.addActionListener(new java.awt.event.ActionListener() {
@@ -30,18 +48,7 @@ public class ItemPakaian extends Item {
             }
         });
         getContentPane().add(cmbWaktu);
-        cmbWaktu.setBounds(430, 230, 160, 40);
-
-        cmbJenis.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Setrika", "Cuci Kering", "Cuci Kering + Setrika" }));
-        cmbJenis.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbJenisActionPerformed(evt);
-            }
-        });
-        getContentPane().add(cmbJenis);
-        cmbJenis.setBounds(430, 170, 160, 40);
-
-        jLabel4.setText("jLabel4");
+        cmbWaktu.setBounds(430, 290, 160, 40);
         getContentPane().add(jLabel4);
         jLabel4.setBounds(0, 0, 790, 460);
 
@@ -52,6 +59,10 @@ public class ItemPakaian extends Item {
     private void cmbJenisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbJenisActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cmbJenisActionPerformed
+
+    private void inpJumlahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inpJumlahActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inpJumlahActionPerformed
 
     private void cmbWaktuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbWaktuActionPerformed
         // TODO add your handling code here:
@@ -74,14 +85,22 @@ public class ItemPakaian extends Item {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ItemPakaian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OtpItemSelimut.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ItemPakaian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OtpItemSelimut.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ItemPakaian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OtpItemSelimut.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ItemPakaian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OtpItemSelimut.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -94,7 +113,7 @@ public class ItemPakaian extends Item {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                ItemPakaian dialog = new ItemPakaian(new javax.swing.JFrame(), true);
+                OtpItemSelimut dialog = new OtpItemSelimut(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -109,6 +128,7 @@ public class ItemPakaian extends Item {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> cmbJenis;
     private javax.swing.JComboBox<String> cmbWaktu;
+    private javax.swing.JTextField inpJumlah;
     private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }

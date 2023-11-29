@@ -87,22 +87,22 @@ public class OrderToPick extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnPakaianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPakaianActionPerformed
-        ItemPakaian itemPakaian = new ItemPakaian(this, true);
+        OtpItemPakaian itemPakaian = new OtpItemPakaian(this, true);
         itemPakaian.setVisible(true);
     }//GEN-LAST:event_btnPakaianActionPerformed
 
     private void btnSepatuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSepatuActionPerformed
-        ItemSepatu ItemSepatu = new ItemSepatu(this, true);
+        OtpItemSepatu ItemSepatu = new OtpItemSepatu(this, true);
         ItemSepatu.setVisible(true);
     }//GEN-LAST:event_btnSepatuActionPerformed
 
     private void btnKarpetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKarpetActionPerformed
-        ItemKarpet ItemKarpet = new ItemKarpet(this, true);
+        OtpItemKarpet ItemKarpet = new OtpItemKarpet(this, true);
         ItemKarpet.setVisible(true);
     }//GEN-LAST:event_btnKarpetActionPerformed
 
     private void btnSelimutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelimutActionPerformed
-        ItemSelimut ItemSelimut = new ItemSelimut(this, true);
+        OtpItemSelimut ItemSelimut = new OtpItemSelimut(this, true);
         ItemSelimut.setVisible(true);
     }//GEN-LAST:event_btnSelimutActionPerformed
 

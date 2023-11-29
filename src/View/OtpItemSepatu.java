@@ -1,8 +1,19 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
+ */
 package View;
 
-public class ItemSelimut extends Item {
+/**
+ *
+ * @author bagas
+ */
+public class OtpItemSepatu extends OtpItem {
 
-    public ItemSelimut(java.awt.Frame parent, boolean modal) {
+    /**
+     * Creates new form ItemSepatu
+     */
+    public OtpItemSepatu(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
@@ -17,9 +28,8 @@ public class ItemSelimut extends Item {
     private void initComponents() {
 
         inpJumlah = new javax.swing.JTextField();
-        cmbJenis = new javax.swing.JComboBox<>();
         cmbWaktu = new javax.swing.JComboBox<>();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -32,15 +42,6 @@ public class ItemSelimut extends Item {
         getContentPane().add(inpJumlah);
         inpJumlah.setBounds(430, 170, 160, 40);
 
-        cmbJenis.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cuci Kering", "Cuci Kering + Setrika" }));
-        cmbJenis.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbJenisActionPerformed(evt);
-            }
-        });
-        getContentPane().add(cmbJenis);
-        cmbJenis.setBounds(430, 230, 160, 40);
-
         cmbWaktu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hemat (5 Hari)", "Standar (3 Hari)", "Express (1 Hari)" }));
         cmbWaktu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -48,17 +49,13 @@ public class ItemSelimut extends Item {
             }
         });
         getContentPane().add(cmbWaktu);
-        cmbWaktu.setBounds(430, 290, 160, 40);
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(0, 0, 790, 460);
+        cmbWaktu.setBounds(430, 230, 160, 40);
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 790, 140);
 
         setSize(new java.awt.Dimension(804, 498));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void cmbJenisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbJenisActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmbJenisActionPerformed
 
     private void inpJumlahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inpJumlahActionPerformed
         // TODO add your handling code here:
@@ -85,13 +82,13 @@ public class ItemSelimut extends Item {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ItemSelimut.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OtpItemSepatu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ItemSelimut.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OtpItemSepatu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ItemSelimut.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OtpItemSepatu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ItemSelimut.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OtpItemSepatu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -105,7 +102,7 @@ public class ItemSelimut extends Item {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                ItemSelimut dialog = new ItemSelimut(new javax.swing.JFrame(), true);
+                OtpItemSepatu dialog = new OtpItemSepatu(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -118,9 +115,8 @@ public class ItemSelimut extends Item {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> cmbJenis;
     private javax.swing.JComboBox<String> cmbWaktu;
     private javax.swing.JTextField inpJumlah;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
