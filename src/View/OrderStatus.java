@@ -35,7 +35,7 @@ public class OrderStatus extends ViewController {
 
             },
             new String [] {
-                "Nama", "No. Telepon", "Status Pembayaran"
+                "Nama", "No. Telepon", "Status Pesanan"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -88,7 +88,6 @@ public class OrderStatus extends ViewController {
         btn_hapus.setBounds(525, 440, 118, 33);
 
         jLabel1.setIcon(new javax.swing.ImageIcon("E:\\Kuliah\\Semester 3\\OOP\\Tugas\\UAS-Project\\Laundry\\src\\Image\\gambarListPemesanan.png")); // NOI18N
-        jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 490);
 
@@ -97,13 +96,16 @@ public class OrderStatus extends ViewController {
     }// </editor-fold>//GEN-END:initComponents
 
     private void menampilkanTabel(){
-        DefaultTableModel model = (DefaultTableModel)table.getModel();    
+        DefaultTableModel model = (DefaultTableModel)table.getModel();
 
         for (int i = 0; i < getOrderController().getOrderSize(); i++) {
-
+            boolean statusPesanan = getOrderController().getOrder(i).isStatusOrderan();
+            String statusText = statusPesanan ? "Sudah" : "Belum";
+            
             model.addRow(new Object[] {
                 getOrderController().getOrder(i).getNamaPelanggan(),
                 getOrderController().getOrder(i).getNomorTeleponPelanggan(),
+                statusText,
             });
         }
     }
