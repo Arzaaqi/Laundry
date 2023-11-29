@@ -1,7 +1,18 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
+ */
 package View;
 
+/**
+ *
+ * @author bagas
+ */
 public class OtpItemKarpet extends OtpItem {
 
+    /**
+     * Creates new form ItemSepatu
+     */
     public OtpItemKarpet(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
@@ -40,7 +51,7 @@ public class OtpItemKarpet extends OtpItem {
         getContentPane().add(cmbWaktu);
         cmbWaktu.setBounds(430, 230, 160, 40);
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 790, 460);
+        jLabel2.setBounds(0, 0, 790, 140);
 
         setSize(new java.awt.Dimension(804, 498));
         setLocationRelativeTo(null);
@@ -79,6 +90,30 @@ public class OtpItemKarpet extends OtpItem {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(OtpItemKarpet.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
