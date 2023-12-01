@@ -32,23 +32,35 @@ public class ViewController extends JFrame {
             case "dashboard" ->
                 new Dashboard();
             case "dashboard_customer" ->
-                new DashboardCus();
+                new DashboardCustomer();
             case "order_status" ->
                 new OrderStatus();
+            case "order_status_customer" ->
+                new OrderStatusCustomer();
             case "menu_item" ->
                 new MenuItem();
-            case "kalkulator_customer" ->
-                new ViewKalkulator();
             case "order_to_pick" ->
                 new OrderToPick();
-            case "order_list_cust" ->
-                new Orderlist_cs();
+            case "kalkulator_customer" ->
+                new ViewKalkulator();
             default ->
                 null;
         };
     }
 
-    private void openFrame(ViewController frame) {
+//    private void openFrame(ViewController frame) {
+//        if (frame == null) {
+//            JOptionPane.showMessageDialog(this, "Frame tidak ditemukan!", "Error", JOptionPane.WARNING_MESSAGE);
+//        } else {
+//            frame.loadController(userController, orderController);
+//            frame.setLocationRelativeTo(this);
+//            frame.afterOpen();
+//            this.dispose();
+//            frame.setVisible(true);
+//        }
+//    }
+    
+    public <T extends ViewController> void openFrame(T frame) {
         if (frame == null) {
             JOptionPane.showMessageDialog(this, "Frame tidak ditemukan!", "Error", JOptionPane.WARNING_MESSAGE);
         } else {
@@ -65,20 +77,20 @@ public class ViewController extends JFrame {
         openFrame(frame);
     }
 
-    public void openFrame(Order order) {
-        ViewController frame = new OrderDetail(order);
-        openFrame(frame);
-    }
-
-    public void openFrame(LogicKeranjang keranjang) {
-        ViewController frame = new ViewKeranjang(keranjang);
-        openFrame(frame);
-    }
-    
-    public void openFrameCustomer(LogicKeranjang keranjang) {
-        ViewController frame = new OtpViewKeranjang(keranjang);
-        openFrame(frame);
-    }
+//    public void openFrame(Order order) {
+//        ViewController frame = new OrderDetail(order);
+//        openFrame(frame);
+//    }
+//
+//    public void openFrame(LogicKeranjang keranjang) {
+//        ViewController frame = new ViewKeranjang(keranjang);
+//        openFrame(frame);
+//    }
+//
+//    public void openFrameCustomer(LogicKeranjang keranjang) {
+//        ViewController frame = new OtpViewKeranjang(keranjang);
+//        openFrame(frame);
+//    }
 
     public void afterOpen() {
 

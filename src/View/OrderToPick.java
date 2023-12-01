@@ -113,7 +113,7 @@ public class OrderToPick extends ViewController {
     }//GEN-LAST:event_btnSelimutActionPerformed
 
     private void btnKeranjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeranjangActionPerformed
-        openFrameCustomer(keranjang);
+        openFrame(new OtpViewKeranjang(keranjang));
     }//GEN-LAST:event_btnKeranjangActionPerformed
 
     private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed

@@ -1,7 +1,5 @@
 package View;
 
-import java.util.ArrayList;
-import java.awt.Image;
 import javax.swing.JOptionPane;
 
 import Controller.*;
@@ -83,9 +81,9 @@ public class Login extends ViewController {
         if (user == null) {
             JOptionPane.showMessageDialog(this, "Email atau password salah!", "Login gagal", JOptionPane.WARNING_MESSAGE);
         } else {
-            if ("pelanggan".equals(user.getRole())) {
+            if (user.getRole().equals("pelanggan")) {
                 openFrame("dashboard_customer");
-            } else if ("pegawai".equals(user.getRole())) {
+            } else if (user.getRole().equals("pegawai")) {
                 openFrame("dashboard");
             } else {
                 JOptionPane.showMessageDialog(this, "Role tidak valid", "Login gagal", JOptionPane.WARNING_MESSAGE);

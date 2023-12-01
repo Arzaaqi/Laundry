@@ -4,9 +4,9 @@ import Controller.*;
 
 import javax.swing.table.DefaultTableModel;
 
-public class Orderlist_cs extends ViewController {
+public class OrderStatusCustomer extends ViewController {
 
-    public Orderlist_cs() {
+    public OrderStatusCustomer() {
         initComponents();
     }
 
@@ -71,7 +71,7 @@ public class Orderlist_cs extends ViewController {
 
         jLabel3.setText("jLabel3");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(270, 140, 38, 16);
+        jLabel3.setBounds(270, 140, 37, 16);
 
         setSize(new java.awt.Dimension(799, 497));
         setLocationRelativeTo(null);
@@ -87,7 +87,7 @@ public class Orderlist_cs extends ViewController {
         for (int i = 0; i < getOrderController().getOrderSize(); i++) {
 
             if (getOrderController().getOrder(i).getNamaPelanggan().equals(getUserController().getCurrentUser().getName())
-                    || getOrderController().getOrder(i).getNomorTeleponPelanggan().equals(getUserController().getCurrentUser().getPhoneNumber())) {
+                    && getOrderController().getOrder(i).getNomorTeleponPelanggan().equals(getUserController().getCurrentUser().getPhoneNumber())) {
 
                 boolean statusPesanan = getOrderController().getOrder(i).isStatusOrderan();
                 String statusText = statusPesanan ? "Sudah" : "Belum";

@@ -8,7 +8,6 @@ public class OrderStatus extends ViewController {
 
     public OrderStatus() {
         initComponents();
-        menampilkanTabel();
     }
 
     /**
@@ -116,7 +115,7 @@ public class OrderStatus extends ViewController {
         
         if(selectedRow != -1){
             Order order = getOrderController().getOrder(selectedRow);
-            openFrame(order);
+            openFrame(new OrderDetail(order));
         }
     }//GEN-LAST:event_btn_detailActionPerformed
 

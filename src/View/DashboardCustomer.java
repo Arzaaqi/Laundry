@@ -2,9 +2,9 @@ package View;
 
 import Controller.*;
 
-public class DashboardCus extends ViewController {
+public class DashboardCustomer extends ViewController {
 
-    public DashboardCus() {
+    public DashboardCustomer() {
         initComponents();
     }
 
@@ -29,7 +29,7 @@ public class DashboardCus extends ViewController {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(785, 520));
+        setMinimumSize(new java.awt.Dimension(785, 520));
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -59,10 +59,8 @@ public class DashboardCus extends ViewController {
         jLabel6.setText("Order to Pick");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(577, 286, 130, 35);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Kuliah\\Tugas\\Semester 3\\Pemrograman Berorientasi Objek\\Laundry\\src\\Image\\dashboardCustomer.png")); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 788, 490);
+        jLabel2.setBounds(0, 0, 0, 490);
 
         btnStatusOrder.setBackground(new java.awt.Color(0, 204, 204));
         btnStatusOrder.setFont(new java.awt.Font("Stencil Std", 1, 14)); // NOI18N
@@ -139,7 +137,7 @@ public class DashboardCus extends ViewController {
     }//GEN-LAST:event_btn_KembaliActionPerformed
 
     private void btnStatusOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStatusOrderActionPerformed
-        openFrame("order_list_cust");
+        openFrame("order_status_customer");
     }//GEN-LAST:event_btnStatusOrderActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
