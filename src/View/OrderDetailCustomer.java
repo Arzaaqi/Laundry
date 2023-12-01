@@ -4,11 +4,8 @@
  */
 package View;
 
-/**
- *
- * @author ACER
- */
-public class OrderDetailCustomer extends javax.swing.JFrame {
+import Controller.*;
+public class OrderDetailCustomer extends ViewController {
 
     /**
      * Creates new form OrderDetail_cs
@@ -16,6 +13,7 @@ public class OrderDetailCustomer extends javax.swing.JFrame {
     public OrderDetailCustomer() {
         initComponents();
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -26,57 +24,57 @@ public class OrderDetailCustomer extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        txt_alamat = new javax.swing.JLabel();
+        txt_nama = new javax.swing.JLabel();
+        txt_telepon = new javax.swing.JLabel();
+        txt_harga = new javax.swing.JLabel();
+        txt_status = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
+        txt_brpakaian = new javax.swing.JLabel();
+        txt_jcpakaian = new javax.swing.JLabel();
+        txt_pkpakaian = new javax.swing.JLabel();
+        txt_jmlsepatu = new javax.swing.JLabel();
+        txt_pktsepatu = new javax.swing.JLabel();
+        txt_jmlselimut = new javax.swing.JLabel();
+        txt_jcselimut = new javax.swing.JLabel();
+        txt_pkselimut = new javax.swing.JLabel();
+        txt_jmlkarpet = new javax.swing.JLabel();
+        txt_pktkarpet = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         btn_kembali = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jLabel2.setFont(new java.awt.Font("Nirmala UI", 1, 19)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Alamat");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(240, 220, 230, 20);
+        txt_alamat.setFont(new java.awt.Font("Nirmala UI", 1, 19)); // NOI18N
+        txt_alamat.setForeground(new java.awt.Color(255, 255, 255));
+        txt_alamat.setText("Alamat");
+        getContentPane().add(txt_alamat);
+        txt_alamat.setBounds(240, 220, 230, 20);
 
-        jLabel5.setFont(new java.awt.Font("Nirmala UI", 1, 19)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Nama");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(240, 170, 230, 20);
+        txt_nama.setFont(new java.awt.Font("Nirmala UI", 1, 19)); // NOI18N
+        txt_nama.setForeground(new java.awt.Color(255, 255, 255));
+        txt_nama.setText("Nama");
+        getContentPane().add(txt_nama);
+        txt_nama.setBounds(240, 170, 230, 20);
 
-        jLabel6.setFont(new java.awt.Font("Nirmala UI", 1, 19)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("No.telp");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(240, 190, 240, 30);
+        txt_telepon.setFont(new java.awt.Font("Nirmala UI", 1, 19)); // NOI18N
+        txt_telepon.setForeground(new java.awt.Color(255, 255, 255));
+        txt_telepon.setText("No.telp");
+        getContentPane().add(txt_telepon);
+        txt_telepon.setBounds(240, 190, 240, 30);
 
-        jLabel7.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("nama");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(240, 240, 230, 30);
+        txt_harga.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+        txt_harga.setForeground(new java.awt.Color(255, 255, 255));
+        txt_harga.setText("nama");
+        getContentPane().add(txt_harga);
+        txt_harga.setBounds(240, 240, 230, 30);
 
-        jLabel4.setFont(new java.awt.Font("Nirmala UI", 1, 19)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Status");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(240, 270, 230, 20);
+        txt_status.setFont(new java.awt.Font("Nirmala UI", 1, 19)); // NOI18N
+        txt_status.setForeground(new java.awt.Color(255, 255, 255));
+        txt_status.setText("Status");
+        getContentPane().add(txt_status);
+        txt_status.setBounds(240, 270, 230, 20);
 
         jLabel8.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -84,65 +82,75 @@ public class OrderDetailCustomer extends javax.swing.JFrame {
         getContentPane().add(jLabel8);
         jLabel8.setBounds(250, 620, 100, 40);
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel9.setText("Berat");
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(190, 380, 100, 19);
+        txt_brpakaian.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        txt_brpakaian.setText("Berat");
+        getContentPane().add(txt_brpakaian);
+        txt_brpakaian.setBounds(190, 380, 100, 19);
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel10.setText("Berat");
-        getContentPane().add(jLabel10);
-        jLabel10.setBounds(190, 410, 100, 19);
+        txt_jcpakaian.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        txt_jcpakaian.setText("Berat");
+        getContentPane().add(txt_jcpakaian);
+        txt_jcpakaian.setBounds(190, 410, 100, 19);
 
-        jLabel11.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel11.setText("Berat");
-        getContentPane().add(jLabel11);
-        jLabel11.setBounds(180, 429, 100, 30);
+        txt_pkpakaian.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        txt_pkpakaian.setText("Berat");
+        getContentPane().add(txt_pkpakaian);
+        txt_pkpakaian.setBounds(180, 429, 100, 30);
 
-        jLabel12.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel12.setText("Berat");
-        getContentPane().add(jLabel12);
-        jLabel12.setBounds(150, 519, 100, 30);
+        txt_jmlsepatu.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        txt_jmlsepatu.setText("Berat");
+        getContentPane().add(txt_jmlsepatu);
+        txt_jmlsepatu.setBounds(150, 519, 100, 30);
 
-        jLabel13.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel13.setText("Berat");
-        getContentPane().add(jLabel13);
-        jLabel13.setBounds(150, 540, 100, 40);
+        txt_pktsepatu.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        txt_pktsepatu.setText("Berat");
+        getContentPane().add(txt_pktsepatu);
+        txt_pktsepatu.setBounds(150, 540, 100, 40);
 
-        jLabel14.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel14.setText("Berat");
-        getContentPane().add(jLabel14);
-        jLabel14.setBounds(480, 369, 100, 30);
+        txt_jmlselimut.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        txt_jmlselimut.setText("Berat");
+        getContentPane().add(txt_jmlselimut);
+        txt_jmlselimut.setBounds(480, 369, 100, 30);
 
-        jLabel15.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel15.setText("Berat");
-        getContentPane().add(jLabel15);
-        jLabel15.setBounds(480, 399, 100, 30);
+        txt_jcselimut.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        txt_jcselimut.setText("Berat");
+        getContentPane().add(txt_jcselimut);
+        txt_jcselimut.setBounds(480, 399, 100, 30);
 
-        jLabel16.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel16.setText("Berat");
-        getContentPane().add(jLabel16);
-        jLabel16.setBounds(480, 430, 100, 30);
+        txt_pkselimut.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        txt_pkselimut.setText("Berat");
+        getContentPane().add(txt_pkselimut);
+        txt_pkselimut.setBounds(480, 430, 100, 30);
 
-        jLabel17.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel17.setText("Berat");
-        getContentPane().add(jLabel17);
-        jLabel17.setBounds(450, 520, 100, 30);
+        txt_jmlkarpet.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        txt_jmlkarpet.setText("Berat");
+        getContentPane().add(txt_jmlkarpet);
+        txt_jmlkarpet.setBounds(450, 510, 100, 40);
 
-        jLabel18.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel18.setText("Berat");
-        getContentPane().add(jLabel18);
-        jLabel18.setBounds(450, 550, 100, 19);
+        txt_pktkarpet.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        txt_pktkarpet.setText("Berat");
+        getContentPane().add(txt_pktkarpet);
+        txt_pktkarpet.setBounds(450, 550, 100, 19);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/order_detail.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 600, 680);
+
+        btn_kembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_kembaliActionPerformed(evt);
+            }
+        });
         getContentPane().add(btn_kembali);
         btn_kembali.setBounds(250, 620, 100, 40);
 
         setSize(new java.awt.Dimension(614, 687));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_kembaliActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_kembaliActionPerformed
 
     /**
      * @param args the command line arguments
@@ -183,21 +191,21 @@ public class OrderDetailCustomer extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_kembali;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel txt_alamat;
+    private javax.swing.JLabel txt_brpakaian;
+    private javax.swing.JLabel txt_harga;
+    private javax.swing.JLabel txt_jcpakaian;
+    private javax.swing.JLabel txt_jcselimut;
+    private javax.swing.JLabel txt_jmlkarpet;
+    private javax.swing.JLabel txt_jmlselimut;
+    private javax.swing.JLabel txt_jmlsepatu;
+    private javax.swing.JLabel txt_nama;
+    private javax.swing.JLabel txt_pkpakaian;
+    private javax.swing.JLabel txt_pkselimut;
+    private javax.swing.JLabel txt_pktkarpet;
+    private javax.swing.JLabel txt_pktsepatu;
+    private javax.swing.JLabel txt_status;
+    private javax.swing.JLabel txt_telepon;
     // End of variables declaration//GEN-END:variables
 }

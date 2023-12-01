@@ -22,11 +22,12 @@ public class OrderStatusCustomer extends ViewController {
         jScrollPane1 = new javax.swing.JScrollPane();
         tabel = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        btn_kembali = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        txt_telepon = new javax.swing.JLabel();
+        txt_nama = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        btn_detail = new javax.swing.JButton();
+        btn_kembali = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -42,24 +43,41 @@ public class OrderStatusCustomer extends ViewController {
         jScrollPane1.setViewportView(tabel);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(170, 170, 452, 250);
+        jScrollPane1.setBounds(170, 180, 452, 250);
 
-        jLabel2.setFont(new java.awt.Font("Myriad Pro", 1, 15)); // NOI18N
-        jLabel2.setText("Kembali");
+        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Detail");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(370, 430, 60, 30);
+        jLabel2.setBounds(680, 446, 60, 20);
 
-        jLabel4.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
-        jLabel4.setText("Nama pokok");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(260, 110, 80, 20);
+        jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Kembali");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(550, 446, 70, 20);
 
-        jLabel5.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
-        jLabel5.setText("no.telepon");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(260, 140, 80, 20);
+        txt_telepon.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        txt_telepon.setText("Telepon");
+        getContentPane().add(txt_telepon);
+        txt_telepon.setBounds(350, 140, 210, 40);
+
+        txt_nama.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        txt_nama.setText("Nama");
+        getContentPane().add(txt_nama);
+        txt_nama.setBounds(350, 110, 220, 40);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/status_order_cs.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 490);
+
+        btn_detail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_detailActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_detail);
+        btn_detail.setBounds(665, 443, 100, 30);
 
         btn_kembali.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,19 +85,19 @@ public class OrderStatusCustomer extends ViewController {
             }
         });
         getContentPane().add(btn_kembali);
-        btn_kembali.setBounds(340, 430, 110, 30);
-
-        jLabel3.setText("jLabel3");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(270, 140, 37, 16);
+        btn_kembali.setBounds(525, 443, 110, 30);
 
         setSize(new java.awt.Dimension(799, 497));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_kembaliActionPerformed
-        openFrame("dashboard_customer");
+        // TODO add your handling code here:
     }//GEN-LAST:event_btn_kembaliActionPerformed
+
+    private void btn_detailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_detailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_detailActionPerformed
 
     public void menampilkanTabel() {
         DefaultTableModel model = (DefaultTableModel) tabel.getModel();
@@ -106,21 +124,22 @@ public class OrderStatusCustomer extends ViewController {
             }
 
         }
-        jLabel4.setText(getUserController().getCurrentUser().getName());
-        jLabel5.setText(getUserController().getCurrentUser().getPhoneNumber());
+        txt_telepon.setText(getUserController().getCurrentUser().getName());
+        txt_nama.setText(getUserController().getCurrentUser().getPhoneNumber());
     }
 
     public void afterOpen() {
         menampilkanTabel();
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_detail;
     private javax.swing.JButton btn_kembali;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tabel;
+    private javax.swing.JLabel txt_nama;
+    private javax.swing.JLabel txt_telepon;
     // End of variables declaration//GEN-END:variables
 }
