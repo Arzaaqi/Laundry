@@ -4,6 +4,7 @@ public class Order {
 
     private String namaPelanggan;
     private String nomorTeleponPelanggan;
+    private String alamatPelanggan;
     private boolean statusOrderan;
 
     private double beratCucianBaju;
@@ -31,6 +32,14 @@ public class Order {
         return nomorTeleponPelanggan;
     }
 
+    public String getAlamatPelanggan() {
+        return alamatPelanggan;
+    }
+
+    public void setAlamatPelanggan(String alamatPelanggan) {
+        this.alamatPelanggan = alamatPelanggan;
+    }
+    
     public boolean isStatusOrderan() {
         return statusOrderan;
     }

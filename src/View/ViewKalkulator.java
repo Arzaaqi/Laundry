@@ -152,7 +152,7 @@ public class ViewKalkulator extends ViewController {
         lblKembali.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         lblKembali.setPreferredSize(new java.awt.Dimension(61, 25));
         getContentPane().add(lblKembali);
-        lblKembali.setBounds(50, 420, 90, 40);
+        lblKembali.setBounds(50, 430, 80, 20);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));

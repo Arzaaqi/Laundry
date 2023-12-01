@@ -25,7 +25,7 @@ public class ViewKeranjang extends ViewController {
         }
         this.keranjang = keranjang;
         menampilkanTabel();
-        
+
         inpTotalHarga.setText("" + keranjang.getTotalHarga());
     }
 
@@ -246,20 +246,23 @@ public class ViewKeranjang extends ViewController {
 
     private void btnPesanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesanActionPerformed
         if (inpNama.getText().equals("")) {
-            JOptionPane.showMessageDialog(this, "Nama Harus Diisi!",
+            JOptionPane.showMessageDialog(this, "Nama Pelanggan Harus Diisi!",
                     "Nama", JOptionPane.WARNING_MESSAGE);
         } else if (inpNomor.getText().equals("")) {
-            JOptionPane.showMessageDialog(this, "Nomor Harus Diisi!",
+            JOptionPane.showMessageDialog(this, "Nomor Telepon Harus Diisi!",
                     "Nomor", JOptionPane.WARNING_MESSAGE);
+        } else if (inpAlamat.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Alamat Pelanggan Harus Diisi!",
+                    "Alamat", JOptionPane.WARNING_MESSAGE);
         } else {
-            getOrderController().buatOrder(inpNama.getText(), inpNomor.getText());
+            getOrderController().buatOrder(inpNama.getText(), inpNomor.getText(), inpAlamat.getText());
             getOrderController().addItemToOrder("Pakaian", keranjang.getBeratCucianBaju(), keranjang.getJenisCuciBaju(), keranjang.getWaktuPengerjaanBaju(), 0);
             getOrderController().addItemToOrder("Selimut", 0, keranjang.getJenisCuciSelimut(), keranjang.getWaktuPengerjaanSelimut(), keranjang.getJumlahCucianSelimut());
             getOrderController().addItemToOrder("Sepatu", 0, null, keranjang.getWaktuPengerjaanSepatu(), keranjang.getJumlahCucianSepatu());
             getOrderController().addItemToOrder("Karpet", 0, null, keranjang.getWaktuPengerjaanKarpet(), keranjang.getJumlahCucianKarpet());
             getOrderController().addHarga(keranjang.getTotalHarga());
             getOrderController().addOrder();
-            
+
             JOptionPane.showMessageDialog(this, "Berhasil Memesan", "Pesan", JOptionPane.INFORMATION_MESSAGE);
 
             openFrame("menu_item");

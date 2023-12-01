@@ -155,4 +155,22 @@ public class LogicKeranjang {
         double total = hargaBaju() + hargaKarpet() + hargaSelimut() + hargaSepatu();
         return total;
     }
+
+    public double updateHarga(Order order) {
+        setBeratCucianBaju(order.getBeratCucianBaju());
+        setJenisCuciBaju(order.getJenisCuciBaju());
+        setWaktuPengerjaanBaju(order.getWaktuPengerjaanBaju());
+
+        setJumlahCucianSelimut(order.getJumlahCucianSelimut());
+        setJenisCuciSelimut(order.getJenisCuciSelimut());
+        setWaktuPengerjaanSelimut(order.getWaktuPengerjaanSelimut());
+
+        setJumlahCucianSepatu(order.getJumlahCucianSepatu());
+        setWaktuPengerjaanSepatu(order.getWaktuPengerjaanSepatu());
+
+        setJumlahCucianKarpet(order.getJumlahCucianKarpet());
+        setWaktuPengerjaanKarpet(order.getWaktuPengerjaanKarpet());
+        
+        return getTotalHarga();
+    }
 }

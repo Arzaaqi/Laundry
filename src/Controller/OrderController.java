@@ -19,10 +19,11 @@ public class OrderController {
         }
     }
 
-    public void buatOrder(String namaPelanggan, String nomorTelepon) {
+    public void buatOrder(String namaPelanggan, String nomorTelepon, String alamatPelanggan) {
         this.order = new Order();
         order.setNamaPelanggan(namaPelanggan);
         order.setNomorTeleponPelanggan(nomorTelepon);
+        order.setAlamatPelanggan(alamatPelanggan);
         order.setStatusOrderan("Belum Selesai");
     }
 

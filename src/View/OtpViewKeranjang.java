@@ -25,9 +25,13 @@ public class OtpViewKeranjang extends ViewController {
         }
         this.keranjang = keranjang;
         menampilkanTabel();
-        
-        
+
         inpTotalHarga.setText("" + keranjang.getTotalHarga());
+        inpNama.setText(getUserController().getCurrentUser().getName());
+        inpNomor.setText(getUserController().getCurrentUser().getPhoneNumber());
+
+        inpNama.setEditable(false);
+        inpNomor.setEditable(false);
     }
 
     private void menampilkanTabel() {
@@ -209,6 +213,8 @@ public class OtpViewKeranjang extends ViewController {
         inpTotalHarga.setEnabled(false);
         getContentPane().add(inpTotalHarga);
         inpTotalHarga.setBounds(340, 385, 160, 25);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("E:\\Kuliah 2023\\OOP\\UAS_Laundry\\src\\Image\\Keranjang.png")); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 480);
 
@@ -244,26 +250,23 @@ public class OtpViewKeranjang extends ViewController {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnPesanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesanActionPerformed
-//        if (inpNama.getText().equals("")) {
-//            JOptionPane.showMessageDialog(this, "Nama Harus Diisi!",
-//                    "Nama", JOptionPane.WARNING_MESSAGE);
-//        } else if (inpNomor.getText().equals("")) {
-//            JOptionPane.showMessageDialog(this, "Nomor Harus Diisi!",
-//                    "Nomor", JOptionPane.WARNING_MESSAGE);
-//        } else {
-            getOrderController().buatOrder(getUserController().getCurrentUser().getName(), getUserController().getCurrentUser().getPhoneNumber());
+        if (inpAlamat.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Alamat Pelanggan Harus Diisi!",
+                    "Alamat", JOptionPane.WARNING_MESSAGE);
+        } else {
+            getOrderController().buatOrder(getUserController().getCurrentUser().getName(), getUserController().getCurrentUser().getPhoneNumber(), inpAlamat.getText());
             getOrderController().addItemToOrder("Pakaian", 0, keranjang.getJenisCuciBaju(), keranjang.getWaktuPengerjaanBaju(), 0);
             getOrderController().addItemToOrder("Selimut", 0, keranjang.getJenisCuciSelimut(), keranjang.getWaktuPengerjaanSelimut(), keranjang.getJumlahCucianSelimut());
             getOrderController().addItemToOrder("Sepatu", 0, null, keranjang.getWaktuPengerjaanSepatu(), keranjang.getJumlahCucianSepatu());
             getOrderController().addItemToOrder("Karpet", 0, null, keranjang.getWaktuPengerjaanKarpet(), keranjang.getJumlahCucianKarpet());
             getOrderController().addHarga(keranjang.getTotalHarga());
             getOrderController().addOrder();
-            
+
             JOptionPane.showMessageDialog(this, "Berhasil Memesan", "Pesan", JOptionPane.INFORMATION_MESSAGE);
 
             openFrame("order_to_pick");
             this.dispose();
-//        }
+        }
     }//GEN-LAST:event_btnPesanActionPerformed
 
     private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed

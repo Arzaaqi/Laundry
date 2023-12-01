@@ -107,6 +107,7 @@ public class OrderStatusCustomer extends ViewController {
 
         }
         jLabel4.setText(getUserController().getCurrentUser().getName());
+        jLabel5.setText(getUserController().getCurrentUser().getPhoneNumber());
     }
 
     public void afterOpen() {
