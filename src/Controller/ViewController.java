@@ -42,10 +42,7 @@ public class ViewController extends JFrame {
             case "order_to_pick" ->
                 new OrderToPick();
             case "kalkulator_customer" ->
-                new ViewKalkulator();
-            case "detail_customer" ->
-                new OrderDetailCustomer();
-                
+                new ViewKalkulator();                
             default ->
                 null;
         };

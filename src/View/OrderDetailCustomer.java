@@ -5,13 +5,68 @@
 package View;
 
 import Controller.*;
+import Logic.Order;
 public class OrderDetailCustomer extends ViewController {
 
     /**
      * Creates new form OrderDetail_cs
      */
-    public OrderDetailCustomer() {
+    private Order order;
+    public OrderDetailCustomer(Order order) {
         initComponents();
+        this.order = order;
+         boolean orderStatus = order.isStatusOrderan();
+        if (!orderStatus == false) {
+            txt_status.setText("Selesai");
+        } else {
+            txt_status.setText("Belum Selesai");
+        }
+        
+        txt_nama.setText(order.getNamaPelanggan());
+        txt_telepon.setText(order.getNomorTeleponPelanggan());
+        txt_harga.setText(" " + order.getTotalHarga());
+        txt_alamat.setText(order.getAlamatPelanggan());
+        viewdetail();
+    }
+    
+    public void viewdetail(){
+        if (order.getBeratCucianBaju() == 0 && order.getJenisCuciBaju() == null) {
+            txt_brpakaian.setText("-");
+            txt_jcpakaian.setText("-");
+            txt_pkpakaian.setText("-");
+        } else {
+            txt_brpakaian.setText("" + order.getBeratCucianBaju());
+            txt_jcpakaian.setText(order.getJenisCuciBaju());
+            txt_pkpakaian.setText("" + order.getWaktuPengerjaanBaju());
+        }
+
+        if (order.getJumlahCucianSelimut() == 0) {
+            txt_jmlselimut.setText("-");
+            txt_jcselimut.setText("-");
+            txt_pkselimut.setText("-");
+        } else {
+            txt_jmlselimut.setText("" + order.getJumlahCucianSelimut());
+            txt_jcselimut.setText(order.getJenisCuciSelimut());
+            txt_pkselimut.setText("" + order.getWaktuPengerjaanSelimut());
+        }
+
+        if (order.getJumlahCucianSepatu() == 0) {
+            txt_jmlsepatu.setText("-");
+            txt_pktsepatu.setText("-");
+        } else {
+            txt_jmlsepatu.setText("" + order.getJumlahCucianSepatu());
+            txt_pktsepatu.setText("" + order.getWaktuPengerjaanSepatu());
+        }
+
+        if (order.getJumlahCucianKarpet() == 0) {
+            txt_jmlkarpet.setText("-");
+            txt_pktkarpet.setText("-");
+        } else {
+            txt_jmlkarpet.setText("" + order.getJumlahCucianKarpet());
+            txt_pktkarpet.setText("" + order.getWaktuPengerjaanKarpet());
+        }
+    
+    
     }
 
 
@@ -149,7 +204,7 @@ public class OrderDetailCustomer extends ViewController {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_kembaliActionPerformed
-        // TODO add your handling code here:
+        openFrame("order_status_customer");
     }//GEN-LAST:event_btn_kembaliActionPerformed
 
     /**
@@ -183,7 +238,7 @@ public class OrderDetailCustomer extends ViewController {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new OrderDetailCustomer().setVisible(true);
+               
             }
         });
     }

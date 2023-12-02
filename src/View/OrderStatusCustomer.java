@@ -1,6 +1,7 @@
 package View;
 
 import Controller.*;
+import Logic.Order;
 
 import javax.swing.table.DefaultTableModel;
 
@@ -92,11 +93,18 @@ public class OrderStatusCustomer extends ViewController {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_kembaliActionPerformed
-        // TODO add your handling code here:
+        openFrame("dashboard_customer");
     }//GEN-LAST:event_btn_kembaliActionPerformed
 
     private void btn_detailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_detailActionPerformed
-        // TODO add your handling code here:
+          DefaultTableModel model = (DefaultTableModel) tabel.getModel();
+        int selectedRow = tabel.getSelectedRow();
+        
+        if(selectedRow != -1){
+            Order order = getOrderController().getOrder(selectedRow);
+            openFrame(new OrderDetailCustomer(order));
+        }
+        
     }//GEN-LAST:event_btn_detailActionPerformed
 
     public void menampilkanTabel() {
@@ -124,8 +132,8 @@ public class OrderStatusCustomer extends ViewController {
             }
 
         }
-        txt_telepon.setText(getUserController().getCurrentUser().getName());
-        txt_nama.setText(getUserController().getCurrentUser().getPhoneNumber());
+        txt_nama.setText(getUserController().getCurrentUser().getName());
+        txt_telepon.setText(getUserController().getCurrentUser().getPhoneNumber());
     }
 
     public void afterOpen() {
