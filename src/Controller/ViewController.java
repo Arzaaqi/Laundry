@@ -48,18 +48,6 @@ public class ViewController extends JFrame {
         };
     }
 
-//    private void openFrame(ViewController frame) {
-//        if (frame == null) {
-//            JOptionPane.showMessageDialog(this, "Frame tidak ditemukan!", "Error", JOptionPane.WARNING_MESSAGE);
-//        } else {
-//            frame.loadController(userController, orderController);
-//            frame.setLocationRelativeTo(this);
-//            frame.afterOpen();
-//            this.dispose();
-//            frame.setVisible(true);
-//        }
-//    }
-    
     public <T extends ViewController> void openFrame(T frame) {
         if (frame == null) {
             JOptionPane.showMessageDialog(this, "Frame tidak ditemukan!", "Error", JOptionPane.WARNING_MESSAGE);
@@ -76,21 +64,6 @@ public class ViewController extends JFrame {
         ViewController frame = getFrame(viewName);
         openFrame(frame);
     }
-
-//    public void openFrame(Order order) {
-//        ViewController frame = new OrderDetail(order);
-//        openFrame(frame);
-//    }
-//
-//    public void openFrame(LogicKeranjang keranjang) {
-//        ViewController frame = new ViewKeranjang(keranjang);
-//        openFrame(frame);
-//    }
-//
-//    public void openFrameCustomer(LogicKeranjang keranjang) {
-//        ViewController frame = new OtpViewKeranjang(keranjang);
-//        openFrame(frame);
-//    }
 
     public void afterOpen() {
 

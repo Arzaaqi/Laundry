@@ -26,44 +26,6 @@ public class OrderDetail extends ViewController {
         tampilData();
     }
 
-    private void tampilData() {
-        if (order.getBeratCucianBaju() == 0 && order.getJenisCuciBaju() == null) {
-            inpBeratPakaian.setText("-");
-            lblTipeCuciBaju.setText("-");
-            lblLamaPengerjaanBaju.setText("-");
-        } else {
-            inpBeratPakaian.setText("" + order.getBeratCucianBaju());
-            lblTipeCuciBaju.setText(order.getJenisCuciBaju());
-            lblLamaPengerjaanBaju.setText("" + order.getWaktuPengerjaanBaju());
-        }
-
-        if (order.getJumlahCucianSelimut() == 0) {
-            inpJumlahSelimut.setText("-");
-            lblTipeCuciSelimut.setText("-");
-            lblLamaPengerjaanSelimut.setText("-");
-        } else {
-            inpJumlahSelimut.setText("" + order.getJumlahCucianSelimut());
-            lblTipeCuciSelimut.setText(order.getJenisCuciSelimut());
-            lblLamaPengerjaanSelimut.setText("" + order.getWaktuPengerjaanSelimut());
-        }
-
-        if (order.getJumlahCucianSepatu() == 0) {
-            inpJumlahSepatu.setText("-");
-            lblShoesDuration.setText("-");
-        } else {
-            inpJumlahSepatu.setText("" + order.getJumlahCucianSepatu());
-            lblShoesDuration.setText("" + order.getWaktuPengerjaanSepatu());
-        }
-
-        if (order.getJumlahCucianKarpet() == 0) {
-            inpJumlahKarpet.setText("-");
-            lblCarpetDuration.setText("-");
-        } else {
-            inpJumlahKarpet.setText("" + order.getJumlahCucianKarpet());
-            lblCarpetDuration.setText("" + order.getWaktuPengerjaanKarpet());
-        }
-    }
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -197,24 +159,14 @@ public class OrderDetail extends ViewController {
                 order.setNamaPelanggan(inpNama.getText());
                 order.setNomorTeleponPelanggan(inpNoTelp.getText());
                 order.setStatusOrderan(cmbStatus.getSelectedItem().toString());
-                
+
                 lblHarga.setText("" + order.getTotalHarga());
-                
+
                 JOptionPane.showMessageDialog(this,
                         "Pesanan atas nama "
                         + order.getNamaPelanggan() + " telah selesai.", "Pesanan", JOptionPane.INFORMATION_MESSAGE);
             } else {
-//                KalkulatorPakaian pakaian = new KalkulatorPakaian();
                 order.setBeratCucianBaju(Double.parseDouble(inpBeratPakaian.getText()));
-//
-//                pakaian.setBerat(Double.parseDouble(inpBeratPakaian.getText()));
-//                pakaian.setJenisCucian(order.getJenisCuciBaju());
-//                pakaian.setJenisPengerjaan(order.getWaktuPengerjaanBaju());
-//                //Masih Error
-//                
-//                order.setTotalHarga(pakaian.hitung());
-                //
-
                 LogicKeranjang keranjang = new LogicKeranjang();
 
                 order.setTotalHarga(keranjang.updateHarga(order));
@@ -222,17 +174,53 @@ public class OrderDetail extends ViewController {
                 order.setNamaPelanggan(inpNama.getText());
                 order.setNomorTeleponPelanggan(inpNoTelp.getText());
                 order.setStatusOrderan(cmbStatus.getSelectedItem().toString());
-                
+
                 lblHarga.setText("" + order.getTotalHarga());
 
                 JOptionPane.showMessageDialog(this,
                         "Pesanan atas nama "
                         + order.getNamaPelanggan() + " telah selesai.", "Pesanan", JOptionPane.INFORMATION_MESSAGE);
-
             }
-
         }
     }//GEN-LAST:event_btnProsesActionPerformed
+
+    private void tampilData() {
+        if (order.getBeratCucianBaju() == 0 && order.getJenisCuciBaju() == null) {
+            inpBeratPakaian.setText("-");
+            lblTipeCuciBaju.setText("-");
+            lblLamaPengerjaanBaju.setText("-");
+        } else {
+            inpBeratPakaian.setText("" + order.getBeratCucianBaju());
+            lblTipeCuciBaju.setText(order.getJenisCuciBaju());
+            lblLamaPengerjaanBaju.setText("" + order.getWaktuPengerjaanBaju());
+        }
+
+        if (order.getJumlahCucianSelimut() == 0) {
+            inpJumlahSelimut.setText("-");
+            lblTipeCuciSelimut.setText("-");
+            lblLamaPengerjaanSelimut.setText("-");
+        } else {
+            inpJumlahSelimut.setText("" + order.getJumlahCucianSelimut());
+            lblTipeCuciSelimut.setText(order.getJenisCuciSelimut());
+            lblLamaPengerjaanSelimut.setText("" + order.getWaktuPengerjaanSelimut());
+        }
+
+        if (order.getJumlahCucianSepatu() == 0) {
+            inpJumlahSepatu.setText("-");
+            lblShoesDuration.setText("-");
+        } else {
+            inpJumlahSepatu.setText("" + order.getJumlahCucianSepatu());
+            lblShoesDuration.setText("" + order.getWaktuPengerjaanSepatu());
+        }
+
+        if (order.getJumlahCucianKarpet() == 0) {
+            inpJumlahKarpet.setText("-");
+            lblCarpetDuration.setText("-");
+        } else {
+            inpJumlahKarpet.setText("" + order.getJumlahCucianKarpet());
+            lblCarpetDuration.setText("" + order.getWaktuPengerjaanKarpet());
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnKembali;
