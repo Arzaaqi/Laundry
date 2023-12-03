@@ -49,7 +49,7 @@ public class Login extends ViewController {
         getContentPane().add(btnLogin);
         btnLogin.setBounds(670, 390, 72, 23);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Kuliah\\Tugas\\Semester 3\\Pemrograman Berorientasi Objek\\Laundry\\src\\Image\\login.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/login.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 490);
 
@@ -62,7 +62,7 @@ public class Login extends ViewController {
         getContentPane().add(btnRegist);
         btnRegist.setBounds(560, 350, 75, 23);
 
-        setSize(new java.awt.Dimension(801, 496));
+        setSize(new java.awt.Dimension(801, 525));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

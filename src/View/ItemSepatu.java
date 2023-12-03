@@ -56,11 +56,11 @@ public class ItemSepatu extends Item {
         getContentPane().add(cmbWaktu);
         cmbWaktu.setBounds(430, 290, 160, 40);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("A:\\backuptugas\\documents\\OOP\\Laundry\\src\\Image\\ITEM SEPATU.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/itemSepatu.png"))); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 0, 790, 490);
 
-        setSize(new java.awt.Dimension(804, 498));
+        setSize(new java.awt.Dimension(804, 528));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

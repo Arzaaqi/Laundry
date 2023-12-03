@@ -2,10 +2,10 @@ package View;
 
 import Logic.LogicKeranjang;
 
-public class ItemBaju extends Item {
+public class ItemPakaian extends Item {
 
     LogicKeranjang keranjang;
-    public ItemBaju(java.awt.Frame parent, boolean modal, LogicKeranjang keranjang) {
+    public ItemPakaian(java.awt.Frame parent, boolean modal, LogicKeranjang keranjang) {
         super(parent, modal);
         initComponents();
         this.keranjang = keranjang;
@@ -20,13 +20,22 @@ public class ItemBaju extends Item {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        cmbWaktu = new javax.swing.JComboBox<>();
         inpBerat = new javax.swing.JTextField();
         cmbJenis = new javax.swing.JComboBox<>();
-        cmbWaktu = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
+
+        cmbWaktu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hemat (5 Hari)", "Standar (3 Hari)", "Express (1 Hari)" }));
+        cmbWaktu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbWaktuActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cmbWaktu);
+        cmbWaktu.setBounds(440, 320, 160, 40);
 
         inpBerat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -45,21 +54,12 @@ public class ItemBaju extends Item {
         getContentPane().add(cmbJenis);
         cmbJenis.setBounds(440, 240, 160, 40);
 
-        cmbWaktu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hemat (5 Hari)", "Standar (3 Hari)", "Express (1 Hari)" }));
-        cmbWaktu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbWaktuActionPerformed(evt);
-            }
-        });
-        getContentPane().add(cmbWaktu);
-        cmbWaktu.setBounds(440, 320, 160, 40);
-
-        jLabel4.setIcon(new javax.swing.ImageIcon("A:\\backuptugas\\documents\\OOP\\Laundry\\src\\Image\\ITEM BAJU.png")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/itemPakaian.png"))); // NOI18N
         jLabel4.setText("jLabel4");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(0, 0, 790, 490);
 
-        setSize(new java.awt.Dimension(804, 498));
+        setSize(new java.awt.Dimension(804, 528));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

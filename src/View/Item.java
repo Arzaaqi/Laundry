@@ -16,21 +16,14 @@ public class Item extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnKembali = new javax.swing.JButton();
-        btnTambah = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        btnTambah = new javax.swing.JButton();
+        btnKembali = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
-
-        btnKembali.setText("Kembali");
-        btnKembali.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnKembaliActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnKembali);
-        btnKembali.setBounds(20, 430, 160, 40);
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 790, 490);
 
         btnTambah.setText("Tambah ke Keranjang");
         btnTambah.addActionListener(new java.awt.event.ActionListener() {
@@ -40,8 +33,15 @@ public class Item extends javax.swing.JDialog {
         });
         getContentPane().add(btnTambah);
         btnTambah.setBounds(620, 420, 150, 50);
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 790, 490);
+
+        btnKembali.setText("Kembali");
+        btnKembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKembaliActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnKembali);
+        btnKembali.setBounds(20, 430, 160, 40);
 
         setSize(new java.awt.Dimension(804, 498));
         setLocationRelativeTo(null);

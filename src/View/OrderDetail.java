@@ -135,7 +135,7 @@ public class OrderDetail extends ViewController {
         getContentPane().add(lblHarga);
         lblHarga.setBounds(260, 243, 260, 20);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("E:\\Kuliah 2023\\OOP\\UAS_Laundry\\src\\Image\\gambarDetailPesanan.png")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/orderDetail.png"))); // NOI18N
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, 0, 600, 670);
 

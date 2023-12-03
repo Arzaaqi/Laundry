@@ -50,11 +50,11 @@ public class ItemSelimut extends Item {
         getContentPane().add(cmbWaktu);
         cmbWaktu.setBounds(430, 330, 210, 50);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("A:\\backuptugas\\documents\\OOP\\Laundry\\src\\Image\\ITEM SELIMUT.png")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/itemSelimut.png"))); // NOI18N
         getContentPane().add(jLabel4);
         jLabel4.setBounds(0, 0, 790, 490);
 
-        setSize(new java.awt.Dimension(804, 498));
+        setSize(new java.awt.Dimension(804, 528));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

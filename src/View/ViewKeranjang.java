@@ -204,7 +204,7 @@ public class ViewKeranjang extends ViewController {
         getContentPane().add(inpTotalHarga);
         inpTotalHarga.setBounds(340, 385, 160, 25);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Kuliah\\Tugas\\Semester 3\\Pemrograman Berorientasi Objek\\Laundry\\src\\Image\\Keranjang.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Keranjang.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 480);
 

@@ -81,7 +81,7 @@ public class OrderStatus extends ViewController {
         getContentPane().add(btn_hapus);
         btn_hapus.setBounds(525, 440, 118, 33);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("E:\\Kuliah\\Semester 3\\OOP\\Tugas\\UAS-Project\\Laundry\\src\\Image\\gambarListPemesanan.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/orderList.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 490);
 

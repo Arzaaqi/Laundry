@@ -1,6 +1,5 @@
 package Controller;
 
-import Logic.*;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import View.*;
@@ -42,7 +41,7 @@ public class ViewController extends JFrame {
             case "order_to_pick" ->
                 new OrderToPick();
             case "kalkulator_customer" ->
-                new ViewKalkulator();                
+                new KalkulatorCustomer();                
             default ->
                 null;
         };

@@ -37,7 +37,7 @@ public class Dashboard extends ViewController {
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, 0, 0, 490);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("D:\\Kuliah\\Tugas\\Semester 3\\Pemrograman Berorientasi Objek\\Laundry\\src\\Image\\dashboard.png")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/dashboard.png"))); // NOI18N
         getContentPane().add(jLabel4);
         jLabel4.setBounds(0, 0, 790, 490);
 

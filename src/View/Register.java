@@ -53,7 +53,7 @@ public class Register extends ViewController {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 0, 790, 490);
 
-        setSize(new java.awt.Dimension(804, 498));
+        setSize(new java.awt.Dimension(804, 528));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
