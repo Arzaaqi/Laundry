@@ -249,6 +249,10 @@ public class ViewKeranjang extends ViewController {
         } else if (inpAlamat.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Alamat Pelanggan Harus Diisi!",
                     "Alamat", JOptionPane.WARNING_MESSAGE);
+        } else if (keranjang.getJenisCuciBaju() == null && keranjang.getJenisCuciSelimut() == null
+                && keranjang.getJumlahCucianSepatu() == 0 && keranjang.getJumlahCucianKarpet() == 0) {
+            JOptionPane.showMessageDialog(this, "Tidak ada Pesanan!",
+                    "Pesanan Kosong", JOptionPane.WARNING_MESSAGE);
         } else {
             getOrderController().buatOrder(inpNama.getText(), inpNomor.getText(), inpAlamat.getText());
             getOrderController().addItemToOrder("Pakaian", keranjang.getBeratCucianBaju(), keranjang.getJenisCuciBaju(), keranjang.getWaktuPengerjaanBaju(), 0);

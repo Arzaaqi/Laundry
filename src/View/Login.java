@@ -31,9 +31,9 @@ public class Login extends ViewController {
             }
         });
         getContentPane().add(inputNama);
-        inputNama.setBounds(560, 260, 110, 22);
+        inputNama.setBounds(560, 260, 110, 30);
         getContentPane().add(inputPassword);
-        inputPassword.setBounds(560, 320, 110, 22);
+        inputPassword.setBounds(560, 320, 110, 30);
 
         lblRegist.setForeground(new java.awt.Color(255, 255, 255));
         lblRegist.setText("Register?");

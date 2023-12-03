@@ -36,8 +36,8 @@ public class KalkulatorCustomer extends ViewController {
         cmbWaktuPengerjaanKarpet = new javax.swing.JComboBox<>();
         inpHargaKarpet = new javax.swing.JTextField();
         bgrKarpet = new javax.swing.JLabel();
-        lblKembali = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         btnKembali = new javax.swing.JButton();
         btnHitung = new javax.swing.JButton();
@@ -71,6 +71,8 @@ public class KalkulatorCustomer extends ViewController {
         inpHargaPakaian.setEnabled(false);
         pnlBaju.add(inpHargaPakaian);
         inpHargaPakaian.setBounds(340, 180, 220, 30);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/KalkulatorBaju.png"))); // NOI18N
         pnlBaju.add(jLabel3);
         jLabel3.setBounds(0, 0, 610, 230);
 
@@ -92,6 +94,8 @@ public class KalkulatorCustomer extends ViewController {
         inpHargaSelimut.setEnabled(false);
         pnlSelimut.add(inpHargaSelimut);
         inpHargaSelimut.setBounds(340, 160, 220, 30);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/KalkulatorSelimut.png"))); // NOI18N
         pnlSelimut.add(jLabel4);
         jLabel4.setBounds(0, 0, 610, 230);
 
@@ -113,6 +117,8 @@ public class KalkulatorCustomer extends ViewController {
         inpHargaSepatu.setEnabled(false);
         pnlSepatu.add(inpHargaSepatu);
         inpHargaSepatu.setBounds(340, 160, 220, 30);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/KalkulatorSepatu.png"))); // NOI18N
         pnlSepatu.add(jLabel5);
         jLabel5.setBounds(0, 0, 610, 230);
 
@@ -136,6 +142,8 @@ public class KalkulatorCustomer extends ViewController {
         inpHargaKarpet.setEnabled(false);
         pnlKarpet.add(inpHargaKarpet);
         inpHargaKarpet.setBounds(340, 150, 220, 30);
+
+        bgrKarpet.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/KalkulatorKarpet.png"))); // NOI18N
         pnlKarpet.add(bgrKarpet);
         bgrKarpet.setBounds(0, 0, 610, 230);
 
@@ -144,16 +152,6 @@ public class KalkulatorCustomer extends ViewController {
         getContentPane().add(PindahPanel);
         PindahPanel.setBounds(80, 140, 610, 260);
 
-        lblKembali.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblKembali.setForeground(new java.awt.Color(255, 255, 255));
-        lblKembali.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblKembali.setText("Kembali");
-        lblKembali.setToolTipText("");
-        lblKembali.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        lblKembali.setPreferredSize(new java.awt.Dimension(61, 25));
-        getContentPane().add(lblKembali);
-        lblKembali.setBounds(50, 430, 80, 20);
-
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -161,6 +159,14 @@ public class KalkulatorCustomer extends ViewController {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(660, 425, 80, 25);
 
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("Kembali");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(50, 430, 90, 25);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/KalkulatorLaundry.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(-3, -4, 790, 490);
@@ -183,7 +189,7 @@ public class KalkulatorCustomer extends ViewController {
         getContentPane().add(btnHitung);
         btnHitung.setBounds(640, 420, 110, 40);
 
-        setSize(new java.awt.Dimension(797, 518));
+        setSize(new java.awt.Dimension(801, 518));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -270,7 +276,7 @@ public class KalkulatorCustomer extends ViewController {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel lblKembali;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel pnlBaju;
     private javax.swing.JPanel pnlKarpet;
     private javax.swing.JPanel pnlSelimut;

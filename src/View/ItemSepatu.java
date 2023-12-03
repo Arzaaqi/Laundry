@@ -45,7 +45,7 @@ public class ItemSepatu extends Item {
             }
         });
         getContentPane().add(inpJumlah);
-        inpJumlah.setBounds(430, 200, 170, 40);
+        inpJumlah.setBounds(430, 210, 170, 40);
 
         cmbWaktu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hemat (5 Hari)", "Standar (3 Hari)", "Express (1 Hari)" }));
         cmbWaktu.addActionListener(new java.awt.event.ActionListener() {
@@ -54,13 +54,13 @@ public class ItemSepatu extends Item {
             }
         });
         getContentPane().add(cmbWaktu);
-        cmbWaktu.setBounds(430, 290, 160, 40);
+        cmbWaktu.setBounds(430, 310, 170, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/itemSepatu.png"))); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 0, 790, 490);
 
-        setSize(new java.awt.Dimension(804, 528));
+        setSize(new java.awt.Dimension(802, 528));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

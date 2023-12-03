@@ -54,7 +54,7 @@ public class ItemSelimut extends Item {
         getContentPane().add(jLabel4);
         jLabel4.setBounds(0, 0, 790, 490);
 
-        setSize(new java.awt.Dimension(804, 528));
+        setSize(new java.awt.Dimension(801, 528));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

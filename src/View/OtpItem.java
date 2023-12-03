@@ -23,17 +23,23 @@ public class OtpItem extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 790, 140);
+        jLabel2.setBounds(0, 0, 790, 360);
 
-        btnProses.setText("Proses");
+        btnProses.setBackground(new java.awt.Color(102, 102, 255));
+        btnProses.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnProses.setForeground(new java.awt.Color(255, 255, 255));
+        btnProses.setText("Tambah ke Keranjang");
         btnProses.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProsesActionPerformed(evt);
             }
         });
         getContentPane().add(btnProses);
-        btnProses.setBounds(620, 380, 120, 40);
+        btnProses.setBounds(550, 390, 190, 40);
 
+        btnKembali.setBackground(new java.awt.Color(102, 102, 255));
+        btnKembali.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnKembali.setForeground(new java.awt.Color(255, 255, 255));
         btnKembali.setText("Kembali");
         btnKembali.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -41,7 +47,7 @@ public class OtpItem extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btnKembali);
-        btnKembali.setBounds(50, 380, 120, 40);
+        btnKembali.setBounds(50, 390, 190, 40);
 
         setSize(new java.awt.Dimension(804, 498));
         setLocationRelativeTo(null);

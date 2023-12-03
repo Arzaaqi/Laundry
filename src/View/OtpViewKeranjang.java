@@ -15,22 +15,19 @@ public class OtpViewKeranjang extends ViewController {
 
     public OtpViewKeranjang(LogicKeranjang keranjang) {
         initComponents();
+        this.keranjang = keranjang;
+        
         javax.swing.text.Document doc = inpNomor.getDocument();
         if (doc instanceof javax.swing.text.AbstractDocument) {
             ((javax.swing.text.AbstractDocument) doc).setDocumentFilter(new NumericFilter());
         }
-        this.keranjang = keranjang;
-        menampilkanTabel();
-
-        inpTotalHarga.setText("" + keranjang.getTotalHarga());
-        inpNama.setText(getUserController().getCurrentUser().getName());
-        inpNomor.setText(getUserController().getCurrentUser().getPhoneNumber());
 
         inpNama.setEditable(false);
         inpNomor.setEditable(false);
     }
 
     private void menampilkanTabel() {
+        inpTotalHarga.setText("" + keranjang.getTotalHarga());
 
         DefaultTableModel model1 = (DefaultTableModel) tblKeranjangPakain.getModel();
         model1.addRow(new Object[]{keranjang.getBeratCucianBaju(), keranjang.getJenisCuciBaju(), keranjang.getWaktuPengerjaanBaju()});
@@ -44,6 +41,8 @@ public class OtpViewKeranjang extends ViewController {
         DefaultTableModel model4 = (DefaultTableModel) tblKeranjangKarpet.getModel();
         model4.addRow(new Object[]{keranjang.getJumlahCucianKarpet(), keranjang.getWaktuPengerjaanKarpet()});
 
+        inpNama.setText(getUserController().getCurrentUser().getName());
+        inpNomor.setText(getUserController().getCurrentUser().getPhoneNumber());
     }
 
     private static class NumericFilter extends DocumentFilter {
@@ -210,7 +209,7 @@ public class OtpViewKeranjang extends ViewController {
         getContentPane().add(inpTotalHarga);
         inpTotalHarga.setBounds(340, 385, 160, 25);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("E:\\Kuliah 2023\\OOP\\UAS_Laundry\\src\\Image\\Keranjang.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Keranjang.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 480);
 
@@ -249,6 +248,10 @@ public class OtpViewKeranjang extends ViewController {
         if (inpAlamat.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Alamat Pelanggan Harus Diisi!",
                     "Alamat", JOptionPane.WARNING_MESSAGE);
+        } else if (keranjang.getJenisCuciBaju() == null && keranjang.getJenisCuciSelimut() == null
+                && keranjang.getJumlahCucianSepatu() == 0 && keranjang.getJumlahCucianKarpet() == 0) {
+            JOptionPane.showMessageDialog(this, "Tidak ada Pesanan!",
+                    "Pesanan Kosong", JOptionPane.WARNING_MESSAGE);
         } else {
             getOrderController().buatOrder(getUserController().getCurrentUser().getName(), getUserController().getCurrentUser().getPhoneNumber(), inpAlamat.getText());
             getOrderController().addItemToOrder("Pakaian", 0, keranjang.getJenisCuciBaju(), keranjang.getWaktuPengerjaanBaju(), 0);
@@ -312,6 +315,11 @@ public class OtpViewKeranjang extends ViewController {
     private void inpAlamatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inpAlamatActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_inpAlamatActionPerformed
+
+    public void afterOpen() {
+        menampilkanTabel();
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnHapus;

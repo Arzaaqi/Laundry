@@ -35,7 +35,7 @@ public class OtpItemPakaian extends OtpItem {
             }
         });
         getContentPane().add(cmbWaktu);
-        cmbWaktu.setBounds(430, 230, 160, 40);
+        cmbWaktu.setBounds(440, 300, 160, 40);
 
         cmbJenis.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Setrika", "Cuci Kering", "Cuci Kering + Setrika" }));
         cmbJenis.addActionListener(new java.awt.event.ActionListener() {
@@ -44,13 +44,13 @@ public class OtpItemPakaian extends OtpItem {
             }
         });
         getContentPane().add(cmbJenis);
-        cmbJenis.setBounds(430, 170, 160, 40);
+        cmbJenis.setBounds(440, 190, 160, 40);
 
-        jLabel4.setText("jLabel4");
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/itemPakaianCus.png"))); // NOI18N
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(0, 0, 790, 460);
+        jLabel4.setBounds(0, 0, 790, 480);
 
-        setSize(new java.awt.Dimension(804, 498));
+        setSize(new java.awt.Dimension(800, 498));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

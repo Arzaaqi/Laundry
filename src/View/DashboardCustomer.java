@@ -22,11 +22,11 @@ public class DashboardCustomer extends ViewController {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        btnStatusOrder = new javax.swing.JButton();
-        btn_Kalkulator = new javax.swing.JButton();
-        btn_Order = new javax.swing.JButton();
-        btn_Kembali = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        btnKembali = new javax.swing.JButton();
+        btnStatusOrder = new javax.swing.JButton();
+        btnKalkulator = new javax.swing.JButton();
+        btnOrder = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(785, 520));
@@ -37,30 +37,49 @@ public class DashboardCustomer extends ViewController {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Keluar");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(357, 420, 70, 40);
+        jLabel1.setBounds(360, 420, 70, 40);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Status Order");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(90, 285, 107, 35);
+        jLabel4.setBounds(90, 290, 120, 25);
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Kalkulator Laundry");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(307, 286, 180, 35);
+        jLabel5.setBounds(310, 290, 170, 25);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Order to Pick");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(577, 286, 130, 35);
+        jLabel6.setBounds(580, 290, 130, 25);
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 0, 0, 490);
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/dashboardCustomer.png"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 0, 790, 490);
+
+        btnKembali.setBackground(new java.awt.Color(102, 0, 102));
+        btnKembali.setFont(new java.awt.Font("Swis721 BlkCn BT", 1, 18)); // NOI18N
+        btnKembali.setForeground(new java.awt.Color(255, 255, 255));
+        btnKembali.setText("KEMBALI");
+        btnKembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKembaliActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnKembali);
+        btnKembali.setBounds(310, 420, 170, 40);
 
         btnStatusOrder.setBackground(new java.awt.Color(0, 204, 204));
         btnStatusOrder.setFont(new java.awt.Font("Stencil Std", 1, 14)); // NOI18N
@@ -75,76 +94,57 @@ public class DashboardCustomer extends ViewController {
         getContentPane().add(btnStatusOrder);
         btnStatusOrder.setBounds(40, 280, 210, 50);
 
-        btn_Kalkulator.setBackground(new java.awt.Color(255, 153, 153));
-        btn_Kalkulator.setFont(new java.awt.Font("Stencil Std", 1, 14)); // NOI18N
-        btn_Kalkulator.setForeground(new java.awt.Color(255, 255, 255));
-        btn_Kalkulator.setText("Kalkulator laundry");
-        btn_Kalkulator.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.lightGray, null, null));
-        btn_Kalkulator.addActionListener(new java.awt.event.ActionListener() {
+        btnKalkulator.setBackground(new java.awt.Color(255, 153, 153));
+        btnKalkulator.setFont(new java.awt.Font("Stencil Std", 1, 14)); // NOI18N
+        btnKalkulator.setForeground(new java.awt.Color(255, 255, 255));
+        btnKalkulator.setText("Kalkulator laundry");
+        btnKalkulator.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.lightGray, null, null));
+        btnKalkulator.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_KalkulatorActionPerformed(evt);
+                btnKalkulatorActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_Kalkulator);
-        btn_Kalkulator.setBounds(280, 280, 220, 50);
+        getContentPane().add(btnKalkulator);
+        btnKalkulator.setBounds(290, 280, 210, 50);
 
-        btn_Order.setBackground(new java.awt.Color(255, 153, 0));
-        btn_Order.setFont(new java.awt.Font("Stencil Std", 1, 14)); // NOI18N
-        btn_Order.setForeground(new java.awt.Color(255, 255, 255));
-        btn_Order.setText("order to pick up");
-        btn_Order.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
-        btn_Order.addActionListener(new java.awt.event.ActionListener() {
+        btnOrder.setBackground(new java.awt.Color(255, 153, 0));
+        btnOrder.setFont(new java.awt.Font("Stencil Std", 1, 14)); // NOI18N
+        btnOrder.setForeground(new java.awt.Color(255, 255, 255));
+        btnOrder.setText("order to pick up");
+        btnOrder.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
+        btnOrder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_OrderActionPerformed(evt);
+                btnOrderActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_Order);
-        btn_Order.setBounds(530, 280, 220, 50);
-
-        btn_Kembali.setBackground(new java.awt.Color(102, 0, 102));
-        btn_Kembali.setFont(new java.awt.Font("Swis721 BlkCn BT", 1, 18)); // NOI18N
-        btn_Kembali.setForeground(new java.awt.Color(255, 255, 255));
-        btn_Kembali.setText("KEMBALI");
-        btn_Kembali.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_KembaliActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btn_Kembali);
-        btn_Kembali.setBounds(310, 420, 170, 40);
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Keluar");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(357, 420, 70, 40);
+        getContentPane().add(btnOrder);
+        btnOrder.setBounds(540, 280, 210, 50);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_KalkulatorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_KalkulatorActionPerformed
+    private void btnKalkulatorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKalkulatorActionPerformed
         openFrame("kalkulator_customer");
-    }//GEN-LAST:event_btn_KalkulatorActionPerformed
+    }//GEN-LAST:event_btnKalkulatorActionPerformed
 
-    private void btn_OrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_OrderActionPerformed
+    private void btnOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrderActionPerformed
         openFrame("order_to_pick");
-    }//GEN-LAST:event_btn_OrderActionPerformed
+    }//GEN-LAST:event_btnOrderActionPerformed
 
-    private void btn_KembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_KembaliActionPerformed
+    private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
         getUserController().logout();
         openFrame("login");
-    }//GEN-LAST:event_btn_KembaliActionPerformed
+    }//GEN-LAST:event_btnKembaliActionPerformed
 
     private void btnStatusOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStatusOrderActionPerformed
         openFrame("order_status_customer");
     }//GEN-LAST:event_btnStatusOrderActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnKalkulator;
+    private javax.swing.JButton btnKembali;
+    private javax.swing.JButton btnOrder;
     private javax.swing.JButton btnStatusOrder;
-    private javax.swing.JButton btn_Kalkulator;
-    private javax.swing.JButton btn_Kembali;
-    private javax.swing.JButton btn_Order;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

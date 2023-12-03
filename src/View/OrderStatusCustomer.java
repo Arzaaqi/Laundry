@@ -17,13 +17,13 @@ public class OrderStatusCustomer extends ViewController {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         tabel = new javax.swing.JTable();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txt_telepon = new javax.swing.JLabel();
         txt_nama = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        btn_detail = new javax.swing.JButton();
-        btn_kembali = new javax.swing.JButton();
+        btnDetail = new javax.swing.JButton();
+        btnKembali = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -41,13 +41,8 @@ public class OrderStatusCustomer extends ViewController {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(170, 180, 452, 250);
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Detail");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(680, 446, 60, 20);
-
         jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Kembali");
         getContentPane().add(jLabel3);
@@ -63,35 +58,42 @@ public class OrderStatusCustomer extends ViewController {
         getContentPane().add(txt_nama);
         txt_nama.setBounds(350, 110, 220, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Kuliah\\Tugas\\Semester 3\\Pemrograman Berorientasi Objek\\Laundry\\src\\Image\\status_order_cs.png")); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Detail");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(690, 446, 50, 20);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/status_order_cs.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 788, 490);
+        jLabel1.setBounds(0, 0, 790, 490);
 
-        btn_detail.addActionListener(new java.awt.event.ActionListener() {
+        btnDetail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_detailActionPerformed(evt);
+                btnDetailActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_detail);
-        btn_detail.setBounds(665, 443, 100, 30);
+        getContentPane().add(btnDetail);
+        btnDetail.setBounds(655, 443, 120, 30);
 
-        btn_kembali.addActionListener(new java.awt.event.ActionListener() {
+        btnKembali.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_kembaliActionPerformed(evt);
+                btnKembaliActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_kembali);
-        btn_kembali.setBounds(525, 443, 110, 30);
+        getContentPane().add(btnKembali);
+        btnKembali.setBounds(525, 443, 110, 30);
 
-        setSize(new java.awt.Dimension(799, 497));
+        setSize(new java.awt.Dimension(801, 520));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_kembaliActionPerformed
+    private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
         openFrame("dashboard_customer");
-    }//GEN-LAST:event_btn_kembaliActionPerformed
+    }//GEN-LAST:event_btnKembaliActionPerformed
 
-    private void btn_detailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_detailActionPerformed
+    private void btnDetailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDetailActionPerformed
           DefaultTableModel model = (DefaultTableModel) tabel.getModel();
         int selectedRow = tabel.getSelectedRow();
         
@@ -100,7 +102,7 @@ public class OrderStatusCustomer extends ViewController {
             openFrame(new OrderDetailCustomer(order));
         }
         
-    }//GEN-LAST:event_btn_detailActionPerformed
+    }//GEN-LAST:event_btnDetailActionPerformed
 
     public void menampilkanTabel() {
         DefaultTableModel model = (DefaultTableModel) tabel.getModel();
@@ -136,11 +138,11 @@ public class OrderStatusCustomer extends ViewController {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_detail;
-    private javax.swing.JButton btn_kembali;
+    private javax.swing.JButton btnDetail;
+    private javax.swing.JButton btnKembali;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tabel;
     private javax.swing.JLabel txt_nama;

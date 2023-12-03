@@ -18,7 +18,7 @@ public class ItemKarpet extends Item {
 
         inpJumlah = new javax.swing.JTextField();
         cmbWaktu = new javax.swing.JComboBox<>();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -40,11 +40,11 @@ public class ItemKarpet extends Item {
         getContentPane().add(cmbWaktu);
         cmbWaktu.setBounds(430, 290, 190, 50);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/itemKarpet.png"))); // NOI18N
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 790, 490);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/itemKarpet.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 790, 490);
 
-        setSize(new java.awt.Dimension(804, 528));
+        setSize(new java.awt.Dimension(801, 528));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -66,6 +66,6 @@ public class ItemKarpet extends Item {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> cmbWaktu;
     private javax.swing.JTextField inpJumlah;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

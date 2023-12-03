@@ -44,7 +44,7 @@ public class OtpItemSelimut extends OtpItem {
             }
         });
         getContentPane().add(cmbJenis);
-        cmbJenis.setBounds(430, 230, 160, 40);
+        cmbJenis.setBounds(430, 240, 160, 40);
 
         cmbWaktu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hemat (5 Hari)", "Standar (3 Hari)", "Express (1 Hari)" }));
         cmbWaktu.addActionListener(new java.awt.event.ActionListener() {
@@ -53,11 +53,13 @@ public class OtpItemSelimut extends OtpItem {
             }
         });
         getContentPane().add(cmbWaktu);
-        cmbWaktu.setBounds(430, 290, 160, 40);
+        cmbWaktu.setBounds(430, 320, 160, 40);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/itemSelimut.png"))); // NOI18N
         getContentPane().add(jLabel4);
         jLabel4.setBounds(0, 0, 790, 460);
 
-        setSize(new java.awt.Dimension(804, 498));
+        setSize(new java.awt.Dimension(801, 498));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

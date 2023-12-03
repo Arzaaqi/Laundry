@@ -43,7 +43,7 @@ public class ItemPakaian extends Item {
             }
         });
         getContentPane().add(inpBerat);
-        inpBerat.setBounds(440, 180, 150, 30);
+        inpBerat.setBounds(440, 170, 160, 35);
 
         cmbJenis.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Setrika", "Cuci Kering", "Cuci Kering + Setrika" }));
         cmbJenis.addActionListener(new java.awt.event.ActionListener() {
@@ -59,7 +59,7 @@ public class ItemPakaian extends Item {
         getContentPane().add(jLabel4);
         jLabel4.setBounds(0, 0, 790, 490);
 
-        setSize(new java.awt.Dimension(804, 528));
+        setSize(new java.awt.Dimension(801, 528));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

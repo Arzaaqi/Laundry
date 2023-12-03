@@ -16,25 +16,28 @@ public class OrderToPick extends ViewController {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnKeranjang = new javax.swing.JButton();
-        btnSelimut = new javax.swing.JButton();
-        btnSepatu = new javax.swing.JButton();
-        btnKarpet = new javax.swing.JButton();
-        btnPakaian = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        btnSelimut = new javax.swing.JButton();
+        btnKarpet = new javax.swing.JButton();
+        btnSepatu = new javax.swing.JButton();
+        btnPakaian = new javax.swing.JButton();
+        btnKeranjang = new javax.swing.JButton();
         btnKembali = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        btnKeranjang.setText("Keranjang");
-        btnKeranjang.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnKeranjangActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnKeranjang);
-        btnKeranjang.setBounds(650, 30, 110, 40);
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Kembali");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(27, 425, 100, 30);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/menu item.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 790, 490);
 
         btnSelimut.setText("Selimut");
         btnSelimut.addActionListener(new java.awt.event.ActionListener() {
@@ -43,16 +46,7 @@ public class OrderToPick extends ViewController {
             }
         });
         getContentPane().add(btnSelimut);
-        btnSelimut.setBounds(430, 260, 160, 110);
-
-        btnSepatu.setText("Sepatu");
-        btnSepatu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSepatuActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnSepatu);
-        btnSepatu.setBounds(430, 110, 160, 110);
+        btnSelimut.setBounds(430, 300, 160, 110);
 
         btnKarpet.setText("Karpet");
         btnKarpet.addActionListener(new java.awt.event.ActionListener() {
@@ -61,7 +55,16 @@ public class OrderToPick extends ViewController {
             }
         });
         getContentPane().add(btnKarpet);
-        btnKarpet.setBounds(200, 260, 160, 110);
+        btnKarpet.setBounds(200, 300, 160, 110);
+
+        btnSepatu.setText("Sepatu");
+        btnSepatu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSepatuActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnSepatu);
+        btnSepatu.setBounds(430, 140, 160, 110);
 
         btnPakaian.setText("Pakaian");
         btnPakaian.addActionListener(new java.awt.event.ActionListener() {
@@ -70,9 +73,16 @@ public class OrderToPick extends ViewController {
             }
         });
         getContentPane().add(btnPakaian);
-        btnPakaian.setBounds(200, 110, 160, 110);
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 790, 490);
+        btnPakaian.setBounds(200, 140, 160, 110);
+
+        btnKeranjang.setText("Keranjang");
+        btnKeranjang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKeranjangActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnKeranjang);
+        btnKeranjang.setBounds(640, 70, 130, 50);
 
         btnKembali.setText("Kembali");
         btnKembali.addActionListener(new java.awt.event.ActionListener() {
@@ -81,7 +91,7 @@ public class OrderToPick extends ViewController {
             }
         });
         getContentPane().add(btnKembali);
-        btnKembali.setBounds(40, 410, 120, 40);
+        btnKembali.setBounds(20, 420, 120, 40);
 
         setSize(new java.awt.Dimension(804, 525));
         setLocationRelativeTo(null);
@@ -123,5 +133,6 @@ public class OrderToPick extends ViewController {
     private javax.swing.JButton btnSelimut;
     private javax.swing.JButton btnSepatu;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

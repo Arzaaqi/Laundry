@@ -27,29 +27,29 @@ public class Register extends ViewController {
             }
         });
         getContentPane().add(inputUsername);
-        inputUsername.setBounds(330, 280, 140, 22);
+        inputUsername.setBounds(330, 275, 140, 30);
         getContentPane().add(inputNomorhp);
-        inputNomorhp.setBounds(330, 330, 140, 20);
+        inputNomorhp.setBounds(330, 320, 140, 30);
 
-        btnRegist.setText("Regist");
+        btnRegist.setText("Daftar");
         btnRegist.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistActionPerformed(evt);
             }
         });
         getContentPane().add(btnRegist);
-        btnRegist.setBounds(480, 400, 72, 23);
+        btnRegist.setBounds(480, 400, 80, 23);
 
-        btnBack.setText("Back");
+        btnBack.setText("Kembali");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
         getContentPane().add(btnBack);
-        btnBack.setBounds(250, 400, 72, 23);
+        btnBack.setBounds(250, 400, 80, 23);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Kuliah\\Tugas\\Semester 3\\Pemrograman Berorientasi Objek\\Laundry\\src\\Image\\register.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/register.png"))); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 0, 790, 490);
 

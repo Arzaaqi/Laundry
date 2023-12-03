@@ -32,47 +32,47 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="330" y="280" width="140" height="-1"/>
+          <AbsoluteConstraints x="330" y="275" width="140" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="inputNomorhp">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="330" y="330" width="140" height="20"/>
+          <AbsoluteConstraints x="330" y="320" width="140" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="btnRegist">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Regist"/>
+        <Property name="text" type="java.lang.String" value="Daftar"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="480" y="400" width="-1" height="-1"/>
+          <AbsoluteConstraints x="480" y="400" width="80" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="btnBack">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Back"/>
+        <Property name="text" type="java.lang.String" value="Kembali"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="250" y="400" width="-1" height="-1"/>
+          <AbsoluteConstraints x="250" y="400" width="80" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="D:\Kuliah\Tugas\Semester 3\Pemrograman Berorientasi Objek\Laundry\src\Image\register.png"/>
+          <Image iconType="3" name="/Image/register.png"/>
         </Property>
       </Properties>
       <Constraints>

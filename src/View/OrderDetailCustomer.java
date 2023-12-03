@@ -81,10 +81,11 @@ public class OrderDetailCustomer extends ViewController {
         txt_status.setBounds(240, 270, 230, 20);
 
         jLabel8.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Kembali");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(250, 620, 100, 40);
+        jLabel8.setBounds(250, 630, 100, 25);
 
         txt_brpakaian.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         txt_brpakaian.setText("Berat");
@@ -136,7 +137,7 @@ public class OrderDetailCustomer extends ViewController {
         getContentPane().add(txt_pktkarpet);
         txt_pktkarpet.setBounds(450, 550, 100, 19);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Kuliah\\Tugas\\Semester 3\\Pemrograman Berorientasi Objek\\Laundry\\src\\Image\\order_detail.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/orderDetailCustomer.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 600, 680);
 
@@ -148,7 +149,7 @@ public class OrderDetailCustomer extends ViewController {
         getContentPane().add(btn_kembali);
         btn_kembali.setBounds(250, 620, 100, 40);
 
-        setSize(new java.awt.Dimension(614, 687));
+        setSize(new java.awt.Dimension(614, 717));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
