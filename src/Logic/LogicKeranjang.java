@@ -2,9 +2,9 @@ package Logic;
 
 public class LogicKeranjang {
 
-    private double beratCucianBaju;
-    private String jenisCuciBaju;
-    private String waktuPengerjaanBaju;
+    private double beratCucianPakaian;
+    private String jenisCuciPakaian;
+    private String waktuPengerjaanPakaian;
 
     private int jumlahCucianSelimut;
     private String jenisCuciSelimut;
@@ -16,28 +16,28 @@ public class LogicKeranjang {
     private int jumlahCucianKarpet;
     private String waktuPengerjaanKarpet;
 
-    public double getBeratCucianBaju() {
-        return beratCucianBaju;
+    public double getBeratCucianPakaian() {
+        return beratCucianPakaian;
     }
 
-    public void setBeratCucianBaju(double beratCucianBaju) {
-        this.beratCucianBaju = beratCucianBaju;
+    public void setBeratCucianPakaian(double beratCucianPakaian) {
+        this.beratCucianPakaian = beratCucianPakaian;
     }
 
-    public String getJenisCuciBaju() {
-        return jenisCuciBaju;
+    public String getJenisCuciPakaian() {
+        return jenisCuciPakaian;
     }
 
-    public void setJenisCuciBaju(String jenisCuciBaju) {
-        this.jenisCuciBaju = jenisCuciBaju;
+    public void setJenisCuciPakaian(String jenisCuciPakaian) {
+        this.jenisCuciPakaian = jenisCuciPakaian;
     }
 
-    public String getWaktuPengerjaanBaju() {
-        return waktuPengerjaanBaju;
+    public String getWaktuPengerjaanPakaian() {
+        return waktuPengerjaanPakaian;
     }
 
-    public void setWaktuPengerjaanBaju(String waktuPengerjaanBaju) {
-        this.waktuPengerjaanBaju = waktuPengerjaanBaju;
+    public void setWaktuPengerjaanPakaian(String waktuPengerjaanPakaian) {
+        this.waktuPengerjaanPakaian = waktuPengerjaanPakaian;
     }
 
     public int getJumlahCucianSelimut() {
@@ -96,15 +96,12 @@ public class LogicKeranjang {
         this.waktuPengerjaanKarpet = waktuPengerjaanKarpet;
     }
 
-    public double hargaBaju() {
-        if (jenisCuciBaju == null || waktuPengerjaanBaju == null || beratCucianBaju == 0) {
+    public double hargaPakaian() {
+        if (jenisCuciPakaian == null || waktuPengerjaanPakaian == null || beratCucianPakaian == 0) {
             return 0;
         } else {
-            KalkulatorPakaian baju = new KalkulatorPakaian();
-            baju.setBerat(beratCucianBaju);
-            baju.setJenisCucian(jenisCuciBaju);
-            baju.setJenisPengerjaan(waktuPengerjaanBaju);
-            return baju.hitung();
+            InterfaceKalkulator kalkulatorPakaian = new KalkulatorPakaian();
+            return (beratCucianPakaian * kalkulatorPakaian.calculateJenisCucianPrice(jenisCuciPakaian) + kalkulatorPakaian.calculateWaktuPengerjaanPrice(waktuPengerjaanPakaian));
         }
     }
 
@@ -112,23 +109,17 @@ public class LogicKeranjang {
         if (jenisCuciSelimut == null || waktuPengerjaanSelimut == null || jumlahCucianSelimut == 0) {
             return 0;
         } else {
-            KalkulatorSelimut selimut = new KalkulatorSelimut();
-            selimut.setJenisCucian(jenisCuciSelimut);
-            selimut.setJenisPengerjaan(waktuPengerjaanSelimut);
-            selimut.setJumlah(jumlahCucianSelimut);
-            return selimut.hitung();
+            InterfaceKalkulator kalkulatorSelimut = new KalkulatorSelimut();
+            return (jumlahCucianSelimut * kalkulatorSelimut.calculateJenisCucianPrice(jenisCuciSelimut) + kalkulatorSelimut.calculateWaktuPengerjaanPrice(waktuPengerjaanSelimut));
         }
-
     }
 
     public double hargaSepatu() {
         if (waktuPengerjaanSepatu == null || jumlahCucianSepatu == 0) {
             return 0;
         } else {
-            KalkulatorSepatu sepatu = new KalkulatorSepatu();
-            sepatu.setJenisPengerjaan(waktuPengerjaanSepatu);
-            sepatu.setJumlah(jumlahCucianSepatu);
-            return sepatu.hitung();
+            InterfaceKalkulator kalkulatorSepatu = new KalkulatorSepatu();
+            return (jumlahCucianSepatu * kalkulatorSepatu.calculateWaktuPengerjaanPrice(waktuPengerjaanSepatu));
         }
     }
 
@@ -136,33 +127,40 @@ public class LogicKeranjang {
         if (waktuPengerjaanKarpet == null || jumlahCucianKarpet == 0) {
             return 0;
         } else {
-            KalkulatorKarpet karpet = new KalkulatorKarpet();
-            karpet.setJenisPengerjaan(waktuPengerjaanKarpet);
-            karpet.setJumlah(jumlahCucianKarpet);
-            return karpet.hitung();
+            InterfaceKalkulator kalkulatorKarpet = new KalkulatorKarpet();
+            return (jumlahCucianKarpet * kalkulatorKarpet.calculateWaktuPengerjaanPrice(waktuPengerjaanKarpet));
         }
     }
 
     public double getTotalHarga() {
-        double total = hargaBaju() + hargaKarpet() + hargaSelimut() + hargaSepatu();
-        return total;
+        return (hargaPakaian() + hargaSelimut() + hargaSepatu() + hargaKarpet());
     }
 
     public double updateHarga(Order order) {
-        setBeratCucianBaju(order.getBeratCucianBaju());
-        setJenisCuciBaju(order.getJenisCuciBaju());
-        setWaktuPengerjaanBaju(order.getWaktuPengerjaanBaju());
+        for (OrderItem item : order.getOrderItems()) {
+            switch (item.getItemType()) {
+                case PAKAIAN:
+                    setBeratCucianPakaian(item.getBerat());
+                    setJenisCuciPakaian(item.getJenisCuci());
+                    setWaktuPengerjaanPakaian(item.getWaktuPengerjaan());
+                    break;
+                case SELIMUT:
+                    setJumlahCucianSelimut(item.getJumlah());
+                    setJenisCuciSelimut(item.getJenisCuci());
+                    setWaktuPengerjaanSelimut(item.getWaktuPengerjaan());
+                    break;
+                case SEPATU:
+                    setJumlahCucianSepatu(item.getJumlah());
+                    setWaktuPengerjaanSepatu(item.getWaktuPengerjaan());
+                    break;
+                case KARPET:
+                    setJumlahCucianKarpet(item.getJumlah());
+                    setWaktuPengerjaanKarpet(item.getWaktuPengerjaan());
+                    break;
+            }
+        }
 
-        setJumlahCucianSelimut(order.getJumlahCucianSelimut());
-        setJenisCuciSelimut(order.getJenisCuciSelimut());
-        setWaktuPengerjaanSelimut(order.getWaktuPengerjaanSelimut());
-
-        setJumlahCucianSepatu(order.getJumlahCucianSepatu());
-        setWaktuPengerjaanSepatu(order.getWaktuPengerjaanSepatu());
-
-        setJumlahCucianKarpet(order.getJumlahCucianKarpet());
-        setWaktuPengerjaanKarpet(order.getWaktuPengerjaanKarpet());
-        
         return getTotalHarga();
     }
+
 }

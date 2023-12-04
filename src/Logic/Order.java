@@ -1,28 +1,38 @@
 package Logic;
 
-public class Order {
+import java.util.ArrayList;
+import java.util.List;
+
+import Controller.*;
+
+public class Order extends ViewController {
 
     private String namaPelanggan;
     private String nomorTeleponPelanggan;
     private String alamatPelanggan;
-    private boolean statusOrderan;
-
-    private double beratCucianBaju;
-    private String jenisCuciBaju;
-    private String waktuPengerjaanBaju;
-
-    private int jumlahCucianSelimut;
-    private String jenisCuciSelimut;
-    private String waktuPengerjaanSelimut;
-
-    private int jumlahCucianSepatu;
-    private String waktuPengerjaanSepatu;
-
-    private int jumlahCucianKarpet;
-    private String waktuPengerjaanKarpet;
-    
     private double totalHarga;
-    
+    private boolean statusOrderan = false;
+
+    private List<OrderItem> orderItems = new ArrayList<>();
+
+    public double calculateTotalHarga() {
+        double total = 0;
+
+        for (OrderItem item : orderItems) {
+            KalkulatorHarga kalkulatorHarga = new KalkulatorHarga(item);
+            total += kalkulatorHarga.calculatePrice();
+        }
+
+        return total;
+    }
+
+    public void addItem(OrderItem item) {
+        orderItems.add(item);
+    }
+
+    public void removeItem(OrderItem item) {
+        orderItems.remove(item);
+    }
 
     public String getNamaPelanggan() {
         return namaPelanggan;
@@ -36,52 +46,16 @@ public class Order {
         return alamatPelanggan;
     }
 
-    public void setAlamatPelanggan(String alamatPelanggan) {
-        this.alamatPelanggan = alamatPelanggan;
-    }
-    
     public boolean isStatusOrderan() {
         return statusOrderan;
     }
 
-    public double getBeratCucianBaju() {
-        return beratCucianBaju;
+    public double getTotalHarga() {
+        return totalHarga;
     }
 
-    public String getJenisCuciBaju() {
-        return jenisCuciBaju;
-    }
-
-    public String getWaktuPengerjaanBaju() {
-        return waktuPengerjaanBaju;
-    }
-
-    public int getJumlahCucianSelimut() {
-        return jumlahCucianSelimut;
-    }
-
-    public String getJenisCuciSelimut() {
-        return jenisCuciSelimut;
-    }
-
-    public String getWaktuPengerjaanSelimut() {
-        return waktuPengerjaanSelimut;
-    }
-
-    public int getJumlahCucianSepatu() {
-        return jumlahCucianSepatu;
-    }
-
-    public String getWaktuPengerjaanSepatu() {
-        return waktuPengerjaanSepatu;
-    }
-
-    public int getJumlahCucianKarpet() {
-        return jumlahCucianKarpet;
-    }
-
-    public String getWaktuPengerjaanKarpet() {
-        return waktuPengerjaanKarpet;
+    public List<OrderItem> getOrderItems() {
+        return orderItems;
     }
 
     public void setNamaPelanggan(String namaPelanggan) {
@@ -92,60 +66,23 @@ public class Order {
         this.nomorTeleponPelanggan = nomorTeleponPelanggan;
     }
 
-    public void setBeratCucianBaju(double beratCucianBaju) {
-        this.beratCucianBaju = beratCucianBaju;
+    public void setAlamatPelanggan(String alamatPelanggan) {
+        this.alamatPelanggan = alamatPelanggan;
     }
 
-    public void setJenisCuciBaju(String jenisCuciBaju) {
-        this.jenisCuciBaju = jenisCuciBaju;
-    }
-
-    public void setWaktuPengerjaanBaju(String waktuPengerjaanBaju) {
-        this.waktuPengerjaanBaju = waktuPengerjaanBaju;
-    }
-
-    public void setJumlahCucianSelimut(int jumlahCucianSelimut) {
-        this.jumlahCucianSelimut = jumlahCucianSelimut;
-    }
-
-    public void setJenisCuciSelimut(String jenisCuciSelimut) {
-        this.jenisCuciSelimut = jenisCuciSelimut;
-    }
-
-    public void setWaktuPengerjaanSelimut(String waktuPengerjaanSelimut) {
-        this.waktuPengerjaanSelimut = waktuPengerjaanSelimut;
-    }
-
-    public void setJumlahCucianSepatu(int jumlahCucianSepatu) {
-        this.jumlahCucianSepatu = jumlahCucianSepatu;
-    }
-
-    public void setWaktuPengerjaanSepatu(String waktuPengerjaanSepatu) {
-        this.waktuPengerjaanSepatu = waktuPengerjaanSepatu;
-    }
-
-    public void setJumlahCucianKarpet(int jumlahCucianKarpet) {
-        this.jumlahCucianKarpet = jumlahCucianKarpet;
-    }
-
-    public void setWaktuPengerjaanKarpet(String waktuPengerjaanKarpet) {
-        this.waktuPengerjaanKarpet = waktuPengerjaanKarpet;
-    }
-
-    public void setStatusOrderan(String statusOrderan) {
-        if(statusOrderan == "Selesai")
-            this.statusOrderan = true;
-        else
-            this.statusOrderan = false;
-    }
-
-    public double getTotalHarga() {
-        return totalHarga;
+    public void setStatusOrderan(boolean statusOrderan) {
+        this.statusOrderan = statusOrderan;
     }
 
     public void setTotalHarga(double totalHarga) {
         this.totalHarga = totalHarga;
     }
-    
-    
+
+    public void setStatusOrderan(String statusOrderan) {
+        if (statusOrderan == "Selesai") {
+            this.statusOrderan = true;
+        } else {
+            this.statusOrderan = false;
+        }
+    }
 }

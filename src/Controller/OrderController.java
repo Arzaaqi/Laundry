@@ -39,7 +39,7 @@ public class OrderController {
 
         switch (itemType) {
             case "Pakaian":
-                tambahBaju(berat, jenisCuci, waktuPengerjaan);
+                tambahPakaian(berat, jenisCuci, waktuPengerjaan);
                 break;
             case "Selimut":
                 tambahSelimut(jumlahCucian, jenisCuci, waktuPengerjaan);
@@ -55,26 +55,24 @@ public class OrderController {
         }
     }
 
-    public void tambahBaju(double beratCucianBaju, String jenisCuciBaju, String waktuPengerjaanBaju) {
-        order.setBeratCucianBaju(beratCucianBaju);
-        order.setJenisCuciBaju(jenisCuciBaju);
-        order.setWaktuPengerjaanBaju(waktuPengerjaanBaju);
+    public void tambahPakaian(double beratCucianPakaian, String jenisCuciPakaian, String waktuPengerjaanPakaian) {
+        OrderItem pakaian = new OrderItem(ItemType.PAKAIAN, beratCucianPakaian, jenisCuciPakaian, waktuPengerjaanPakaian, 0);
+        order.addItem(pakaian);
     }
 
-    public void tambahSelimut(int jumlahCucianSelimut, String jenisCucianSelimut, String waktuPengerjaanSelimut) {
-        order.setJumlahCucianSelimut(jumlahCucianSelimut);
-        order.setJenisCuciSelimut(jenisCucianSelimut);
-        order.setWaktuPengerjaanSelimut(waktuPengerjaanSelimut);
+    public void tambahSelimut(int jumlahCucianSelimut, String jenisCuciSelimut, String waktuPengerjaanSelimut) {
+        OrderItem selimut = new OrderItem(ItemType.SELIMUT, 0.0, jenisCuciSelimut, waktuPengerjaanSelimut, jumlahCucianSelimut);
+        order.addItem(selimut);
     }
 
     public void tambahSepatu(int jumlahCucianSepatu, String waktuPengerjaanSepatu) {
-        order.setJumlahCucianSepatu(jumlahCucianSepatu);
-        order.setWaktuPengerjaanSepatu(waktuPengerjaanSepatu);
+        OrderItem sepatu = new OrderItem(ItemType.SEPATU, 0.0, null, waktuPengerjaanSepatu, jumlahCucianSepatu);
+        order.addItem(sepatu);
     }
 
     public void tambahKarpet(int jumlahCucianKarpet, String waktuPengerjaanKarpet) {
-        order.setJumlahCucianKarpet(jumlahCucianKarpet);
-        order.setWaktuPengerjaanKarpet(waktuPengerjaanKarpet);
+        OrderItem karpet = new OrderItem(ItemType.KARPET, 0.0, null, waktuPengerjaanKarpet, jumlahCucianKarpet);
+        order.addItem(karpet);
     }
     
     public void addHarga(double totalHarga){

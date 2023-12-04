@@ -201,41 +201,35 @@ public class KalkulatorCustomer extends ViewController {
         int selectedIndex = PindahPanel.getSelectedIndex();
 
         if (selectedIndex == 0) {
-            KalkulatorPakaian baju = new KalkulatorPakaian();
+            InterfaceKalkulator kalkulatorPakaian = new KalkulatorPakaian();
+            
             int berat = Integer.parseInt(inpBeratPakaian.getText());
             String jenisCucian = (String) cmbJenisCucianPakaian.getSelectedItem();
             String waktuPengerjaan = (String) cmbLamaPengerjaanPakaian.getSelectedItem();
-
-            baju.setBerat(berat);
-            baju.setJenisCucian(jenisCucian);
-            baju.setJenisPengerjaan(waktuPengerjaan);
-            inpHargaPakaian.setText(String.valueOf(baju.hitung()));
+            
+            inpHargaPakaian.setText(String.valueOf(berat * kalkulatorPakaian.calculateJenisCucianPrice(jenisCucian) + kalkulatorPakaian.calculateWaktuPengerjaanPrice(waktuPengerjaan)));
         } else if (selectedIndex == 1) {
-            KalkulatorSelimut selimut = new KalkulatorSelimut();
+            InterfaceKalkulator kalkulatorSelimut = new KalkulatorSelimut();
+            
             int jumlah = Integer.parseInt(inpJumlahSelimut.getText());
             String jenisCucian = (String) cmbJenisCucianSelimut.getSelectedItem();
             String waktuPengerjaan = (String) cmbLamaPengerjaanSelimut.getSelectedItem();
 
-            selimut.setJumlah(jumlah);
-            selimut.setJenisCucian(jenisCucian);
-            selimut.setJenisPengerjaan(waktuPengerjaan);
-            inpHargaSelimut.setText(String.valueOf(selimut.hitung()));
+            inpHargaSelimut.setText(String.valueOf(jumlah * kalkulatorSelimut.calculateJenisCucianPrice(jenisCucian) + kalkulatorSelimut.calculateWaktuPengerjaanPrice(waktuPengerjaan)));
         } else if (selectedIndex == 2) {
-            KalkulatorSepatu sepatu = new KalkulatorSepatu();
+            InterfaceKalkulator kalkulatorSepatu = new KalkulatorSepatu();
+            
             int jumlah = Integer.parseInt(inpJumlahSepatu.getText());
             String waktuPengerjaan = (String) cmbWaktuPengerjaanSepatu.getSelectedItem();
 
-            sepatu.setJumlah(jumlah);
-            sepatu.setJenisPengerjaan(waktuPengerjaan);
-            inpHargaSepatu.setText(String.valueOf(sepatu.hitung()));
+            inpHargaSepatu.setText(String.valueOf(jumlah * kalkulatorSepatu.calculateWaktuPengerjaanPrice(waktuPengerjaan)));
         } else if (selectedIndex == 3) {
-            KalkulatorKarpet karpet = new KalkulatorKarpet();
+            InterfaceKalkulator kalkulatorKarpet = new KalkulatorKarpet();
+            
             int jumlah = Integer.parseInt(inpJumlahKarpet.getText());
             String waktuPengerjaan = (String) cmbWaktuPengerjaanKarpet.getSelectedItem();
 
-            karpet.setJumlah(jumlah);
-            karpet.setJenisPengerjaan(waktuPengerjaan);
-            inpHargaKarpet.setText(String.valueOf(karpet.hitung()));
+            inpHargaKarpet.setText(String.valueOf(jumlah * kalkulatorKarpet.calculateWaktuPengerjaanPrice(waktuPengerjaan)));
         }
     }//GEN-LAST:event_btnHitungActionPerformed
 

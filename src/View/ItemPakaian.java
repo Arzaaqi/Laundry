@@ -78,10 +78,10 @@ public class ItemPakaian extends Item {
     @Override
     public void btnTambahActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        keranjang.setBeratCucianBaju(Integer.parseInt(inpBerat.getText()));
-        keranjang.setJenisCuciBaju(cmbJenis.getSelectedItem().toString());
-        keranjang.setWaktuPengerjaanBaju(cmbWaktu.getSelectedItem().toString());
-        System.out.println("" + keranjang.getBeratCucianBaju());
+        keranjang.setBeratCucianPakaian(Integer.parseInt(inpBerat.getText()));
+        keranjang.setJenisCuciPakaian(cmbJenis.getSelectedItem().toString());
+        keranjang.setWaktuPengerjaanPakaian(cmbWaktu.getSelectedItem().toString());
+        System.out.println("" + keranjang.getBeratCucianPakaian());
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -1,7 +1,10 @@
 package View;
 
 import Controller.*;
+import Logic.ItemType;
+import Logic.KalkulatorHarga;
 import Logic.Order;
+import Logic.OrderItem;
 
 import javax.swing.table.DefaultTableModel;
 
@@ -94,41 +97,48 @@ public class OrderStatusCustomer extends ViewController {
     }//GEN-LAST:event_btnKembaliActionPerformed
 
     private void btnDetailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDetailActionPerformed
-          DefaultTableModel model = (DefaultTableModel) tabel.getModel();
+        DefaultTableModel model = (DefaultTableModel) tabel.getModel();
         int selectedRow = tabel.getSelectedRow();
-        
-        if(selectedRow != -1){
+
+        if (selectedRow != -1) {
             Order order = getOrderController().getOrder(selectedRow);
             openFrame(new OrderDetailCustomer(order));
         }
-        
-    }//GEN-LAST:event_btnDetailActionPerformed
 
+    }//GEN-LAST:event_btnDetailActionPerformed
+    
     public void menampilkanTabel() {
         DefaultTableModel model = (DefaultTableModel) tabel.getModel();
         System.out.println("halo");
+
         for (int i = 0; i < getOrderController().getOrderSize(); i++) {
+            Order currentOrder = getOrderController().getOrder(i);
 
-            if (getOrderController().getOrder(i).getNamaPelanggan().equals(getUserController().getCurrentUser().getName())
-                    && getOrderController().getOrder(i).getNomorTeleponPelanggan().equals(getUserController().getCurrentUser().getPhoneNumber())) {
+            if (currentOrder.getNamaPelanggan().equals(getUserController().getCurrentUser().getName())
+                    && currentOrder.getNomorTeleponPelanggan().equals(getUserController().getCurrentUser().getPhoneNumber())) {
 
-                boolean statusPesanan = getOrderController().getOrder(i).isStatusOrderan();
+                boolean statusPesanan = currentOrder.isStatusOrderan();
                 String statusText = statusPesanan ? "Sudah" : "Belum";
-                if (getOrderController().getOrder(i).getBeratCucianBaju() == 0
-                        && getOrderController().getOrder(i).getJenisCuciBaju() != null) {
-                    model.addRow(new Object[]{
-                        getUserController().getCurrentUser().getName(),
-                        "Sedang dihitung",
-                        statusText,});
-                } else {
-                model.addRow(new Object[]{
-                    getUserController().getCurrentUser().getName(),
-                    getOrderController().getOrder(i).getTotalHarga(),
-                    statusText,});
+
+                for (OrderItem item : currentOrder.getOrderItems()) {
+                    if (item.getBerat() == 0 && item.getJenisCuci() != null && item.getItemType() == ItemType.PAKAIAN) {
+                        model.addRow(new Object[]{
+                            getUserController().getCurrentUser().getName(),
+                            "Sedang dihitung",
+                            statusText
+                        });
+                    } else {
+                        double totalHarga = currentOrder.getTotalHarga();
+                        model.addRow(new Object[]{
+                            getUserController().getCurrentUser().getName(),
+                            totalHarga,
+                            statusText
+                        });
+                    }
                 }
             }
-
         }
+
         txt_nama.setText(getUserController().getCurrentUser().getName());
         txt_telepon.setText(getUserController().getCurrentUser().getPhoneNumber());
     }
@@ -136,7 +146,7 @@ public class OrderStatusCustomer extends ViewController {
     public void afterOpen() {
         menampilkanTabel();
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDetail;
     private javax.swing.JButton btnKembali;

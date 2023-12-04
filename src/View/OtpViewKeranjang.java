@@ -30,7 +30,7 @@ public class OtpViewKeranjang extends ViewController {
         inpTotalHarga.setText("" + keranjang.getTotalHarga());
 
         DefaultTableModel model1 = (DefaultTableModel) tblKeranjangPakain.getModel();
-        model1.addRow(new Object[]{keranjang.getBeratCucianBaju(), keranjang.getJenisCuciBaju(), keranjang.getWaktuPengerjaanBaju()});
+        model1.addRow(new Object[]{keranjang.getBeratCucianPakaian(), keranjang.getJenisCuciPakaian(), keranjang.getWaktuPengerjaanPakaian()});
 
         DefaultTableModel model2 = (DefaultTableModel) tblKeranjangSepatu.getModel();
         model2.addRow(new Object[]{keranjang.getJumlahCucianSepatu(), keranjang.getWaktuPengerjaanSepatu()});
@@ -248,13 +248,13 @@ public class OtpViewKeranjang extends ViewController {
         if (inpAlamat.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Alamat Pelanggan Harus Diisi!",
                     "Alamat", JOptionPane.WARNING_MESSAGE);
-        } else if (keranjang.getJenisCuciBaju() == null && keranjang.getJenisCuciSelimut() == null
+        } else if (keranjang.getJenisCuciPakaian() == null && keranjang.getJenisCuciSelimut() == null
                 && keranjang.getJumlahCucianSepatu() == 0 && keranjang.getJumlahCucianKarpet() == 0) {
             JOptionPane.showMessageDialog(this, "Tidak ada Pesanan!",
                     "Pesanan Kosong", JOptionPane.WARNING_MESSAGE);
         } else {
             getOrderController().buatOrder(getUserController().getCurrentUser().getName(), getUserController().getCurrentUser().getPhoneNumber(), inpAlamat.getText());
-            getOrderController().addItemToOrder("Pakaian", 0, keranjang.getJenisCuciBaju(), keranjang.getWaktuPengerjaanBaju(), 0);
+            getOrderController().addItemToOrder("Pakaian", 0, keranjang.getJenisCuciPakaian(), keranjang.getWaktuPengerjaanPakaian(), 0);
             getOrderController().addItemToOrder("Selimut", 0, keranjang.getJenisCuciSelimut(), keranjang.getWaktuPengerjaanSelimut(), keranjang.getJumlahCucianSelimut());
             getOrderController().addItemToOrder("Sepatu", 0, null, keranjang.getWaktuPengerjaanSepatu(), keranjang.getJumlahCucianSepatu());
             getOrderController().addItemToOrder("Karpet", 0, null, keranjang.getWaktuPengerjaanKarpet(), keranjang.getJumlahCucianKarpet());
@@ -285,9 +285,9 @@ public class OtpViewKeranjang extends ViewController {
         int selectedRow4 = tblKeranjangKarpet.getSelectedRow();
 
         if (selectedRow1 != -1) {
-            keranjang.setBeratCucianBaju(0);
-            keranjang.setJenisCuciBaju(null);
-            keranjang.setWaktuPengerjaanBaju(null);
+            keranjang.setBeratCucianPakaian(0);
+            keranjang.setJenisCuciPakaian(null);
+            keranjang.setWaktuPengerjaanPakaian(null);
             modell.removeRow(selectedRow1);
             modell.fireTableDataChanged();
         } else if (selectedRow2 != -1) {

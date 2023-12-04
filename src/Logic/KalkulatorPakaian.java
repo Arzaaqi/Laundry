@@ -2,30 +2,14 @@ package Logic;
 
 public class KalkulatorPakaian implements InterfaceKalkulator {
 
-    private double berat;
-    private String jenisPengerjaan;
-    private String jenisCucian;
-    
-
-    public void setBerat(double berat) {
-        this.berat = berat;
-    }
-
-    public void setJenisPengerjaan(String jenisPengerjaan) {
-        this.jenisPengerjaan = jenisPengerjaan;
-    }
-
-    public void setJenisCucian(String jenisCucian) {
-        this.jenisCucian = jenisCucian;
-    }
-
-    private int biayaCucian() {
+    @Override
+    public int calculateJenisCucianPrice(String jenisCuci) {
         int biayaCucian = 0;
-        if (jenisCucian.equalsIgnoreCase("Cuci Kering")) {
+        if (jenisCuci.equalsIgnoreCase("Cuci Kering")) {
             biayaCucian = 3000;
-        } else if (jenisCucian.equalsIgnoreCase("Cuci Kering + Setrika")) {
+        } else if (jenisCuci.equalsIgnoreCase("Cuci Kering + Setrika")) {
             biayaCucian = 4000;
-        } else if (jenisCucian.equalsIgnoreCase("Setrika")) {
+        } else if (jenisCuci.equalsIgnoreCase("Setrika")) {
             biayaCucian = 3000;
         } else {
             biayaCucian = 0;
@@ -34,30 +18,17 @@ public class KalkulatorPakaian implements InterfaceKalkulator {
     }
 
     @Override
-    public double hitung() {
-        int biayaCucian = biayaCucian();
-        int biayaPengerjaan = ubahJenisPengerjaan();
-
-        double totalBiaya = berat * biayaCucian + biayaPengerjaan;
-
-        return totalBiaya;
-
-    }
-
-    @Override
-    public int ubahJenisPengerjaan() {
+    public int calculateWaktuPengerjaanPrice(String waktuPengerjaan) {
         int biayaPengerjaan = 0;
-        if (jenisPengerjaan.equalsIgnoreCase("Express (1 Hari)")) {
+        if (waktuPengerjaan.equalsIgnoreCase("Express (1 Hari)")) {
             biayaPengerjaan = 4000;
-        } else if (jenisPengerjaan.equalsIgnoreCase("Standar (3 Hari)")) {
+        } else if (waktuPengerjaan.equalsIgnoreCase("Standar (3 Hari)")) {
             biayaPengerjaan = 3000;
-        } else if (jenisPengerjaan.equalsIgnoreCase("Hemat (5 Hari)")) {
+        } else if (waktuPengerjaan.equalsIgnoreCase("Hemat (5 Hari)")) {
             biayaPengerjaan = 2000;
         } else {
             biayaPengerjaan = 0;
         }
         return biayaPengerjaan;
-        
     }
-
 }

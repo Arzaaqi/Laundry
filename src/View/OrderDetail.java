@@ -155,18 +155,21 @@ public class OrderDetail extends ViewController {
             JOptionPane.showMessageDialog(this, "Nomor Telepon belum diisi",
                     "Nomor", JOptionPane.WARNING_MESSAGE);
         } else {
-            if (lblTipeCuciBaju.getText() == "-") {
+            if (order.getOrderItems().isEmpty()) {
                 order.setNamaPelanggan(inpNama.getText());
                 order.setNomorTeleponPelanggan(inpNoTelp.getText());
                 order.setStatusOrderan(cmbStatus.getSelectedItem().toString());
-
-                lblHarga.setText("" + order.getTotalHarga());
 
                 JOptionPane.showMessageDialog(this,
                         "Pesanan atas nama "
                         + order.getNamaPelanggan() + " telah selesai.", "Pesanan", JOptionPane.INFORMATION_MESSAGE);
             } else {
-                order.setBeratCucianBaju(Double.parseDouble(inpBeratPakaian.getText()));
+                order.getOrderItems().forEach(item -> {
+                    if (item.getItemType() == ItemType.PAKAIAN) {
+                        item.setBerat(Double.parseDouble(inpBeratPakaian.getText()));
+                    }
+                });
+
                 LogicKeranjang keranjang = new LogicKeranjang();
 
                 order.setTotalHarga(keranjang.updateHarga(order));
@@ -185,43 +188,30 @@ public class OrderDetail extends ViewController {
     }//GEN-LAST:event_btnProsesActionPerformed
 
     private void tampilData() {
-        if (order.getBeratCucianBaju() == 0 && order.getJenisCuciBaju() == null) {
-            inpBeratPakaian.setText("-");
-            lblTipeCuciBaju.setText("-");
-            lblLamaPengerjaanBaju.setText("-");
-        } else {
-            inpBeratPakaian.setText("" + order.getBeratCucianBaju());
-            lblTipeCuciBaju.setText(order.getJenisCuciBaju());
-            lblLamaPengerjaanBaju.setText("" + order.getWaktuPengerjaanBaju());
-        }
-
-        if (order.getJumlahCucianSelimut() == 0) {
-            inpJumlahSelimut.setText("-");
-            lblTipeCuciSelimut.setText("-");
-            lblLamaPengerjaanSelimut.setText("-");
-        } else {
-            inpJumlahSelimut.setText("" + order.getJumlahCucianSelimut());
-            lblTipeCuciSelimut.setText(order.getJenisCuciSelimut());
-            lblLamaPengerjaanSelimut.setText("" + order.getWaktuPengerjaanSelimut());
-        }
-
-        if (order.getJumlahCucianSepatu() == 0) {
-            inpJumlahSepatu.setText("-");
-            lblShoesDuration.setText("-");
-        } else {
-            inpJumlahSepatu.setText("" + order.getJumlahCucianSepatu());
-            lblShoesDuration.setText("" + order.getWaktuPengerjaanSepatu());
-        }
-
-        if (order.getJumlahCucianKarpet() == 0) {
-            inpJumlahKarpet.setText("-");
-            lblCarpetDuration.setText("-");
-        } else {
-            inpJumlahKarpet.setText("" + order.getJumlahCucianKarpet());
-            lblCarpetDuration.setText("" + order.getWaktuPengerjaanKarpet());
-        }
+        order.getOrderItems().forEach(item -> {
+            switch (item.getItemType()) {
+                case PAKAIAN:
+                    inpBeratPakaian.setText(String.valueOf(item.getBerat()));
+                    lblTipeCuciBaju.setText(item.getJenisCuci());
+                    lblLamaPengerjaanBaju.setText(item.getWaktuPengerjaan());
+                    break;
+                case SELIMUT:
+                    inpJumlahSelimut.setText(String.valueOf(item.getJumlah()));
+                    lblTipeCuciSelimut.setText(item.getJenisCuci());
+                    lblLamaPengerjaanSelimut.setText(item.getWaktuPengerjaan());
+                    break;
+                case SEPATU:
+                    inpJumlahSepatu.setText(String.valueOf(item.getJumlah()));
+                    lblShoesDuration.setText(item.getWaktuPengerjaan());
+                    break;
+                case KARPET:
+                    inpJumlahKarpet.setText(String.valueOf(item.getJumlah()));
+                    lblCarpetDuration.setText(item.getWaktuPengerjaan());
+                    break;
+            }
+        });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnKembali;
     private javax.swing.JButton btnProses;

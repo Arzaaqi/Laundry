@@ -65,9 +65,9 @@ public class OtpItemPakaian extends OtpItem {
     @Override
     public void btnProsesActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        keranjang.setJenisCuciBaju(cmbJenis.getSelectedItem().toString());
-        keranjang.setWaktuPengerjaanBaju(cmbWaktu.getSelectedItem().toString());
-        System.out.println("" + keranjang.getWaktuPengerjaanBaju());
+        keranjang.setJenisCuciPakaian(cmbJenis.getSelectedItem().toString());
+        keranjang.setWaktuPengerjaanPakaian(cmbWaktu.getSelectedItem().toString());
+        System.out.println("" + keranjang.getWaktuPengerjaanPakaian());
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> cmbJenis;

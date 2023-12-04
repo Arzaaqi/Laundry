@@ -1,7 +1,7 @@
 package View;
 
 import Controller.*;
-import Logic.Order;
+import Logic.*;
 
 public class OrderDetailCustomer extends ViewController {
 
@@ -10,6 +10,11 @@ public class OrderDetailCustomer extends ViewController {
     public OrderDetailCustomer(Order order) {
         initComponents();
         this.order = order;
+
+        txt_nama.setText(order.getNamaPelanggan());
+        txt_telepon.setText(order.getNomorTeleponPelanggan());
+        txt_harga.setText(" " + order.getTotalHarga());
+        txt_alamat.setText(order.getAlamatPelanggan());
         boolean orderStatus = order.isStatusOrderan();
         if (!orderStatus == false) {
             txt_status.setText("Selesai");
@@ -17,10 +22,6 @@ public class OrderDetailCustomer extends ViewController {
             txt_status.setText("Belum Selesai");
         }
 
-        txt_nama.setText(order.getNamaPelanggan());
-        txt_telepon.setText(order.getNomorTeleponPelanggan());
-        txt_harga.setText(" " + order.getTotalHarga());
-        txt_alamat.setText(order.getAlamatPelanggan());
         viewdetail();
     }
 
@@ -154,40 +155,49 @@ public class OrderDetailCustomer extends ViewController {
     }// </editor-fold>//GEN-END:initComponents
 
     public void viewdetail() {
-        if (order.getBeratCucianBaju() == 0 && order.getJenisCuciBaju() == null) {
-            txt_brpakaian.setText("-");
-            txt_jcpakaian.setText("-");
-            txt_pkpakaian.setText("-");
-        } else {
-            txt_brpakaian.setText("" + order.getBeratCucianBaju());
-            txt_jcpakaian.setText(order.getJenisCuciBaju());
-            txt_pkpakaian.setText("" + order.getWaktuPengerjaanBaju());
-        }
-
-        if (order.getJumlahCucianSelimut() == 0) {
-            txt_jmlselimut.setText("-");
-            txt_jcselimut.setText("-");
-            txt_pkselimut.setText("-");
-        } else {
-            txt_jmlselimut.setText("" + order.getJumlahCucianSelimut());
-            txt_jcselimut.setText(order.getJenisCuciSelimut());
-            txt_pkselimut.setText("" + order.getWaktuPengerjaanSelimut());
-        }
-
-        if (order.getJumlahCucianSepatu() == 0) {
-            txt_jmlsepatu.setText("-");
-            txt_pktsepatu.setText("-");
-        } else {
-            txt_jmlsepatu.setText("" + order.getJumlahCucianSepatu());
-            txt_pktsepatu.setText("" + order.getWaktuPengerjaanSepatu());
-        }
-
-        if (order.getJumlahCucianKarpet() == 0) {
-            txt_jmlkarpet.setText("-");
-            txt_pktkarpet.setText("-");
-        } else {
-            txt_jmlkarpet.setText("" + order.getJumlahCucianKarpet());
-            txt_pktkarpet.setText("" + order.getWaktuPengerjaanKarpet());
+        for (OrderItem item : order.getOrderItems()) {
+            switch (item.getItemType()) {
+                case PAKAIAN:
+                    if (item.getBerat() == 0 && item.getJenisCuci() == null) {
+                        txt_brpakaian.setText("-");
+                        txt_jcpakaian.setText("-");
+                        txt_pkpakaian.setText("-");
+                    } else {
+                        txt_brpakaian.setText("" + item.getBerat());
+                        txt_jcpakaian.setText(item.getJenisCuci());
+                        txt_pkpakaian.setText("" + item.getWaktuPengerjaan());
+                    }
+                    break;
+                case SELIMUT:
+                    if (item.getJumlah() == 0) {
+                        txt_jmlselimut.setText("-");
+                        txt_jcselimut.setText("-");
+                        txt_pkselimut.setText("-");
+                    } else {
+                        txt_jmlselimut.setText("" + item.getJumlah());
+                        txt_jcselimut.setText(item.getJenisCuci());
+                        txt_pkselimut.setText("" + item.getWaktuPengerjaan());
+                    }
+                    break;
+                case SEPATU:
+                    if (item.getJumlah() == 0) {
+                        txt_jmlsepatu.setText("-");
+                        txt_pktsepatu.setText("-");
+                    } else {
+                        txt_jmlsepatu.setText("" + item.getJumlah());
+                        txt_pktsepatu.setText("" + item.getWaktuPengerjaan());
+                    }
+                    break;
+                case KARPET:
+                    if (item.getJumlah() == 0) {
+                        txt_jmlkarpet.setText("-");
+                        txt_pktkarpet.setText("-");
+                    } else {
+                        txt_jmlkarpet.setText("" + item.getJumlah());
+                        txt_pktkarpet.setText("" + item.getWaktuPengerjaan());
+                    }
+                    break;
+            }
         }
     }
 
