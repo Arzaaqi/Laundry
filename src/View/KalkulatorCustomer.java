@@ -43,6 +43,7 @@ public class KalkulatorCustomer extends ViewController {
         btnHitung = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(null);
 
         PindahPanel.setBackground(new java.awt.Color(102, 153, 255));

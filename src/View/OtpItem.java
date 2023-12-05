@@ -21,6 +21,7 @@ public class OtpItem extends javax.swing.JDialog {
         btnKembali = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(null);
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 0, 790, 360);

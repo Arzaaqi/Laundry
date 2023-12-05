@@ -87,6 +87,7 @@ public class OtpViewKeranjang extends ViewController {
         btnHapus = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(null);
 
         jTabbedPane1.setBackground(new java.awt.Color(102, 51, 255));

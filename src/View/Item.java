@@ -21,6 +21,7 @@ public class Item extends javax.swing.JDialog {
         btnKembali = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(null);
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 360);
@@ -49,7 +50,7 @@ public class Item extends javax.swing.JDialog {
         getContentPane().add(btnKembali);
         btnKembali.setBounds(20, 420, 190, 50);
 
-        setSize(new java.awt.Dimension(804, 511));
+        setSize(new java.awt.Dimension(804, 509));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

@@ -82,6 +82,7 @@ public class ViewKeranjang extends ViewController {
         btnHapus = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(null);
 
         jTabbedPane1.setBackground(new java.awt.Color(102, 51, 255));
@@ -235,7 +236,7 @@ public class ViewKeranjang extends ViewController {
         getContentPane().add(btnHapus);
         btnHapus.setBounds(505, 420, 130, 30);
 
-        setSize(new java.awt.Dimension(802, 517));
+        setSize(new java.awt.Dimension(802, 514));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -261,12 +262,14 @@ public class ViewKeranjang extends ViewController {
             getOrderController().addItemToOrder("Karpet", 0, null, keranjang.getWaktuPengerjaanKarpet(), keranjang.getJumlahCucianKarpet());
             getOrderController().addHarga(keranjang.getTotalHarga());
             getOrderController().addOrder();
-
+            getUserController().addCustomer(inpNama.getText(), inpNomor.getText());
             JOptionPane.showMessageDialog(this, "Berhasil Memesan", "Pesan", JOptionPane.INFORMATION_MESSAGE);
 
             openFrame("menu_item");
             this.dispose();
+            
         }
+        
     }//GEN-LAST:event_btnPesanActionPerformed
 
     private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed

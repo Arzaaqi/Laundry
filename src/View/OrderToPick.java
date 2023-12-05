@@ -26,6 +26,7 @@ public class OrderToPick extends ViewController {
         btnKembali = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -93,7 +94,7 @@ public class OrderToPick extends ViewController {
         getContentPane().add(btnKembali);
         btnKembali.setBounds(20, 420, 120, 40);
 
-        setSize(new java.awt.Dimension(804, 525));
+        setSize(new java.awt.Dimension(801, 525));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

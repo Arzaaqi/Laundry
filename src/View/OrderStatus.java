@@ -22,6 +22,7 @@ public class OrderStatus extends ViewController {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(null);
 
         table.setModel(new javax.swing.table.DefaultTableModel(
@@ -85,7 +86,7 @@ public class OrderStatus extends ViewController {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 490);
 
-        setSize(new java.awt.Dimension(801, 529));
+        setSize(new java.awt.Dimension(801, 526));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

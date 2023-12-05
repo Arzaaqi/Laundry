@@ -29,6 +29,7 @@ public class OrderStatusCustomer extends ViewController {
         btnKembali = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(null);
 
         tabel.setModel(new javax.swing.table.DefaultTableModel(

@@ -21,19 +21,22 @@ public class Dashboard extends ViewController {
         btnInputOrder = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Input Order");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(160, 330, 100, 25);
+        jLabel1.setBounds(140, 330, 130, 25);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Status Order");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(520, 330, 100, 25);
+        jLabel2.setBounds(500, 330, 130, 25);
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, 0, 0, 490);
 
@@ -76,7 +79,7 @@ public class Dashboard extends ViewController {
         getContentPane().add(btnInputOrder);
         btnInputOrder.setBounds(120, 320, 220, 50);
 
-        setSize(new java.awt.Dimension(804, 528));
+        setSize(new java.awt.Dimension(802, 521));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

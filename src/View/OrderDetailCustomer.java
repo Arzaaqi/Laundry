@@ -49,98 +49,99 @@ public class OrderDetailCustomer extends ViewController {
         btn_kembali = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(null);
 
-        txt_alamat.setFont(new java.awt.Font("Nirmala UI", 1, 19)); // NOI18N
+        txt_alamat.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
         txt_alamat.setForeground(new java.awt.Color(255, 255, 255));
         txt_alamat.setText("Alamat");
         getContentPane().add(txt_alamat);
-        txt_alamat.setBounds(240, 220, 230, 20);
+        txt_alamat.setBounds(260, 240, 230, 20);
 
-        txt_nama.setFont(new java.awt.Font("Nirmala UI", 1, 19)); // NOI18N
+        txt_nama.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
         txt_nama.setForeground(new java.awt.Color(255, 255, 255));
         txt_nama.setText("Nama");
         getContentPane().add(txt_nama);
-        txt_nama.setBounds(240, 170, 230, 20);
+        txt_nama.setBounds(260, 190, 230, 20);
 
-        txt_telepon.setFont(new java.awt.Font("Nirmala UI", 1, 19)); // NOI18N
+        txt_telepon.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
         txt_telepon.setForeground(new java.awt.Color(255, 255, 255));
         txt_telepon.setText("No.telp");
         getContentPane().add(txt_telepon);
-        txt_telepon.setBounds(240, 190, 240, 30);
+        txt_telepon.setBounds(260, 210, 240, 30);
 
-        txt_harga.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+        txt_harga.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
         txt_harga.setForeground(new java.awt.Color(255, 255, 255));
         txt_harga.setText("nama");
         getContentPane().add(txt_harga);
-        txt_harga.setBounds(240, 240, 230, 30);
+        txt_harga.setBounds(260, 260, 230, 30);
 
-        txt_status.setFont(new java.awt.Font("Nirmala UI", 1, 19)); // NOI18N
+        txt_status.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
         txt_status.setForeground(new java.awt.Color(255, 255, 255));
         txt_status.setText("Status");
         getContentPane().add(txt_status);
-        txt_status.setBounds(240, 270, 230, 20);
+        txt_status.setBounds(260, 290, 230, 30);
 
         jLabel8.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Kembali");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(250, 630, 100, 25);
+        jLabel8.setBounds(280, 660, 80, 20);
 
-        txt_brpakaian.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        txt_brpakaian.setFont(new java.awt.Font("Rockwell", 3, 12)); // NOI18N
         txt_brpakaian.setText("Berat");
         getContentPane().add(txt_brpakaian);
-        txt_brpakaian.setBounds(190, 380, 100, 19);
+        txt_brpakaian.setBounds(180, 399, 140, 30);
 
-        txt_jcpakaian.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        txt_jcpakaian.setFont(new java.awt.Font("Rockwell", 3, 12)); // NOI18N
         txt_jcpakaian.setText("Berat");
         getContentPane().add(txt_jcpakaian);
-        txt_jcpakaian.setBounds(190, 410, 100, 19);
+        txt_jcpakaian.setBounds(150, 430, 170, 30);
 
-        txt_pkpakaian.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        txt_pkpakaian.setFont(new java.awt.Font("Rockwell", 3, 12)); // NOI18N
         txt_pkpakaian.setText("Berat");
         getContentPane().add(txt_pkpakaian);
-        txt_pkpakaian.setBounds(180, 429, 100, 30);
+        txt_pkpakaian.setBounds(150, 460, 170, 30);
 
-        txt_jmlsepatu.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        txt_jmlsepatu.setFont(new java.awt.Font("Rockwell", 3, 12)); // NOI18N
         txt_jmlsepatu.setText("Berat");
         getContentPane().add(txt_jmlsepatu);
-        txt_jmlsepatu.setBounds(150, 519, 100, 30);
+        txt_jmlsepatu.setBounds(170, 550, 100, 30);
 
-        txt_pktsepatu.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        txt_pktsepatu.setFont(new java.awt.Font("Rockwell", 3, 12)); // NOI18N
         txt_pktsepatu.setText("Berat");
         getContentPane().add(txt_pktsepatu);
-        txt_pktsepatu.setBounds(150, 540, 100, 40);
+        txt_pktsepatu.setBounds(110, 570, 170, 50);
 
-        txt_jmlselimut.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        txt_jmlselimut.setFont(new java.awt.Font("Rockwell", 3, 12)); // NOI18N
         txt_jmlselimut.setText("Berat");
         getContentPane().add(txt_jmlselimut);
-        txt_jmlselimut.setBounds(480, 369, 100, 30);
+        txt_jmlselimut.setBounds(490, 400, 120, 20);
 
-        txt_jcselimut.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        txt_jcselimut.setFont(new java.awt.Font("Rockwell", 3, 12)); // NOI18N
         txt_jcselimut.setText("Berat");
         getContentPane().add(txt_jcselimut);
-        txt_jcselimut.setBounds(480, 399, 100, 30);
+        txt_jcselimut.setBounds(480, 420, 140, 40);
 
-        txt_pkselimut.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        txt_pkselimut.setFont(new java.awt.Font("Rockwell", 3, 12)); // NOI18N
         txt_pkselimut.setText("Berat");
         getContentPane().add(txt_pkselimut);
-        txt_pkselimut.setBounds(480, 430, 100, 30);
+        txt_pkselimut.setBounds(470, 460, 140, 15);
 
-        txt_jmlkarpet.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        txt_jmlkarpet.setFont(new java.awt.Font("Rockwell", 3, 12)); // NOI18N
         txt_jmlkarpet.setText("Berat");
         getContentPane().add(txt_jmlkarpet);
-        txt_jmlkarpet.setBounds(450, 510, 100, 40);
+        txt_jmlkarpet.setBounds(470, 540, 100, 40);
 
-        txt_pktkarpet.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        txt_pktkarpet.setFont(new java.awt.Font("Rockwell", 3, 12)); // NOI18N
         txt_pktkarpet.setText("Berat");
         getContentPane().add(txt_pktkarpet);
-        txt_pktkarpet.setBounds(450, 550, 100, 19);
+        txt_pktkarpet.setBounds(430, 569, 160, 50);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/orderDetailCustomer.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 600, 680);
+        jLabel1.setBounds(0, 0, 650, 700);
 
         btn_kembali.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,9 +149,9 @@ public class OrderDetailCustomer extends ViewController {
             }
         });
         getContentPane().add(btn_kembali);
-        btn_kembali.setBounds(250, 620, 100, 40);
+        btn_kembali.setBounds(270, 650, 100, 40);
 
-        setSize(new java.awt.Dimension(614, 717));
+        setSize(new java.awt.Dimension(663, 735));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

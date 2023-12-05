@@ -26,6 +26,7 @@ public class MenuItem extends ViewController {
         btnKembali = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -91,7 +92,7 @@ public class MenuItem extends ViewController {
         getContentPane().add(btnKembali);
         btnKembali.setBounds(20, 430, 110, 23);
 
-        setSize(new java.awt.Dimension(804, 528));
+        setSize(new java.awt.Dimension(801, 526));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

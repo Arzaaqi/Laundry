@@ -40,58 +40,95 @@ public class OrderDetail extends ViewController {
         inpNama = new javax.swing.JTextField();
         inpAlamat = new javax.swing.JTextField();
         cmbStatus = new javax.swing.JComboBox<>();
-        btnProses = new javax.swing.JButton();
-        btnKembali = new javax.swing.JButton();
         inpNoTelp = new javax.swing.JTextField();
         inpBeratPakaian = new javax.swing.JTextField();
         inpJumlahSepatu = new javax.swing.JTextField();
         inpJumlahSelimut = new javax.swing.JTextField();
         inpJumlahKarpet = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         lblHarga = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        btnProses = new javax.swing.JButton();
+        btnKembali = new javax.swing.JButton();
 
         jCheckBox1.setText("jCheckBox1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(null);
 
-        lblCarpetDuration.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
+        lblCarpetDuration.setFont(new java.awt.Font("Rockwell", 3, 12)); // NOI18N
         lblCarpetDuration.setText("12");
         getContentPane().add(lblCarpetDuration);
-        lblCarpetDuration.setBounds(450, 541, 110, 26);
+        lblCarpetDuration.setBounds(420, 580, 190, 26);
 
-        lblShoesDuration.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
+        lblShoesDuration.setFont(new java.awt.Font("Rockwell", 3, 12)); // NOI18N
         lblShoesDuration.setText("2");
         getContentPane().add(lblShoesDuration);
-        lblShoesDuration.setBounds(150, 544, 140, 26);
+        lblShoesDuration.setBounds(110, 586, 190, 20);
 
-        lblTipeCuciSelimut.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
+        lblTipeCuciSelimut.setFont(new java.awt.Font("Rockwell", 3, 12)); // NOI18N
         lblTipeCuciSelimut.setText("Setrika");
         getContentPane().add(lblTipeCuciSelimut);
-        lblTipeCuciSelimut.setBounds(470, 397, 90, 26);
+        lblTipeCuciSelimut.setBounds(480, 430, 130, 20);
 
-        lblLamaPengerjaanSelimut.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 12)); // NOI18N
+        lblLamaPengerjaanSelimut.setFont(new java.awt.Font("Rockwell", 3, 12)); // NOI18N
         lblLamaPengerjaanSelimut.setText("12");
         getContentPane().add(lblLamaPengerjaanSelimut);
-        lblLamaPengerjaanSelimut.setBounds(470, 425, 90, 26);
+        lblLamaPengerjaanSelimut.setBounds(470, 456, 140, 20);
 
-        lblTipeCuciBaju.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
+        lblTipeCuciBaju.setFont(new java.awt.Font("Rockwell", 3, 12)); // NOI18N
         lblTipeCuciBaju.setText("Setrika");
         getContentPane().add(lblTipeCuciBaju);
-        lblTipeCuciBaju.setBounds(188, 397, 100, 26);
+        lblTipeCuciBaju.setBounds(150, 430, 150, 26);
 
-        lblLamaPengerjaanBaju.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 12)); // NOI18N
+        lblLamaPengerjaanBaju.setFont(new java.awt.Font("Rockwell", 3, 12)); // NOI18N
         lblLamaPengerjaanBaju.setText("1");
         getContentPane().add(lblLamaPengerjaanBaju);
-        lblLamaPengerjaanBaju.setBounds(180, 425, 110, 26);
+        lblLamaPengerjaanBaju.setBounds(150, 460, 150, 30);
         getContentPane().add(inpNama);
-        inpNama.setBounds(260, 165, 260, 22);
+        inpNama.setBounds(260, 185, 260, 25);
         getContentPane().add(inpAlamat);
-        inpAlamat.setBounds(260, 215, 260, 22);
+        inpAlamat.setBounds(260, 245, 260, 25);
 
         cmbStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Belum Selesai", "Selesai", "" }));
         getContentPane().add(cmbStatus);
-        cmbStatus.setBounds(260, 270, 140, 22);
+        cmbStatus.setBounds(260, 300, 140, 22);
+        getContentPane().add(inpNoTelp);
+        inpNoTelp.setBounds(260, 215, 260, 25);
+        getContentPane().add(inpBeratPakaian);
+        inpBeratPakaian.setBounds(180, 392, 130, 30);
+        getContentPane().add(inpJumlahSepatu);
+        inpJumlahSepatu.setBounds(170, 550, 132, 30);
+        getContentPane().add(inpJumlahSelimut);
+        inpJumlahSelimut.setBounds(490, 390, 120, 30);
+        getContentPane().add(inpJumlahKarpet);
+        inpJumlahKarpet.setBounds(470, 550, 140, 30);
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Proses");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(540, 646, 60, 30);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Kembali");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(407, 646, 70, 30);
+
+        lblHarga.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
+        lblHarga.setForeground(new java.awt.Color(240, 240, 240));
+        lblHarga.setText("Rp");
+        getContentPane().add(lblHarga);
+        lblHarga.setBounds(260, 275, 260, 20);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/orderDetail.png"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 0, 650, 700);
 
         btnProses.setBackground(new java.awt.Color(0,0,0,0));
         btnProses.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
@@ -104,7 +141,7 @@ public class OrderDetail extends ViewController {
             }
         });
         getContentPane().add(btnProses);
-        btnProses.setBounds(468, 618, 110, 34);
+        btnProses.setBounds(520, 650, 100, 30);
 
         btnKembali.setBackground(new java.awt.Color(0,0,0,0));
         btnKembali.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
@@ -117,29 +154,9 @@ public class OrderDetail extends ViewController {
             }
         });
         getContentPane().add(btnKembali);
-        btnKembali.setBounds(336, 618, 110, 34);
-        getContentPane().add(inpNoTelp);
-        inpNoTelp.setBounds(260, 190, 260, 22);
-        getContentPane().add(inpBeratPakaian);
-        inpBeratPakaian.setBounds(190, 372, 90, 22);
-        getContentPane().add(inpJumlahSepatu);
-        inpJumlahSepatu.setBounds(150, 520, 132, 22);
-        getContentPane().add(inpJumlahSelimut);
-        inpJumlahSelimut.setBounds(470, 370, 80, 22);
-        getContentPane().add(inpJumlahKarpet);
-        inpJumlahKarpet.setBounds(450, 515, 100, 22);
+        btnKembali.setBounds(390, 650, 100, 30);
 
-        lblHarga.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 14)); // NOI18N
-        lblHarga.setForeground(new java.awt.Color(240, 240, 240));
-        lblHarga.setText("Rp");
-        getContentPane().add(lblHarga);
-        lblHarga.setBounds(260, 243, 260, 20);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/orderDetail.png"))); // NOI18N
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, 0, 600, 670);
-
-        setSize(new java.awt.Dimension(617, 709));
+        setSize(new java.awt.Dimension(662, 732));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -224,6 +241,8 @@ public class OrderDetail extends ViewController {
     private javax.swing.JTextField inpNama;
     private javax.swing.JTextField inpNoTelp;
     private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lblCarpetDuration;
     private javax.swing.JLabel lblHarga;

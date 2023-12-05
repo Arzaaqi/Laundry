@@ -23,6 +23,7 @@ public class Login extends ViewController {
         btnRegist = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(null);
 
         inputNama.addActionListener(new java.awt.event.ActionListener() {
@@ -62,7 +63,7 @@ public class Login extends ViewController {
         getContentPane().add(btnRegist);
         btnRegist.setBounds(560, 350, 75, 23);
 
-        setSize(new java.awt.Dimension(801, 525));
+        setSize(new java.awt.Dimension(801, 523));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
