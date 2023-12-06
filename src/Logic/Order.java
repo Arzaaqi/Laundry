@@ -3,9 +3,8 @@ package Logic;
 import java.util.ArrayList;
 import java.util.List;
 
-import Controller.*;
 
-public class Order extends ViewController {
+public class Order {
 
     private String namaPelanggan;
     private String nomorTeleponPelanggan;

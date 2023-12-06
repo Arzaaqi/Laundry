@@ -1,4 +1,5 @@
 package View;
+
 import Controller.*;
 import Logic.*;
 
@@ -90,26 +91,11 @@ public class OrderStatus extends ViewController {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void menampilkanTabel(){
-        DefaultTableModel model = (DefaultTableModel)table.getModel();
-
-        for (int i = 0; i < getOrderController().getOrderSize(); i++) {
-            boolean statusPesanan = getOrderController().getOrder(i).isStatusOrderan();
-            String statusText = statusPesanan ? "Sudah" : "Belum";
-            
-            model.addRow(new Object[] {
-                getOrderController().getOrder(i).getNamaPelanggan(),
-                getOrderController().getOrder(i).getNomorTeleponPelanggan(),
-                statusText,
-            });
-        }
-    }
-    
     private void btn_detailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_detailActionPerformed
         DefaultTableModel model = (DefaultTableModel) table.getModel();
         int selectedRow = table.getSelectedRow();
-        
-        if(selectedRow != -1){
+
+        if (selectedRow != -1) {
             Order order = getOrderController().getOrder(selectedRow);
             openFrame(new OrderDetail(order));
         }
@@ -122,18 +108,32 @@ public class OrderStatus extends ViewController {
     private void btn_hapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_hapusActionPerformed
         DefaultTableModel model = (DefaultTableModel) table.getModel();
         int selectedRow = table.getSelectedRow();
-        
-        if(selectedRow != -1){
+
+        if (selectedRow != -1) {
             getOrderController().hapusOrder(selectedRow);
             model.removeRow(selectedRow);
             model.fireTableDataChanged();
         }
     }//GEN-LAST:event_btn_hapusActionPerformed
+    
+    private void menampilkanTabel() {
+        DefaultTableModel model = (DefaultTableModel) table.getModel();
+
+        for (int i = 0; i < getOrderController().getOrderSize(); i++) {
+            boolean statusPesanan = getOrderController().getOrder(i).isStatusOrderan();
+            String statusText = statusPesanan ? "Sudah" : "Belum";
+
+            model.addRow(new Object[]{
+                getOrderController().getOrder(i).getNamaPelanggan(),
+                getOrderController().getOrder(i).getNomorTeleponPelanggan(),
+                statusText,});
+        }
+    }
 
     public void afterOpen() {
         menampilkanTabel();
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_detail;
     private javax.swing.JButton btn_hapus;

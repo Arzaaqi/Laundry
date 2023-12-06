@@ -121,17 +121,15 @@ public class OrderStatusCustomer extends ViewController {
                 boolean statusPesanan = currentOrder.isStatusOrderan();
                 String statusText = statusPesanan ? "Sudah" : "Belum";
 
-                // Add a flag to check if any PAKAIAN item is found in the order
                 boolean pakaiItemFound = false;
 
                 for (OrderItem item : currentOrder.getOrderItems()) {
                     if (item.getBerat() == 0 && item.getJenisCuci() != null && item.getItemType() == ItemType.PAKAIAN) {
                         pakaiItemFound = true;
-                        break;  // Break if at least one PAKAIAN item is found
+                        break;
                     }
                 }
 
-                // Add a row only if PAKAIAN item is found
                 if (pakaiItemFound) {
                     model.addRow(new Object[]{
                         getUserController().getCurrentUser().getName(),
