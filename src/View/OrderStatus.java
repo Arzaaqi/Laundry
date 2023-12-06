@@ -2,6 +2,7 @@ package View;
 
 import Controller.*;
 import Logic.*;
+import javax.swing.JOptionPane;
 
 import javax.swing.table.DefaultTableModel;
 
@@ -108,14 +109,15 @@ public class OrderStatus extends ViewController {
     private void btn_hapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_hapusActionPerformed
         DefaultTableModel model = (DefaultTableModel) table.getModel();
         int selectedRow = table.getSelectedRow();
-
-        if (selectedRow != -1) {
+        int result = JOptionPane.showConfirmDialog(null,
+                "Yakin ingin hapus?", null, JOptionPane.YES_NO_OPTION);
+        if (result == JOptionPane.YES_OPTION && selectedRow != -1) {
             getOrderController().hapusOrder(selectedRow);
             model.removeRow(selectedRow);
             model.fireTableDataChanged();
         }
     }//GEN-LAST:event_btn_hapusActionPerformed
-    
+
     private void menampilkanTabel() {
         DefaultTableModel model = (DefaultTableModel) table.getModel();
 
