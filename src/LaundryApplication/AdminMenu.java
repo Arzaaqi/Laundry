@@ -14,7 +14,7 @@ public class AdminMenu extends javax.swing.JFrame {
     
     public AdminMenu(ListTransactions listTransactions) {
         initComponents();
-    
+        
         this.listTransactions = listTransactions;
         populateTable();
     }
